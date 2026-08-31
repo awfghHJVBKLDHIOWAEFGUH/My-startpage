@@ -48,6 +48,8 @@
 
         /* Container */
         .container {
+            position: relative;
+            z-index: 1;
             text-align: center;
             width: 90%;
             max-width: 600px;
@@ -157,15 +159,15 @@
         <div class="clock" id="clock">00:00</div>
         
         <form class="search-form" action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" class="search-box" placeholder="Search the web..." autofocus autocomplete="off">
+            <input type="text" name="q" class="search-box" placeholder="Search the web..." aria-label="Search the web" autofocus autocomplete="off">
         </form>
 
         <!-- Quick Links Grid -->
         <div class="bookmarks">
-            <a href="https://youtube.com" class="bookmark-card">▶</a>
-            <a href="https://reddit.com" class="bookmark-card">💬</a>
-            <a href="https://github.com" class="bookmark-card">🐙</a>
-            <a href="https://x.com" class="bookmark-card">⚡</a>
+            <a href="https://youtube.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+            <a href="https://reddit.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="Reddit">💬</a>
+            <a href="https://github.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🐙</a>
+            <a href="https://x.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">⚡</a>
         </div>
     </div>
 
@@ -180,7 +182,7 @@
             const options = { weekday: 'long', month: 'short', day: 'numeric' };
             document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
         }
-        setInterval(updateClock, 1000);
+        setInterval(updateClock, 30000);
         updateClock();
     </script>
 </body>
