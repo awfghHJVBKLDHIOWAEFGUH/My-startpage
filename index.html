@@ -14,10 +14,9 @@
 
         body {
             height: 100vh;
+            width: 100vw;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
             color: #ffffff;
         }
 
@@ -28,60 +27,113 @@
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
-            width: auto;
-            height: auto;
             z-index: -2;
             object-fit: cover;
         }
 
-        /* Dark Overlay */
+        /* Overlay */
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.35);
+            background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(2px);
             z-index: -1;
         }
 
-        /* Container */
-        .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            width: 90%;
-            max-width: 600px;
+        /* TOP LEFT: Analog Clock Widget */
+        .clock-widget {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 20px;
         }
 
-        /* Date Subtitle */
-        .date-display {
-            font-size: 1.1rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.85);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-        }
-
-        /* Clock Styling */
-        .clock {
-            font-size: 5.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            text-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-            line-height: 1;
-        }
-
-        /* Search Form & Bar */
-        .search-form {
+        .analog-clock {
             width: 100%;
-            margin-top: 10px;
+            height: 100%;
+            position: relative;
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            background: #ffffff;
+            border-radius: 4px;
+        }
+
+        .hand.hour {
+            width: 4px;
+            height: 28%;
+            margin-left: -2px;
+        }
+
+        .hand.minute {
+            width: 3px;
+            height: 38%;
+            margin-left: -1.5px;
+        }
+
+        .hand.second {
+            width: 2px;
+            height: 42%;
+            margin-left: -1px;
+            background: #ff4757;
+        }
+
+        .center-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            margin-top: -4px;
+            margin-left: -4px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        /* TOP CENTER: Big Date Banner */
+        .date-widget {
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 4px 16px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 24px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* CENTER: Search Bar */
+        .search-container {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 550px;
         }
 
         .search-box {
@@ -102,18 +154,22 @@
         .search-box:focus {
             background: rgba(255, 255, 255, 0.22);
             border-color: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
         }
 
         .search-box::placeholder {
             color: rgba(255, 255, 255, 0.65);
         }
 
-        /* Bookmark Cards Grid */
-        .bookmarks {
+        /* BOTTOM: Wide Bookmark Cards */
+        .bookmarks-widget {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 15px;
-            margin-top: 10px;
+            width: 90%;
+            max-width: 750px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -121,24 +177,28 @@
         .bookmark-card {
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 55px;
-            height: 55px;
-            border-radius: 18px;
+            gap: 12px;
+            padding: 12px 20px;
+            border-radius: 20px;
             background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
             transition: transform 0.2s ease, background 0.2s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
 
         .bookmark-card svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             fill: #ffffff;
+        }
+
+        .bookmark-title {
+            font-size: 0.95rem;
+            font-weight: 600;
         }
 
         .bookmark-card:hover {
@@ -150,57 +210,72 @@
 </head>
 <body>
 
-    <!-- Background Video -->
     <video autoplay loop muted playsinline id="bg-video">
         <source src="Purple.mp4" type="video/mp4">
     </video>
 
-    <!-- Dark Overlay -->
     <div class="overlay"></div>
 
-    <!-- Main Content Container -->
-    <div class="container">
-        <div class="date-display" id="date">Loading...</div>
-        <div class="clock" id="clock">00:00</div>
-        
-        <form class="search-form" action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" class="search-box" placeholder="Search the web..." aria-label="Search the web" autofocus autocomplete="off">
-        </form>
-
-        <!-- SVG Icon Links Grid -->
-        <div class="bookmarks">
-            <!-- YouTube -->
-            <a href="https://youtube.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <!-- Reddit -->
-            <a href="https://reddit.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
-                <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.363.043-.538A1.758 1.758 0 0 1 4.08 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.059-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.562-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-4.566 3.475c-.086 0-.173.033-.24.099a.338.338 0 0 0 0 .479c.915.914 2.397.914 3.31 0a.338.338 0 0 0 0-.479c-.066-.066-.153-.099-.239-.099h-2.831z"/></svg>
-            </a>
-            <!-- GitHub -->
-            <a href="https://github.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <!-- Twitter/X -->
-            <a href="https://x.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
+    <div class="clock-widget">
+        <div class="analog-clock">
+            <div class="hand hour" id="hour-hand"></div>
+            <div class="hand minute" id="min-hand"></div>
+            <div class="hand second" id="sec-hand"></div>
+            <div class="center-dot"></div>
         </div>
     </div>
 
-    <!-- Live Date & Clock Script -->
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}`;
+    <div class="date-widget" id="date">Loading...</div>
 
-            const options = { weekday: 'long', month: 'short', day: 'numeric' };
+    <div class="search-container">
+        <form action="https://www.startpage.com/do/dsearch" method="GET">
+            <input type="text" name="query" class="search-box" placeholder="Search Startpage..." aria-label="Search Startpage" autofocus autocomplete="off">
+        </form>
+    </div>
+
+    <div class="bookmarks-widget">
+        <a href="https://youtube.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span class="bookmark-title">YouTube</span>
+        </a>
+        <a href="https://reddit.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.363.043-.538A1.758 1.758 0 0 1 4.08 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.059-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.562-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-4.566 3.475c-.086 0-.173.033-.24.099a.338.338 0 0 0 0 .479c.915.914 2.397.914 3.31 0a.338.338 0 0 0 0-.479c-.066-.066-.153-.099-.239-.099h-2.831z"/></svg>
+            <span class="bookmark-title">Reddit</span>
+        </a>
+        <a href="https://github.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span class="bookmark-title">GitHub</span>
+        </a>
+        <a href="https://x.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span class="bookmark-title">Twitter</span>
+        </a>
+    </div>
+
+    <script>
+        function updateWidgets() {
+            const now = new Date();
+
+            // Date String
+            const options = { weekday: 'short', month: 'short', day: 'numeric' };
             document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+
+            // Analog Clock Hands Rotation
+            const seconds = now.getSeconds();
+            const secDegrees = ((seconds / 60) * 360);
+            document.getElementById('sec-hand').style.transform = `rotate(${secDegrees}deg)`;
+
+            const mins = now.getMinutes();
+            const minDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6);
+            document.getElementById('min-hand').style.transform = `rotate(${minDegrees}deg)`;
+
+            const hours = now.getHours();
+            const hourDegrees = ((hours / 12) * 360) + ((mins / 60) * 30);
+            document.getElementById('hour-hand').style.transform = `rotate(${hourDegrees}deg)`;
         }
-        setInterval(updateClock, 30000);
-        updateClock();
+
+        setInterval(updateWidgets, 1000);
+        updateWidgets();
     </script>
 </body>
 </html>
