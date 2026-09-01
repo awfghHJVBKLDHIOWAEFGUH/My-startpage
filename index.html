@@ -8,198 +8,208 @@
         :root {
             --accent: #cba6f7;
             --accent-glow: rgba(203, 166, 247, 0.35);
-            --bg-glass: rgba(17, 17, 27, 0.70);
+            --bg-glass: rgba(17, 17, 27, 0.75);
             --border-glass: rgba(255, 255, 255, 0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, sans-serif; }
-        body { height: 100vh; width: 100vw; overflow: hidden; position: relative; color: #cdd6f4; }
+        body { height: 100vh; width: 100vw; overflow: hidden; position: relative; color: #cdd6f4; background: #0b0b10; }
         #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.45); backdrop-filter: blur(4px); z-index: -1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.5); backdrop-filter: blur(4px); z-index: -1; }
 
-        /* Top Widgets */
-        .clock-widget-container { position: absolute; top: 35px; left: 45px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-        .clock-widget { width: 68px; height: 68px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); }
+        /* Main Grid Wrapper to prevent absolute chaos */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 300px 1fr 300px;
+            grid-template-rows: 80px 1fr auto auto;
+            height: 100vh;
+            padding: 25px 40px;
+            gap: 15px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar Widgets */
+        .top-left { display: flex; align-items: center; gap: 12px; grid-column: 1; grid-row: 1; }
+        .clock-widget { width: 55px; height: 55px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
         .hand.hour { width: 3px; height: 26%; margin-left: -1.5px; }
         .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
         .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
-        .center-dot { position: absolute; top: 50%; left: 50%; width: 6px; height: 6px; margin-top: -3px; margin-left: -3px; background: var(--accent); border-radius: 50%; }
-        .digital-time { font-size: 0.7rem; font-weight: 600; background: var(--bg-glass); padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
+        .center-dot { position: absolute; top: 50%; left: 50%; width: 5px; height: 5px; margin-top: -2.5px; margin-left: -2.5px; background: var(--accent); border-radius: 50%; }
+        .digital-time { font-size: 0.75rem; font-weight: 600; background: var(--bg-glass); padding: 4px 10px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
 
-        .top-center-container { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; grid-column: 2; grid-row: 1; }
         .workspaces { display: flex; gap: 6px; background: var(--bg-glass); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
         .ws-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
         .ws-dot.active { width: 18px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-        .date-widget { font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 4px 14px; border-radius: 12px; border: 1px solid var(--border-glass); }
+        .date-widget { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 3px 12px; border-radius: 10px; border: 1px solid var(--border-glass); }
 
-        .sys-card { position: absolute; top: 35px; right: 45px; background: var(--bg-glass); padding: 8px 12px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 4px; min-width: 180px; font-size: 0.7rem; }
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 8px 12px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 4px; width: 180px; font-size: 0.7rem; }
         .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; }
         .bar-container { width: 65px; height: 4px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
         /* Side Panes */
-        .side-pane { position: absolute; top: 120px; width: 300px; height: calc(100vh - 275px); background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; }
+        .side-pane { grid-row: 2 / span 1; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; max-height: calc(100vh - 240px); }
         .side-pane::-webkit-scrollbar { width: 4px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
-        .side-pane-left { left: 45px; }
-        .side-pane-right { right: 45px; }
-        .pane-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
-        .pane-title svg { width: 14px; height: 14px; fill: var(--accent); }
+        .side-pane-left { grid-column: 1; }
+        .side-pane-right { grid-column: 3; }
+        
+        .pane-title { font-size: 0.8rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .pane-title svg { width: 13px; height: 13px; fill: var(--accent); }
         .live-tag { font-size: 0.55rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
 
-        .item-card { background: rgba(255, 255, 255, 0.05); padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: white; transition: 0.2s ease; display: flex; flex-direction: column; gap: 2px; }
-        .item-card:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); transform: translateY(-1px); }
-        .item-card h4 { font-size: 0.75rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.65rem; color: rgba(255, 255, 255, 0.65); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .item-card { background: rgba(255, 255, 255, 0.04); padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; flex-direction: column; gap: 2px; }
+        .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
+        .item-card h4 { font-size: 0.72rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.6rem; color: rgba(255, 255, 255, 0.65); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-        /* Centered Search Bar */
-        .search-container { position: absolute; top: 34%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 580px; }
+        /* Center Content (Search + Info Box Stacked) */
+        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 20px; }
+        
+        .search-container { width: 100%; max-width: 520px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
-        .search-icon-svg { position: absolute; left: 20px; width: 18px; height: 18px; fill: var(--accent); }
-        .search-box { width: 100%; padding: 15px 20px 15px 52px; font-size: 1rem; border: 1px solid var(--border-glass); border-radius: 35px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
+        .search-icon-svg { position: absolute; left: 18px; width: 16px; height: 16px; fill: var(--accent); }
+        .search-box { width: 100%; padding: 13px 20px 13px 48px; font-size: 0.95rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Expanded Middle Wikipedia / Yap Description Box */
-        .bottom-card { position: absolute; bottom: 85px; left: 50%; transform: translateX(-50%); width: 50%; max-width: 720px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px 20px; display: flex; align-items: center; gap: 14px; box-shadow: 0 0 25px var(--accent-glow); }
-        .bottom-card svg { width: 32px; height: 32px; fill: var(--accent); flex-shrink: 0; }
-        .bottom-info h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
-        .bottom-info p { font-size: 0.75rem; color: rgba(255, 255, 255, 0.8); line-height: 1.4; }
+        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 10px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 0 20px var(--accent-glow); }
+        .bottom-card svg { width: 26px; height: 26px; fill: var(--accent); flex-shrink: 0; }
+        .bottom-info h3 { font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; }
+        .bottom-info p { font-size: 0.7rem; color: rgba(255, 255, 255, 0.8); line-height: 1.35; }
 
         /* Bottom Dock Menu */
-        .dock { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; background: var(--bg-glass); padding: 6px 14px; border-radius: 20px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-        .dock-item { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s; cursor: pointer; }
-        .dock-item:hover { background: rgba(255, 255, 255, 0.15); border-color: var(--accent); }
-        .dock-item svg { width: 16px; height: 16px; fill: var(--accent); }
-        .dock-text span { display: block; font-size: 0.7rem; font-weight: 700; }
-        .dock-text small { display: block; font-size: 0.55rem; color: rgba(255,255,255,0.6); }
+        .dock-container { grid-column: 1 / span 3; grid-row: 3; display: flex; justify-content: center; padding-top: 5px; }
+        .dock { display: flex; gap: 8px; background: var(--bg-glass); padding: 6px 14px; border-radius: 20px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .dock-item { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s; cursor: pointer; }
+        .dock-item:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); }
+        .dock-item svg { width: 15px; height: 15px; fill: var(--accent); }
+        .dock-text span { display: block; font-size: 0.68rem; font-weight: 700; }
+        .dock-text small { display: block; font-size: 0.52rem; color: rgba(255,255,255,0.6); }
     </style>
 </head>
 <body>
     <video autoplay loop muted playsinline id="bg-video"><source src="Purple.mp4" type="video/mp4"></video>
     <div class="overlay"></div>
 
-    <div class="clock-widget-container">
-        <div class="clock-widget">
-            <div class="analog-clock">
-                <div class="hand hour" id="hour-hand"></div>
-                <div class="hand minute" id="min-hand"></div>
-                <div class="hand second" id="sec-hand"></div>
-                <div class="center-dot"></div>
+    <div class="dashboard">
+        <div class="top-left">
+            <div class="clock-widget">
+                <div class="analog-clock">
+                    <div class="hand hour" id="hour-hand"></div>
+                    <div class="hand minute" id="min-hand"></div>
+                    <div class="hand second" id="sec-hand"></div>
+                    <div class="center-dot"></div>
+                </div>
+            </div>
+            <div class="digital-time" id="digital-clock">00:00</div>
+        </div>
+
+        <div class="top-center">
+            <div class="workspaces">
+                <div class="ws-dot active" onclick="switchTab(0)"></div>
+                <div class="ws-dot" onclick="switchTab(1)"></div>
+                <div class="ws-dot" onclick="switchTab(2)"></div>
+                <div class="ws-dot" onclick="switchTab(3)"></div>
+            </div>
+            <div class="date-widget" id="date">Loading...</div>
+        </div>
+
+        <div class="top-right">
+            <div class="sys-header">
+                <span>user@hyprland</span>
+                <span style="display:flex; align-items:center; gap:4px;">
+                    <svg viewBox="0 0 24 24" style="width:10px;height:10px;fill:var(--accent);"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                    17°C
+                </span>
+            </div>
+            <div class="sys-row"><span>CPU</span><div class="bar-container"><div class="bar-fill" id="cpu-bar" style="width: 25%;"></div></div></div>
+            <div class="sys-row"><span>RAM</span><div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 42%;"></div></div></div>
+        </div>
+
+        <div class="side-pane side-pane-left">
+            <div class="pane-title">
+                <span style="display:flex; align-items:center; gap:5px;">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span id="left-pane-title">Trending Feed</span>
+                </span>
+                <span class="live-tag">
+                    <svg viewBox="0 0 24 24" style="width:6px;height:6px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
+                    ACTIVE
+                </span>
+            </div>
+            <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;">
+                <div class="item-card"><h4>Fetching real feed...</h4><p>Please wait a sec</p></div>
             </div>
         </div>
-        <div class="digital-time" id="digital-clock">00:00</div>
-    </div>
 
-    <div class="top-center-container">
-        <div class="workspaces">
-            <div class="ws-dot active" onclick="switchTab(0)"></div>
-            <div class="ws-dot" onclick="switchTab(1)"></div>
-            <div class="ws-dot" onclick="switchTab(2)"></div>
-            <div class="ws-dot" onclick="switchTab(3)"></div>
-        </div>
-        <div class="date-widget" id="date">Loading...</div>
-    </div>
-
-    <div class="sys-card">
-        <div class="sys-header">
-            <span>user@hyprland</span>
-            <span style="display:flex; align-items:center; gap:4px;">
-                <svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:var(--accent);"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
-                17°C
-            </span>
-        </div>
-        <div class="sys-row"><span>CPU</span><div class="bar-container"><div class="bar-fill" id="cpu-bar" style="width: 25%;"></div></div></div>
-        <div class="sys-row"><span>RAM</span><div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 42%;"></div></div></div>
-    </div>
-
-    <div class="side-pane side-pane-left">
-        <div class="pane-title">
-            <span style="display:flex; align-items:center; gap:5px;">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                Trending Feed
-            </span>
-            <span class="live-tag">
-                <svg viewBox="0 0 24 24" style="width:7px;height:7px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
-                ACTIVE
-            </span>
-        </div>
-        <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;">
-            <a href="https://youtube.com" target="_blank" class="item-card">
-                <h4>Lofi Hip Hop Radio 24/7</h4>
-                <p>Lofi Girl • 42k watching live</p>
-            </a>
-            <a href="https://github.com" target="_blank" class="item-card">
-                <h4>hyprwm / Hyprland</h4>
-                <p>Wayland compositor made for ricing setup</p>
-            </a>
-            <a href="https://reddit.com" target="_blank" class="item-card">
-                <h4>r/unixporn Top Post</h4>
-                <p>Check out this insane purple Rice setup</p>
-            </a>
-        </div>
-    </div>
-
-    <div class="side-pane side-pane-right">
-        <div class="pane-title">
-            <span style="display:flex; align-items:center; gap:5px;">
-                <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.45-.32-2.83-.88-4.07l-2.6 1.53c.3.79.48 1.64.48 2.54 0 3.87-3.13 7-7 7z"/></svg>
-                Telemetry Stream
-            </span>
-            <span class="live-tag" id="ping-tag">18ms</span>
-        </div>
-        <div id="right-feed" style="display: flex; flex-direction: column; gap: 6px;">
-            <div class="item-card">
-                <h4>Daemon Status</h4>
-                <p id="socket-status" style="color: #a6e3a1;">Connected to local socket</p>
+        <div class="center-stack">
+            <div class="search-container">
+                <form action="https://www.startpage.com/do/dsearch" method="GET">
+                    <div class="search-wrapper">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input type="text" name="query" class="search-box" placeholder="Search Startpage..." autofocus autocomplete="off">
+                    </div>
+                </form>
             </div>
-            <div class="item-card">
-                <h4>Active Shell Window</h4>
-                <p>firefox - startpage.html</p>
-            </div>
-            <div class="item-card">
-                <h4>Network Bandwidth</h4>
-                <p>0.4 MB/s down | 0.1 MB/s up</p>
+
+            <div class="bottom-card" id="info-box">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <div class="bottom-info">
+                    <h3 id="info-title">YouTube Workspace</h3>
+                    <p id="info-desc">YouTube is an online video sharing and social media platform created in Feb 2005. It features millions of user-generated videos, live streams, and global creators.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="search-container">
-        <form action="https://www.startpage.com/do/dsearch" method="GET">
-            <div class="search-wrapper">
-                <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                <input type="text" name="query" class="search-box" placeholder="Search Startpage..." autofocus autocomplete="off">
+        <div class="side-pane side-pane-right">
+            <div class="pane-title">
+                <span style="display:flex; align-items:center; gap:5px;">
+                    <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.45-.32-2.83-.88-4.07l-2.6 1.53c.3.79.48 1.64.48 2.54 0 3.87-3.13 7-7 7z"/></svg>
+                    Telemetry Stream
+                </span>
+                <span class="live-tag" id="ping-tag">18ms</span>
             </div>
-        </form>
-    </div>
-
-    <div class="bottom-card" id="info-box">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        <div class="bottom-info">
-            <h3 id="info-title">YouTube Workspace</h3>
-            <p id="info-desc">YouTube is an online video sharing and social media platform created in Feb 2005. It features millions of user-generated videos, live streams, and global creators.</p>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+                <div class="item-card">
+                    <h4>Daemon Status</h4>
+                    <p id="socket-status" style="color: #a6e3a1;">Connected to local socket</p>
+                </div>
+                <div class="item-card">
+                    <h4>Active Shell Window</h4>
+                    <p>hyprland - workspace 1</p>
+                </div>
+                <div class="item-card">
+                    <h4>Network Bandwidth</h4>
+                    <p>0.4 MB/s down | 0.1 MB/s up</p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="dock">
-        <a href="#" class="dock-item" onclick="switchTab(0); return false;">
-            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            <div class="dock-text"><span>YouTube</span><small>Hub for endless videos</small></div>
-        </a>
-        <a href="#" class="dock-item" onclick="switchTab(1); return false;">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <div class="dock-text"><span>GitHub</span><small>Code market for devs</small></div>
-        </a>
-        <a href="#" class="dock-item" onclick="switchTab(2); return false;">
-            <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-1.25 1.25h-1.11v1.11a1.25 1.25 0 0 1-2.5 0v-1.11h-1.11a1.25 1.25 0 0 1 0-2.5h1.11V4.993a1.25 1.25 0 0 1 2.5 0v1.11h1.11z"/></svg>
-            <div class="dock-text"><span>Reddit</span><small>Front page of internet</small></div>
-        </a>
-        <a href="#" class="dock-item" onclick="switchTab(3); return false;">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <div class="dock-text"><span>X / Twitter</span><small>Real-time global feed</small></div>
-        </a>
+        <div class="dock-container">
+            <div class="dock">
+                <a href="#" class="dock-item" onclick="switchTab(0); return false;">
+                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <div class="dock-text"><span>YouTube</span><small>Live Feed Hub</small></div>
+                </a>
+                <a href="#" class="dock-item" onclick="switchTab(1); return false;">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <div class="dock-text"><span>GitHub</span><small>Code repositories</small></div>
+                </a>
+                <a href="#" class="dock-item" onclick="switchTab(2); return false;">
+                    <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-1.25 1.25h-1.11v1.11a1.25 1.25 0 0 1-2.5 0v-1.11h-1.11a1.25 1.25 0 0 1 0-2.5h1.11V4.993a1.25 1.25 0 0 1 2.5 0v1.11h1.11z"/></svg>
+                    <div class="dock-text"><span>Reddit</span><small>Community boards</small></div>
+                </a>
+                <a href="#" class="dock-item" onclick="switchTab(3); return false;">
+                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <div class="dock-text"><span>X / Twitter</span><small>Global feed</small></div>
+                </a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -218,16 +228,14 @@
         const tabs = [
             {
                 title: "YouTube Workspace",
-                desc: "YouTube is an online video sharing and social media platform created in Feb 2005. It features millions of user-generated videos, live streams, and global creators.",
-                feed: [
-                    { h: "Lofi Hip Hop Radio 24/7", p: "Lofi Girl • 42k watching live", link: "https://youtube.com" },
-                    { h: "Hyprland Customization Guide", p: "Linux Tech • 340k views", link: "https://youtube.com" },
-                    { h: "Top 10 Web Dev Trends 2026", p: "Fireship • 1.2M views", link: "https://youtube.com" }
-                ]
+                desc: "Live fetching latest uploads via YouTube public RSS feeds directly to your custom startpage dashboard.",
+                isRealYouTube: true,
+                feed: [] 
             },
             {
                 title: "GitHub Workspace",
-                desc: "GitHub is the world's largest platform for software development, hosting millions of open-source repositories, developer tools, and code packages.",
+                desc: "GitHub is the world's largest platform for software development, hosting open-source tools and repos.",
+                isRealYouTube: false,
                 feed: [
                     { h: "hyprwm / Hyprland", p: "Dynamic tiling Wayland compositor", link: "https://github.com/hyprwm/Hyprland" },
                     { h: "catppuccin / catppuccin", p: "Soothing pastel theme for developers", link: "https://github.com/catppuccin/catppuccin" },
@@ -236,23 +244,47 @@
             },
             {
                 title: "Reddit Workspace",
-                desc: "Reddit is a network of communities where people can dive into their interests, hobbies, and gaming passions through user-voted discussions.",
+                desc: "Reddit is a network of communities where people dive into technical interests and custom ricing setups.",
+                isRealYouTube: false,
                 feed: [
-                    { h: "r/unixporn", p: "Top rice: Cyberpunk GTK Theme 2026", link: "https://reddit.com/r/unixporn" },
-                    { h: "r/ProgrammerHumor", p: "When production crashes on a Friday afternoon", link: "https://reddit.com/r/ProgrammerHumor" },
-                    { h: "r/hyprland", p: "Help with animations config file", link: "https://reddit.com/r/hyprland" }
+                    { h: "r/unixporn", p: "Top rice: Cyberpunk GTK Theme setup", link: "https://reddit.com/r/unixporn" },
+                    { h: "r/ProgrammerHumor", p: "When production crashes on Friday afternoon", link: "https://reddit.com/r/ProgrammerHumor" },
+                    { h: "r/hyprland", p: "Help with animations config file syntax", link: "https://reddit.com/r/hyprland" }
                 ]
             },
             {
                 title: "X / Twitter Workspace",
-                desc: "X is a real-time microblogging network keeping track of global news, trending tech discussions, and instant community updates.",
+                desc: "Real-time microblogging network tracking global news, tech discussions, and community updates.",
+                isRealYouTube: false,
                 feed: [
                     { h: "#ArchLinux", p: "New stable kernel release rolling out today", link: "https://x.com" },
-                    { h: "#WebDevelopment", p: "Everyone is shifting towards blazing fast local tools", link: "https://x.com" },
-                    { h: "Tech Trends", p: "AI workflows and custom browsers are taking over", link: "https://x.com" }
+                    { h: "#WebDevelopment", p: "Shifting towards blazing fast local tools", link: "https://x.com" },
+                    { h: "Tech Trends", p: "AI workflows and custom browsers taking over", link: "https://x.com" }
                 ]
             }
         ];
+
+        async function fetchYouTubeFeed() {
+            try {
+                // Lofi Girl channel ID (UC52X5nvz_c_N04tP7eA5oTg) as a default live feed example
+                const channelID = "UC52X5nvz_c_N04tP7eA5oTg"; 
+                const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D${channelID}`);
+                const data = await res.json();
+                
+                if (data.status === 'ok') {
+                    tabs[0].feed = data.items.slice(0, 4).map(item => ({
+                        h: item.title,
+                        p: `Published: ${item.pubDate.split(' ')[0]}`,
+                        link: item.link
+                    }));
+                    if(document.querySelector('.ws-dot.active').getAttribute('onclick').includes('0')) {
+                        switchTab(0);
+                    }
+                }
+            } catch (e) {
+                tabs[0].feed = [{ h: "Lofi Hip Hop Radio", p: "Stream active on YouTube", link: "https://youtube.com" }];
+            }
+        }
 
         function switchTab(index) {
             const dots = document.querySelectorAll('.ws-dot');
@@ -262,9 +294,11 @@
 
             document.getElementById('info-title').textContent = tabs[index].title;
             document.getElementById('info-desc').textContent = tabs[index].desc;
+            document.getElementById('left-pane-title').textContent = tabs[index].isRealYouTube ? "YouTube Live Feed" : "Trending Feed";
 
             const feedContainer = document.getElementById('left-feed');
             feedContainer.innerHTML = '';
+            
             tabs[index].feed.forEach(item => {
                 const card = document.createElement('a');
                 card.href = item.link;
@@ -277,6 +311,7 @@
 
         setInterval(updateClock, 1000);
         updateClock();
+        fetchYouTubeFeed();
     </script>
 </body>
 </html>
