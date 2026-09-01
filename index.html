@@ -28,8 +28,8 @@
             margin: 0 auto;
         }
 
-        /* Top Bar Widgets */
-        .top-left { display: flex; align-items: center; gap: 8px; grid-column: 1; grid-row: 1; }
+        /* ================= TOP BAR — fixed / never draggable ================= */
+        .top-left { display: flex; align-items: center; gap: 8px; grid-column: 1; grid-row: 1; z-index: 30; }
         .clock-widget { width: 34px; height: 34px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
@@ -39,19 +39,26 @@
         .center-dot { position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; margin-top: -2px; margin-left: -2px; background: var(--accent); border-radius: 50%; }
         .digital-time { font-size: 0.6rem; font-weight: 600; background: var(--bg-glass); padding: 2px 7px; border-radius: 8px; border: 1px solid var(--border-glass); color: var(--accent); backdrop-filter: blur(12px); }
 
-        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; grid-column: 2; grid-row: 1; }
+        .reset-btn { width: 22px; height: 22px; border-radius: 50%; background: var(--bg-glass); border: 1px solid var(--border-glass); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: 0.2s ease; }
+        .reset-btn:hover { border-color: var(--accent); background: rgba(203,166,247,0.15); }
+        .reset-btn svg { width: 11px; height: 11px; fill: var(--accent); }
+
+        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; grid-column: 2; grid-row: 1; z-index: 30; }
         .workspaces { display: flex; gap: 5px; background: var(--bg-glass); padding: 2px 8px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
         .ws-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
         .ws-dot.active { width: 16px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
         .date-widget { font-size: 0.58rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 8px; border-radius: 8px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
 
-        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 3px 6px; border-radius: 10px; backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 1px; width: 145px; font-size: 0.55rem; }
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 3px 6px; border-radius: 10px; backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 1px; width: 145px; font-size: 0.55rem; z-index: 30; }
         .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; }
         .bar-container { width: 45px; height: 2px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
-        /* Side Panes */
+        /* ================= DRAGGABLE WIDGETS ================= */
+        .side-pane, .widget { position: relative; z-index: 2; transition: box-shadow 0.2s ease, transform 0.15s ease; }
+        .side-pane.dragging, .widget.dragging { z-index: 50; box-shadow: 0 16px 40px rgba(0,0,0,0.55), 0 0 0 1px var(--accent); transform: scale(1.015); cursor: grabbing; }
+
         .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(8px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow-y: auto; height: calc(100vh - 66px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
@@ -60,7 +67,9 @@
         /* Restricted Right Pane: sized to fit its content (title + specs + logos), not the full column height */
         .side-pane-right { grid-column: 3; justify-content: flex-start; height: fit-content; overflow-y: visible; align-self: start; }
 
-        .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; }
+        .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; border-radius: 6px 6px 0 0; transition: background 0.2s ease; }
+        .pane-title:hover { background: rgba(255,255,255,0.05); }
+        .pane-title:active { cursor: grabbing; }
         .pane-title svg { width: 10px; height: 10px; fill: var(--accent); }
         .live-tag { font-size: 0.45rem; background: rgba(203,166,247,0.2); padding: 1px 4px; border-radius: 4px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 2px; }
 
@@ -73,8 +82,14 @@
         .item-card h4 { font-size: 0.58rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .item-card p { font-size: 0.48rem; color: rgba(255, 255, 255, 0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* Center Stack */
+        /* Center Stack — now just an initial-position wrapper; the two children are independent widgets */
         .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 10px; height: calc(100vh - 66px); }
+
+        .widget { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 100%; max-width: 460px; }
+
+        .drag-handle { width: 38px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.25); cursor: grab; touch-action: none; transition: background 0.2s ease, width 0.2s ease; }
+        .drag-handle:hover { background: var(--accent); width: 50px; }
+        .drag-handle:active { cursor: grabbing; background: var(--accent); }
 
         .search-container { width: 100%; max-width: 440px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
@@ -111,6 +126,9 @@
                 </div>
             </div>
             <div class="digital-time" id="digital-clock">00:00</div>
+            <div class="reset-btn" id="reset-layout" title="Reset widget layout">
+                <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+            </div>
         </div>
 
         <div class="top-center">
@@ -135,8 +153,8 @@
             <div class="sys-row"><span>RAM</span><div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 58%;"></div></div></div>
         </div>
 
-        <div class="side-pane side-pane-left">
-            <div class="pane-title">
+        <div class="side-pane side-pane-left" id="pane-left">
+            <div class="pane-title" title="Drag to move">
                 <span style="display:flex; align-items:center; gap:4px;">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     <span id="left-pane-title">Trending Feed</span>
@@ -150,30 +168,36 @@
         </div>
 
         <div class="center-stack">
-            <div class="search-container">
-                <form action="https://www.startpage.com/do/dsearch" method="GET">
-                    <div class="search-wrapper">
-                        <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                        <input type="text" name="query" class="search-box" placeholder="Search Startpage..." autofocus autocomplete="off">
-                    </div>
-                </form>
+            <div class="widget" id="widget-search">
+                <div class="drag-handle" title="Drag to move"></div>
+                <div class="search-container">
+                    <form action="https://www.startpage.com/do/dsearch" method="GET">
+                        <div class="search-wrapper">
+                            <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                            <input type="text" name="query" class="search-box" placeholder="Search Startpage..." autofocus autocomplete="off">
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <a href="#" target="_blank" class="bottom-card" id="wiki-card">
-                <div class="bottom-logo-container">
-                    <svg viewBox="0 0 24 24" width="100%" height="100%">
-                        <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </div>
-                <div class="bottom-info">
-                    <h3 id="info-title">Loading Wikipedia...</h3>
-                    <p id="info-desc">Fetching live intro excerpt from Wikipedia data endpoint...</p>
-                </div>
-            </a>
+            <div class="widget" id="widget-wiki">
+                <div class="drag-handle" title="Drag to move"></div>
+                <a href="#" target="_blank" class="bottom-card" id="wiki-card">
+                    <div class="bottom-logo-container">
+                        <svg viewBox="0 0 24 24" width="100%" height="100%">
+                            <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
+                    <div class="bottom-info">
+                        <h3 id="info-title">Loading Wikipedia...</h3>
+                        <p id="info-desc">Fetching live intro excerpt from Wikipedia data endpoint...</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <div class="side-pane side-pane-right">
-            <div class="pane-title">
+        <div class="side-pane side-pane-right" id="pane-right">
+            <div class="pane-title" title="Drag to move">
                 <span style="display:flex; align-items:center; gap:4px;">
                     <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.45-.32-2.83-.88-4.07l-2.6 1.53c.3.79.48 1.64.48 2.54 0 3.87-3.13 7-7 7z"/></svg>
                     Apple Device Telemetry
@@ -349,6 +373,83 @@
         switchTab(0);
         setInterval(updateClock, 1000);
         updateClock();
+
+        /* ================= DRAG SYSTEM ================= */
+        // Every widget starts in its normal grid/flex position (the "organized" layout).
+        // On the first pointerdown on a widget's handle, it's frozen to its current
+        // on-screen rect and switched to position:fixed, then dragged freely.
+        // The top bar (.top-left / .top-center / .top-right) never gets a handle,
+        // so it can never be moved.
+        function makeDraggable(widgetEl, handleEl) {
+            if (!widgetEl || !handleEl) return;
+            let dragging = false;
+            let offsetX = 0, offsetY = 0;
+            const TOP_BAR_HEIGHT = 58; // keep widgets from being dragged under the fixed top bar
+
+            function getPoint(e) {
+                if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                return { x: e.clientX, y: e.clientY };
+            }
+
+            function onPointerDown(e) {
+                const rect = widgetEl.getBoundingClientRect();
+                widgetEl.style.position = 'fixed';
+                widgetEl.style.left = rect.left + 'px';
+                widgetEl.style.top = rect.top + 'px';
+                widgetEl.style.width = rect.width + 'px';
+                widgetEl.style.height = rect.height + 'px';
+                widgetEl.style.right = 'auto';
+                widgetEl.style.bottom = 'auto';
+                widgetEl.style.margin = '0';
+                widgetEl.style.maxHeight = rect.height + 'px';
+
+                const p = getPoint(e);
+                offsetX = p.x - rect.left;
+                offsetY = p.y - rect.top;
+                dragging = true;
+                widgetEl.classList.add('dragging');
+
+                window.addEventListener('pointermove', onPointerMove, { passive: false });
+                window.addEventListener('pointerup', onPointerUp);
+                window.addEventListener('touchmove', onPointerMove, { passive: false });
+                window.addEventListener('touchend', onPointerUp);
+                e.preventDefault();
+            }
+
+            function onPointerMove(e) {
+                if (!dragging) return;
+                e.preventDefault();
+                const p = getPoint(e);
+                const w = widgetEl.offsetWidth;
+                const h = widgetEl.offsetHeight;
+                let newLeft = p.x - offsetX;
+                let newTop = p.y - offsetY;
+                newLeft = Math.max(4, Math.min(newLeft, window.innerWidth - w - 4));
+                newTop = Math.max(TOP_BAR_HEIGHT, Math.min(newTop, window.innerHeight - h - 4));
+                widgetEl.style.left = newLeft + 'px';
+                widgetEl.style.top = newTop + 'px';
+            }
+
+            function onPointerUp() {
+                dragging = false;
+                widgetEl.classList.remove('dragging');
+                window.removeEventListener('pointermove', onPointerMove);
+                window.removeEventListener('pointerup', onPointerUp);
+                window.removeEventListener('touchmove', onPointerMove);
+                window.removeEventListener('touchend', onPointerUp);
+            }
+
+            handleEl.addEventListener('pointerdown', onPointerDown);
+            handleEl.addEventListener('touchstart', onPointerDown, { passive: false });
+        }
+
+        makeDraggable(document.getElementById('pane-left'), document.getElementById('pane-left').querySelector('.pane-title'));
+        makeDraggable(document.getElementById('pane-right'), document.getElementById('pane-right').querySelector('.pane-title'));
+        makeDraggable(document.getElementById('widget-search'), document.getElementById('widget-search').querySelector('.drag-handle'));
+        makeDraggable(document.getElementById('widget-wiki'), document.getElementById('widget-wiki').querySelector('.drag-handle'));
+
+        // Reset button: simplest, most reliable way back to the organized start state.
+        document.getElementById('reset-layout').addEventListener('click', () => location.reload());
     </script>
 </body>
 </html>
