@@ -51,12 +51,12 @@
         .bar-container { width: 45px; height: 2px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
-        /* Side Panes - Sized exactly to user drawing boxes */
+        /* Side Panes - Sized to match user boxes */
         .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(8px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow-y: auto; height: calc(100vh - 66px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; }
-        .side-pane-right { grid-column: 3; justify-content: flex-start; height: 350px; } /* Trimmed down height to match right-side red box drawing */
+        .side-pane-right { grid-column: 3; justify-content: flex-start; height: 430px; } 
         
         .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; }
         .pane-title svg { width: 10px; height: 10px; fill: var(--accent); }
@@ -80,14 +80,18 @@
         .search-box { width: 100%; padding: 10px 18px 10px 42px; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(12px); color: #ffffff; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Wikipedia Card with MacOS Fastfetch Logo */
+        /* Wikipedia Card with YouTube Logo */
         .bottom-card { width: 100%; max-width: 460px; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-decoration: none; color: inherit; transition: 0.2s ease; }
         .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.1); }
         .bottom-logo-container { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .bottom-logo-container svg { width: 30px; height: 30px; }
+        .bottom-logo-container svg { width: 28px; height: 28px; }
         .bottom-info { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
         .bottom-info h3 { font-size: 0.72rem; font-weight: 700; color: #fff; }
         .bottom-info p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.75); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+        /* Fastfetch Logo Section under right specs */
+        .logos-footer { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: auto; padding: 8px 0 2px 0; border-top: 1px solid var(--border-glass); }
+        .fastfetch-logo-wrap { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
     </style>
 </head>
 <body>
@@ -155,10 +159,8 @@
 
             <a href="#" target="_blank" class="bottom-card" id="wiki-card">
                 <div class="bottom-logo-container">
-                    <svg viewBox="0 0 170 170" width="100%" height="100%">
-                        <path fill="#ea4335" d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.1-1.91-14.24-6.12-3.3-2.73-7.2-7.38-11.7-13.95-6.85-10.02-12.2-21.13-16.06-33.32-3.87-12.18-5.8-23.75-5.8-34.71 0-14.54 3.65-26.24 10.96-35.11 7.31-8.87 16.59-13.38 27.84-13.38 5.66 0 11.41 1.34 17.26 4.02 5.84 2.68 9.77 4.02 11.8 4.02 1.83 0 5.86-1.39 12.09-4.17 6.22-2.78 12.06-4.11 17.51-3.98 12.23.43 21.87 4.96 28.91 13.59-10.85 6.6-16.14 15.82-15.87 27.67.27 10.59 4.38 19.14 12.33 25.64 7.96 6.5 17.3 9.87 28.03 10.11-2.92 9.07-6.9 18.06-11.94 26.97z"/>
-                        <path fill="#4285f4" d="M119.22 32.55c0 7.84-2.83 14.94-8.5 21.31-5.66 6.37-12.63 10.05-20.9 11.04-.33-4.02.65-8.25 2.94-12.69 2.29-4.44 5.51-8.19 9.66-11.25 4.15-3.06 8.52-5.07 13.11-6.04 3.32-.65 5.09-.3 5.3 1.06-.03.22-.05.86-.05 1.92z"/>
-                        <path fill="#fbbc05" d="M119.22 32.55c0 7.84-2.83 14.94-8.5 21.31-5.66 6.37-12.63 10.05-20.9 11.04-.33-4.02.65-8.25 2.94-12.69 2.29-4.44 5.51-8.19 9.66-11.25 4.15-3.06 8.52-5.07 13.11-6.04 3.32-.65 5.09-.3 5.3 1.06-.03.22-.05.86-.05 1.92z" opacity="0"/>
+                    <svg viewBox="0 0 24 24" width="100%" height="100%">
+                        <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                 </div>
                 <div class="bottom-info">
@@ -196,6 +198,21 @@
                 <div class="item-card">
                     <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div>
+                </div>
+            </div>
+
+            <div class="logos-footer">
+                <div class="fastfetch-logo-wrap" title="macOS Fastfetch">
+                    <svg viewBox="0 0 170 170" width="100%" height="100%">
+                        <path fill="#ea4335" d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.1-1.91-14.24-6.12-3.3-2.73-7.2-7.38-11.7-13.95-6.85-10.02-12.2-21.13-16.06-33.32-3.87-12.18-5.8-23.75-5.8-34.71 0-14.54 3.65-26.24 10.96-35.11 7.31-8.87 16.59-13.38 27.84-13.38 5.66 0 11.41 1.34 17.26 4.02 5.84 2.68 9.77 4.02 11.8 4.02 1.83 0 5.86-1.39 12.09-4.17 6.22-2.78 12.06-4.11 17.51-3.98 12.23.43 21.87 4.96 28.91 13.59-10.85 6.6-16.14 15.82-15.87 27.67.27 10.59 4.38 19.14 12.33 25.64 7.96 6.5 17.3 9.87 28.03 10.11-2.92 9.07-6.9 18.06-11.94 26.97z"/>
+                        <path fill="#4285f4" d="M119.22 32.55c0 7.84-2.83 14.94-8.5 21.31-5.66 6.37-12.63 10.05-20.9 11.04-.33-4.02.65-8.25 2.94-12.69 2.29-4.44 5.51-8.19 9.66-11.25 4.15-3.06 8.52-5.07 13.11-6.04 3.32-.65 5.09-.3 5.3 1.06-.03.22-.05.86-.05 1.92z"/>
+                        <path fill="#fbbc05" d="M119.22 32.55c0 7.84-2.83 14.94-8.5 21.31-5.66 6.37-12.63 10.05-20.9 11.04-.33-4.02.65-8.25 2.94-12.69 2.29-4.44 5.51-8.19 9.66-11.25 4.15-3.06 8.52-5.07 13.11-6.04 3.32-.65 5.09-.3 5.3 1.06-.03.22-.05.86-.05 1.92z" opacity="0"/>
+                    </svg>
+                </div>
+                <div class="fastfetch-logo-wrap" title="Arch Linux">
+                    <svg viewBox="0 0 300 300" width="100%" height="100%">
+                        <path fill="#1793d1" d="M140.23 16.51c-3.15 5.82-6.57 11.83-9.87 17.75-29.08 52.12-58.17 104.24-87.26 156.36-2.5 4.49-5.11 9.15-6.67 14.07-2.31 7.28-.43 14.88 4.67 20.35 5.25 5.65 13.14 7.64 20.34 5.12 5.06-1.78 9.5-5.09 13.56-8.24 23.33-18.17 46.66-36.33 69.99-54.5 2.06-1.6 4.12-3.21 6.18-4.81 2.06 1.6 4.12 3.21 6.18 4.81 23.33 18.17 46.66 36.33 69.99 54.5 4.06 3.15 8.5 6.46 13.56 8.24 7.2 2.52 15.09.53 20.34-5.12 5.1-5.47 6.98-13.07 4.67-20.35-1.56-4.92-4.17-9.58-6.67-14.07-29.09-52.12-58.18-104.24-87.26-156.36-3.3-5.92-6.72-11.93-9.87-17.75-3.69-6.81-11.58-10.51-19.14-9.33-4.1.65-7.97 3.03-10.45 6.47zm7.55 37.66c25.43 45.85 50.87 91.71 76.3 137.56-17.29-13.3-34.58-26.6-51.87-39.9-1.92-1.48-3.9-3-5.93-4.52-2.03 1.52-4.01 3.04-5.93 4.52-17.29 13.3-34.58 26.6-51.87 39.9 25.43-45.85 50.87-91.71 76.3-137.56z"/>
+                    </svg>
                 </div>
             </div>
         </div>
