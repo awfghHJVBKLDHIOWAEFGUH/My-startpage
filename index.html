@@ -8,84 +8,84 @@
         :root {
             --accent: #cba6f7;
             --accent-glow: rgba(203, 166, 247, 0.35);
-            --bg-glass: rgba(17, 17, 27, 0.75);
-            --border-glass: rgba(255, 255, 255, 0.15);
+            --bg-glass: rgba(17, 17, 27, 0.45); /* High transparency so wallpaper shines through! */
+            --border-glass: rgba(255, 255, 255, 0.12);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, sans-serif; }
         body { height: 100vh; width: 100vw; overflow: hidden; position: relative; color: #cdd6f4; background: #0b0b10; }
         #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.45); backdrop-filter: blur(4px); z-index: -1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.25); backdrop-filter: blur(2px); z-index: -1; }
 
         .dashboard {
             display: grid;
             grid-template-columns: 310px 1fr 310px;
-            grid-template-rows: 55px 1fr;
+            grid-template-rows: 50px 1fr;
             height: 100vh;
-            padding: 10px 20px;
-            gap: 10px;
+            padding: 8px 16px;
+            gap: 12px;
             max-width: 1600px;
             margin: 0 auto;
         }
 
         /* Top Bar Widgets */
         .top-left { display: flex; align-items: center; gap: 8px; grid-column: 1; grid-row: 1; }
-        .clock-widget { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 12px var(--accent-glow); flex-shrink: 0; }
+        .clock-widget { width: 34px; height: 34px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
         .hand.hour { width: 3px; height: 26%; margin-left: -1.5px; }
         .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
         .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
         .center-dot { position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; margin-top: -2px; margin-left: -2px; background: var(--accent); border-radius: 50%; }
-        .digital-time { font-size: 0.62rem; font-weight: 600; background: var(--bg-glass); padding: 2px 7px; border-radius: 8px; border: 1px solid var(--border-glass); color: var(--accent); }
+        .digital-time { font-size: 0.6rem; font-weight: 600; background: var(--bg-glass); padding: 2px 7px; border-radius: 8px; border: 1px solid var(--border-glass); color: var(--accent); backdrop-filter: blur(12px); }
 
         .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; grid-column: 2; grid-row: 1; }
         .workspaces { display: flex; gap: 5px; background: var(--bg-glass); padding: 2px 8px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
         .ws-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
         .ws-dot.active { width: 16px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-        .date-widget { font-size: 0.6rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 8px; border-radius: 8px; border: 1px solid var(--border-glass); }
+        .date-widget { font-size: 0.58rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 8px; border-radius: 8px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
 
-        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 3px 6px; border-radius: 10px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 1px; width: 145px; font-size: 0.55rem; }
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 3px 6px; border-radius: 10px; backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 1px; width: 145px; font-size: 0.55rem; }
         .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; }
         .bar-container { width: 45px; height: 2px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
-        /* Side Panes */
-        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; gap: 5px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; height: calc(100vh - 75px); }
+        /* Side Panes - Fully Transparent Wallpaper View */
+        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(8px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow-y: auto; height: calc(100vh - 66px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; }
         .side-pane-right { grid-column: 3; justify-content: space-between; }
         
-        .pane-title { font-size: 0.68rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; }
+        .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; }
         .pane-title svg { width: 10px; height: 10px; fill: var(--accent); }
         .live-tag { font-size: 0.45rem; background: rgba(203,166,247,0.2); padding: 1px 4px; border-radius: 4px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 2px; }
 
-        /* Feed Cards (Max Packed Height - 10 Items) */
-        .item-card { background: rgba(255, 255, 255, 0.04); padding: 4px 6px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
-        .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
-        .item-thumb { width: 36px; height: 23px; border-radius: 3px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
-        .item-icon { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
+        /* Feed Cards */
+        .item-card { background: rgba(255, 255, 255, 0.05); padding: 4px 6px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 6px; align-items: center; flex-shrink: 0; backdrop-filter: blur(4px); }
+        .item-card:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); transform: translateY(-1px); }
+        .item-thumb { width: 34px; height: 22px; border-radius: 3px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+        .item-icon { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
         .item-content { display: flex; flex-direction: column; gap: 1px; overflow: hidden; }
-        .item-card h4 { font-size: 0.6rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.5rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card h4 { font-size: 0.58rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.48rem; color: rgba(255, 255, 255, 0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* Center Stack */
-        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 5px 10px; height: calc(100vh - 75px); }
+        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 10px; height: calc(100vh - 66px); }
         
-        .search-container { width: 100%; max-width: 460px; margin: auto 0; }
+        .search-container { width: 100%; max-width: 440px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
         .search-icon-svg { position: absolute; left: 16px; width: 15px; height: 15px; fill: var(--accent); pointer-events: none; }
-        .search-box { width: 100%; padding: 10px 18px 10px 42px; font-size: 0.82rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
+        .search-box { width: 100%; padding: 10px 18px 10px 42px; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(12px); color: #ffffff; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Bottom Wikipedia Card (Pulled Onscreen) */
-        .bottom-card { width: 100%; max-width: 500px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px; box-shadow: 0 0 25px var(--accent-glow); text-decoration: none; color: inherit; transition: 0.2s ease; margin-bottom: 2px; }
-        .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.09); }
-        .bottom-logo-container { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; fill: var(--accent); }
-        .bottom-info h3 { font-size: 0.78rem; font-weight: 700; margin-bottom: 2px; color: #fff; display: flex; align-items: center; gap: 5px; }
-        .bottom-info p { font-size: 0.62rem; color: rgba(255, 255, 255, 0.8); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        /* Wikipedia Card (Locked In) */
+        .bottom-card { width: 100%; max-width: 460px; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 12px; padding: 8px 12px; display: flex; align-items: flex-start; gap: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-decoration: none; color: inherit; transition: 0.2s ease; }
+        .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.1); }
+        .bottom-logo-container { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; fill: var(--accent); }
+        .bottom-info h3 { font-size: 0.72rem; font-weight: 700; margin-bottom: 2px; color: #fff; display: flex; align-items: center; gap: 5px; }
+        .bottom-info p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.75); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body>
@@ -142,7 +142,6 @@
         </div>
 
         <div class="center-stack">
-            <div></div>
             <div class="search-container">
                 <form action="https://www.startpage.com/do/dsearch" method="GET">
                     <div class="search-wrapper">
@@ -169,29 +168,29 @@
                 </span>
                 <span class="live-tag" id="ping-tag">12ms</span>
             </div>
-            <div style="display: flex; flex-direction: column; gap: 5px;">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--accent);"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Hardware Processor</h4><p style="color: var(--accent);">Apple A16 Bionic (6-core)</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Operating System</h4><p>iPadOS Webkit Environment</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--accent);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Memory Allocation</h4><p>4GB LPDDR5 • Active Cache</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Display Specs</h4><p>Liquid Retina • 60Hz Viewport</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div>
                 </div>
             </div>
-            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.4); text-align: center; padding-top: 2px;">A16 Silicon Core Active</div>
+            <div style="font-size: 0.48rem; color: rgba(255,255,255,0.4); text-align: center; padding-top: 2px;">A16 Silicon Core Active</div>
         </div>
     </div>
 
