@@ -40,14 +40,15 @@
         .bar-container { width: 70px; height: 4px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
-        /* Side Panes (Expanded Big Rigs & Random Live Feed) */
+        /* Side Panes */
         .side-pane { position: absolute; top: 125px; width: 310px; height: calc(100vh - 270px); background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; }
         .side-pane::-webkit-scrollbar { width: 4px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { left: 35px; }
         .side-pane-right { right: 35px; }
         .pane-title { font-size: 0.9rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
-        .live-tag { font-size: 0.6rem; background: rgba(203,166,247,0.2); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border-glass); color: var(--accent); }
+        .pane-title svg { width: 16px; height: 16px; fill: var(--accent); }
+        .live-tag { font-size: 0.6rem; background: rgba(203,166,247,0.2); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 4px; }
 
         .item-card { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: white; transition: 0.2s ease; display: flex; flex-direction: column; gap: 3px; }
         .item-card:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); transform: translateY(-1px); }
@@ -61,13 +62,13 @@
         .search-box { width: 100%; padding: 18px 20px 18px 55px; font-size: 1.05rem; border: 1px solid var(--border-glass); border-radius: 40px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Expanded Middle Info Card (Wikipedia / Yap Box) */
+        /* Expanded Middle Info Card */
         .bottom-card { position: absolute; bottom: 95px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 720px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 20px; padding: 14px 22px; display: flex; align-items: center; gap: 16px; box-shadow: 0 0 25px var(--accent-glow); }
-        .bottom-card svg { width: 40px; height: 40px; fill: var(--accent); flex-shrink: 0; }
+        .bottom-card svg { width: 36px; height: 36px; fill: var(--accent); flex-shrink: 0; }
         .bottom-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
         .bottom-info p { font-size: 0.75rem; color: rgba(255, 255, 255, 0.75); line-height: 1.4; }
 
-        /* Dock / Workspace Switcher Menu */
+        /* Dock Menu */
         .dock { position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; background: var(--bg-glass); padding: 8px 16px; border-radius: 24px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
         .dock-item { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s; cursor: pointer; }
         .dock-item:hover { background: rgba(255, 255, 255, 0.15); border-color: var(--accent); }
@@ -103,15 +104,27 @@
     </div>
 
     <div class="sys-card">
-        <div class="sys-header"><span>user@hyprland</span><span id="weather">Cloudy 17°C</span></div>
+        <div class="sys-header">
+            <span>user@hyprland</span>
+            <span id="weather" style="display:flex; align-items:center; gap:4px;">
+                <svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--accent);"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                Cloudy 17°C
+            </span>
+        </div>
         <div class="sys-row"><span>CPU</span><div class="bar-container"><div class="bar-fill" id="cpu-bar" style="width: 25%;"></div></div></div>
         <div class="sys-row"><span>RAM</span><div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 42%;"></div></div></div>
     </div>
 
     <div class="side-pane side-pane-left">
         <div class="pane-title">
-            <span>🔥 Live Trending Feed</span>
-            <span class="live-tag">LIVE 🟢</span>
+            <span style="display:flex; align-items:center; gap:6px;">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Live Trending Feed
+            </span>
+            <span class="live-tag">
+                <svg viewBox="0 0 24 24" style="width:8px;height:8px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
+                ACTIVE
+            </span>
         </div>
         <div id="left-feed" style="display: flex; flex-direction: column; gap: 8px;">
             <a href="https://youtube.com" target="_blank" class="item-card">
@@ -124,27 +137,30 @@
             </a>
             <a href="https://reddit.com" target="_blank" class="item-card">
                 <h4>r/unixporn Top Post</h4>
-                <p>Check out this insane purple Rice setup ✨</p>
+                <p>Check out this insane purple Rice setup</p>
             </a>
         </div>
     </div>
 
     <div class="side-pane side-pane-right">
         <div class="pane-title">
-            <span>⚡ Live Telemetry</span>
-            <span class="live-tag" id="ping-tag">Ping: 18ms</span>
+            <span style="display:flex; align-items:center; gap:6px;">
+                <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.45-.32-2.83-.88-4.07l-2.6 1.53c.3.79.48 1.64.48 2.54 0 3.87-3.13 7-7 7z"/></svg>
+                Telemetry Stream
+            </span>
+            <span class="live-tag" id="ping-tag">18ms</span>
         </div>
         <div id="right-feed" style="display: flex; flex-direction: column; gap: 8px;">
             <div class="item-card">
-                <h4>WebSocket Connection</h4>
-                <p id="socket-status" style="color: #a6e3a1;">Connected to local daemon</p>
+                <h4>Daemon Status</h4>
+                <p id="socket-status" style="color: #a6e3a1;">Connected to local socket</p>
             </div>
             <div class="item-card">
-                <h4>Active Window</h4>
+                <h4>Active Shell Window</h4>
                 <p>firefox - startpage.html</p>
             </div>
             <div class="item-card">
-                <h4>Network Inactivity</h4>
+                <h4>Network Bandwidth</h4>
                 <p>0.4 MB/s down | 0.1 MB/s up</p>
             </div>
         </div>
@@ -187,7 +203,6 @@
     </div>
 
     <script>
-        // Clock Engine
         function updateClock() {
             const now = new Date();
             document.getElementById('digital-clock').textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
@@ -196,12 +211,10 @@
             document.getElementById('min-hand').style.transform = `rotate(${((now.getMinutes() / 60) * 360) + ((now.getSeconds() / 60) * 6)}deg)`;
             document.getElementById('hour-hand').style.transform = `rotate(${((now.getHours() / 12) * 360) + ((now.getMinutes() / 60) * 30)}deg)`;
             
-            // Randomly fluctuate system bars to look like a live system monitor daemon
             document.getElementById('cpu-bar').style.width = (20 + Math.floor(Math.random() * 25)) + '%';
             document.getElementById('ram-bar').style.width = (40 + Math.floor(Math.random() * 5)) + '%';
         }
 
-        // Tab Data Profiles for Dynamic Switching
         const tabs = [
             {
                 title: "YouTube Workspace",
@@ -242,17 +255,14 @@
         ];
 
         function switchTab(index) {
-            // Update active dot indicators
             const dots = document.querySelectorAll('.ws-dot');
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
 
-            // Update bottom info card description
             document.getElementById('info-title').textContent = tabs[index].title;
             document.getElementById('info-desc').textContent = tabs[index].desc;
 
-            // Update left live feed box items
             const feedContainer = document.getElementById('left-feed');
             feedContainer.innerHTML = '';
             tabs[index].feed.forEach(item => {
