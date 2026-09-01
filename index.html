@@ -20,9 +20,9 @@
         .dashboard {
             display: grid;
             grid-template-columns: 310px 1fr 310px;
-            grid-template-rows: 70px 1fr;
+            grid-template-rows: 60px 1fr;
             height: 100vh;
-            padding: 16px 35px;
+            padding: 12px 25px;
             gap: 12px;
             max-width: 1600px;
             margin: 0 auto;
@@ -30,60 +30,62 @@
 
         /* Top Bar Widgets */
         .top-left { display: flex; align-items: center; gap: 10px; grid-column: 1; grid-row: 1; }
-        .clock-widget { width: 45px; height: 45px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
+        .clock-widget { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
         .hand.hour { width: 3px; height: 26%; margin-left: -1.5px; }
         .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
         .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
         .center-dot { position: absolute; top: 50%; left: 50%; width: 5px; height: 5px; margin-top: -2.5px; margin-left: -2.5px; background: var(--accent); border-radius: 50%; }
-        .digital-time { font-size: 0.68rem; font-weight: 600; background: var(--bg-glass); padding: 3px 8px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
+        .digital-time { font-size: 0.65rem; font-weight: 600; background: var(--bg-glass); padding: 3px 8px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
 
-        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; grid-column: 2; grid-row: 1; }
-        .workspaces { display: flex; gap: 6px; background: var(--bg-glass); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
+        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; grid-column: 2; grid-row: 1; }
+        .workspaces { display: flex; gap: 6px; background: var(--bg-glass); padding: 3px 10px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
         .ws-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
         .ws-dot.active { width: 18px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-        .date-widget { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 10px; border-radius: 10px; border: 1px solid var(--border-glass); }
+        .date-widget { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 10px; border-radius: 10px; border: 1px solid var(--border-glass); }
 
-        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 5px 10px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 2px; width: 165px; font-size: 0.62rem; }
-        .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2px; }
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 4px 8px; border-radius: 12px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 2px; width: 155px; font-size: 0.6rem; }
+        .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; }
-        .bar-container { width: 55px; height: 3px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
+        .bar-container { width: 50px; height: 3px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
         /* Side Panes */
-        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; max-height: calc(100vh - 110px); }
+        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 10px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; height: calc(100vh - 95px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; }
-        .side-pane-right { grid-column: 3; }
+        .side-pane-right { grid-column: 3; justify-content: space-between; }
         
-        .pane-title { font-size: 0.75rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
-        .pane-title svg { width: 12px; height: 12px; fill: var(--accent); }
-        .live-tag { font-size: 0.5rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
+        .pane-title { font-size: 0.72rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+        .pane-title svg { width: 11px; height: 11px; fill: var(--accent); }
+        .live-tag { font-size: 0.48rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
 
-        /* Feed Cards */
-        .item-card { background: rgba(255, 255, 255, 0.04); padding: 6px 9px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; }
+        /* Feed Cards (Max Packed Layout) */
+        .item-card { background: rgba(255, 255, 255, 0.04); padding: 5px 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 7px; align-items: center; }
         .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
-        .item-thumb { width: 44px; height: 30px; border-radius: 5px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
-        .item-icon { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
-        .item-content { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
-        .item-card h4 { font-size: 0.66rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.54rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-thumb { width: 40px; height: 26px; border-radius: 4px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+        .item-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
+        .item-content { display: flex; flex-direction: column; gap: 1px; overflow: hidden; }
+        .item-card h4 { font-size: 0.63rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.52rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* Center Stack */
-        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 15px; }
+        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 10px 15px; height: calc(100vh - 95px); }
         
-        .search-container { width: 100%; max-width: 480px; }
+        .search-container { width: 100%; max-width: 480px; margin-top: auto; margin-bottom: auto; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
-        .search-icon-svg { position: absolute; left: 18px; width: 15px; height: 15px; fill: var(--accent); }
-        .search-box { width: 100%; padding: 11px 20px 11px 46px; font-size: 0.88rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
+        .search-icon-svg { position: absolute; left: 16px; width: 15px; height: 15px; fill: var(--accent); }
+        .search-box { width: 100%; padding: 11px 20px 11px 44px; font-size: 0.85rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 14px 18px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 0 25px var(--accent-glow); }
-        .bottom-logo-container { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; fill: var(--accent); }
-        .bottom-info h3 { font-size: 0.86rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
-        .bottom-info p { font-size: 0.7rem; color: rgba(255, 255, 255, 0.85); line-height: 1.45; }
+        /* Bottom Wikipedia Card */
+        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px 16px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 0 25px var(--accent-glow); text-decoration: none; color: inherit; transition: 0.2s ease; margin-bottom: 5px; }
+        .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.09); }
+        .bottom-logo-container { width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; fill: var(--accent); }
+        .bottom-info h3 { font-size: 0.82rem; font-weight: 700; margin-bottom: 3px; color: #fff; display: flex; align-items: center; gap: 5px; }
+        .bottom-info p { font-size: 0.66rem; color: rgba(255, 255, 255, 0.8); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body>
@@ -129,7 +131,7 @@
             <div class="pane-title">
                 <span style="display:flex; align-items:center; gap:5px;">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span id="left-pane-title">Live Stream Feed</span>
+                    <span id="left-pane-title">Trending Feed</span>
                 </span>
                 <span class="live-tag">
                     <svg viewBox="0 0 24 24" style="width:5px;height:5px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
@@ -140,6 +142,7 @@
         </div>
 
         <div class="center-stack">
+            <div></div>
             <div class="search-container">
                 <form action="https://www.startpage.com/do/dsearch" method="GET">
                     <div class="search-wrapper">
@@ -149,13 +152,13 @@
                 </form>
             </div>
 
-            <div class="bottom-card" id="info-box">
+            <a href="#" target="_blank" class="bottom-card" id="wiki-card">
                 <div class="bottom-logo-container" id="bottom-logo"></div>
                 <div class="bottom-info">
-                    <h3 id="info-title">YouTube Workspace</h3>
-                    <p id="info-desc">YouTube is an American online video sharing and social media platform headquartered in San Bruno, California. Launched in February 2005 by Chad Hurley, Steve Chen, and Jawed Karim, it allows billions of users to discover, watch, upload, and share user-generated and corporate video content globally.</p>
+                    <h3 id="info-title">Loading Wikipedia...</h3>
+                    <p id="info-desc">Fetching live intro excerpt from Wikipedia data endpoint...</p>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="side-pane side-pane-right">
@@ -168,26 +171,27 @@
             </div>
             <div style="display: flex; flex-direction: column; gap: 6px;">
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--accent);"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Hardware Processor</h4><p style="color: var(--accent);">Apple A16 Bionic (6-core)</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Operating System</h4><p>iPadOS Webkit Environment</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--accent);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Memory Allocation</h4><p>4GB LPDDR5 • Active Cache</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Display Specs</h4><p>Liquid Retina • 60Hz Viewport</p></div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
                     <div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div>
                 </div>
             </div>
+            <div style="font-size: 0.55rem; color: rgba(255,255,255,0.4); text-align: center; padding-top: 4px;">A16 Silicon Core Active</div>
         </div>
     </div>
 
@@ -213,58 +217,89 @@
 
         const tabs = [
             {
-                title: "YouTube Workspace",
+                title: "YouTube Trending",
                 logoKey: "youtube",
-                desc: "YouTube is an American online video sharing and social media platform headquartered in San Bruno, California. Launched in February 2005 by Chad Hurley, Steve Chen, and Jawed Karim, it allows billions of users to discover, watch, upload, and share user-generated and corporate video content globally.",
+                wikiPage: "YouTube",
                 paneTitle: "Trending YouTube Feed",
                 feed: [
                     { h: "Lofi Hip Hop Radio - Beats to Study to", p: "Lofi Girl • Live Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
                     { h: "Synthwave Radio - Chill Synth/Retrowave", p: "Lofi Girl Synth • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" },
                     { h: "Apple iPad Event Live Stream Replay", p: "Apple Official • 4M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" },
                     { h: "Never Gonna Give You Up", p: "Rick Astley • 1.5B views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" },
-                    { h: "Coding a Start Page in HTML & CSS", p: "Dev Channel • 320k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" }
+                    { h: "Coding a Start Page in HTML & CSS", p: "Dev Channel • 320k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" },
+                    { h: "Linux Customization Showcase 2026", p: "Ricing Master • 89k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Lo-Fi Beats to Code/Relax to", p: "Synthwave Boy • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" },
+                    { h: "Building an Ultimate iPad Pro Setup", p: "Tech Gadgets • 1.2M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" }
                 ] 
             },
             {
-                title: "GitHub Workspace",
+                title: "GitHub Trending",
                 logoKey: "github",
-                desc: "GitHub, Inc. is a developer platform that allows developers to create, store, manage and share their source code. It uses Git software, providing distributed version control of Git plus access control, bug tracking, feature requests, task management, continuous integration, and wikis for every project.",
+                wikiPage: "GitHub",
                 paneTitle: "Trending Repositories",
                 feed: [
                     { h: "torvalds / linux", p: "Linux kernel source tree repository", link: "https://github.com/torvalds/linux", thumb: "https://opengraph.githubassets.com/1/torvalds/linux" },
                     { h: "facebook / react", p: "The library for web and native UI", link: "https://github.com/facebook/react", thumb: "https://opengraph.githubassets.com/1/facebook/react" },
                     { h: "tailwindlabs / tailwindcss", p: "A utility-first CSS framework", link: "https://github.com/tailwindlabs/tailwindcss", thumb: "https://opengraph.githubassets.com/1/tailwindlabs/tailwindcss" },
                     { h: "shadcn / ui", p: "Beautifully designed component system", link: "https://github.com/shadcn/ui", thumb: "https://opengraph.githubassets.com/1/shadcn/ui" },
-                    { h: "oven-sh / bun", p: "Incredibly fast JavaScript runtime", link: "https://github.com/oven-sh/bun", thumb: "https://opengraph.githubassets.com/1/oven-sh/bun" }
+                    { h: "oven-sh / bun", p: "Incredibly fast JavaScript runtime", link: "https://github.com/oven-sh/bun", thumb: "https://opengraph.githubassets.com/1/oven-sh/bun" },
+                    { h: "hyprwm / Hyprland", p: "Dynamic tiling Wayland compositor", link: "https://github.com/hyprwm/Hyprland", thumb: "https://opengraph.githubassets.com/1/hyprwm/Hyprland" },
+                    { h: "rust-lang / rust", p: "Empowering everyone to build reliable software", link: "https://github.com/rust-lang/rust", thumb: "https://opengraph.githubassets.com/1/rust-lang/rust" },
+                    { h: "Homebrew / brew", p: "The Missing Package Manager for macOS (or Linux)", link: "https://github.com/Homebrew/brew", thumb: "https://opengraph.githubassets.com/1/Homebrew/brew" }
                 ]
             },
             {
-                title: "Twitch Workspace",
+                title: "Twitch Trending",
                 logoKey: "twitch",
-                desc: "Twitch is an American video live streaming service that focuses on video game live streaming, including broadcasts of eSports competitions, creative content, music streams, and 'In Real Life' personality streams owned by Amazon.",
+                wikiPage: "Twitch_(service)",
                 paneTitle: "Live Twitch Channels",
                 feed: [
                     { h: "Shroud", p: "Playing Valorant • 24.1k viewers", link: "https://twitch.tv/shroud", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_shroud-440x248.jpg" },
                     { h: "xQc", p: "Just Chatting • 45.8k viewers", link: "https://twitch.tv/xqcow", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-440x248.jpg" },
                     { h: "Lirik", p: "Variety Gaming • 18.3k viewers", link: "https://twitch.tv/lirik", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-440x248.jpg" },
                     { h: "Tarik", p: "Valorant Watch Parties • 30.5k viewers", link: "https://twitch.tv/tarik", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_tarik-440x248.jpg" },
-                    { h: "Summit1g", p: "Escape from Tarkov • 15.2k viewers", link: "https://twitch.tv/summit1g", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-440x248.jpg" }
+                    { h: "Summit1g", p: "Escape from Tarkov • 15.2k viewers", link: "https://twitch.tv/summit1g", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-440x248.jpg" },
+                    { h: "KaiCenat", p: "SPECIAL STREAM • 110k viewers", link: "https://twitch.tv/kaicenat", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_kaicenat-440x248.jpg" },
+                    { h: "Asmongold", p: "World of Warcraft • 25k viewers", link: "https://twitch.tv/asmongold", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_asmongold-440x248.jpg" },
+                    { h: "BongCloud", p: "Chess Grandmaster Match • 8k viewers", link: "https://twitch.tv", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_shroud-440x248.jpg" }
                 ]
             },
             {
-                title: "X / Twitter Workspace",
+                title: "X / Twitter Trending",
                 logoKey: "twitter",
-                desc: "X (formerly Twitter) is a global social media platform focused on real-time microblogging and public conversation. It allows users to broadcast short text updates, media attachments, and engage in fast-moving global dialogue across diverse topics.",
+                wikiPage: "X_(social_network)",
                 paneTitle: "Global Trends",
                 feed: [
                     { h: "#WebDevelopment", p: "Discussions on modern browser engines", link: "https://x.com", thumb: "" },
                     { h: "#Apple", p: "Latest iPadOS architecture updates", link: "https://x.com", thumb: "" },
                     { h: "#OpenSource", p: "New releases from independent creators", link: "https://x.com", thumb: "" },
                     { h: "#TechNews", p: "Hardware innovations and silicon drops", link: "https://x.com", thumb: "" },
-                    { h: "#Design", p: "Minimalist glassmorphism UI layouts", link: "https://x.com", thumb: "" }
+                    { h: "#Design", p: "Minimalist glassmorphism UI layouts", link: "https://x.com", thumb: "" },
+                    { h: "#TypeScript", p: "New type system features released", link: "https://x.com", thumb: "" },
+                    { h: "#Linux", p: "Custom ricing setups trending worldwide", link: "https://x.com", thumb: "" },
+                    { h: "#AI", p: "Next-gen agentic web architectures", link: "https://x.com", thumb: "" }
                 ]
             }
         ];
+
+        async function fetchWikiSnippet(title, pageKey) {
+            document.getElementById('info-title').textContent = title + " (Wikipedia)";
+            document.getElementById('info-desc').textContent = "Fetching live excerpt from Wikipedia...";
+            document.getElementById('wiki-card').href = `https://en.wikipedia.org/wiki/${pageKey}`;
+
+            try {
+                const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${pageKey}`);
+                const data = await response.json();
+                if (data && data.extract) {
+                    document.getElementById('info-title').textContent = data.title;
+                    document.getElementById('info-desc').textContent = data.extract;
+                } else {
+                    document.getElementById('info-desc').textContent = "Could not load wiki summary excerpt.";
+                }
+            } catch (e) {
+                document.getElementById('info-desc').textContent = "Offline or network restriction prevented Wikipedia fetch.";
+            }
+        }
 
         function switchTab(index) {
             const dots = document.querySelectorAll('.ws-dot');
@@ -272,10 +307,10 @@
                 dot.classList.toggle('active', i === index);
             });
 
-            document.getElementById('info-title').textContent = tabs[index].title;
-            document.getElementById('info-desc').textContent = tabs[index].desc;
             document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
             document.getElementById('bottom-logo').innerHTML = logos[tabs[index].logoKey];
+            
+            fetchWikiSnippet(tabs[index].title, tabs[index].wikiPage);
 
             const feedContainer = document.getElementById('left-feed');
             feedContainer.innerHTML = '';
@@ -286,7 +321,7 @@
                 card.target = '_blank';
                 card.className = 'item-card';
                 
-                let thumbHtml = item.thumb ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--accent);">📌</div>`;
+                let thumbHtml = item.thumb ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--accent);">🔥</div>`;
                 
                 card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
                 feedContainer.appendChild(card);
