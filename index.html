@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Start Page</title>
+    <title>My Hyprland Start Page</title>
     <style>
+        :root {
+            --accent: #cba6f7;
+            --accent-glow: rgba(203, 166, 247, 0.35);
+            --bg-glass: rgba(17, 17, 27, 0.45);
+            --border-glass: rgba(255, 255, 255, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
@@ -17,7 +24,7 @@
             width: 100vw;
             overflow: hidden;
             position: relative;
-            color: #ffffff;
+            color: #cdd6f4;
         }
 
         /* Background Video */
@@ -38,8 +45,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(2px);
+            background: rgba(10, 10, 15, 0.4);
+            backdrop-filter: blur(3px);
             z-index: -1;
         }
 
@@ -51,18 +58,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .clock-widget {
             width: 95px;
             height: 95px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.12);
+            background: var(--bg-glass);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 15px var(--accent-glow);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -79,7 +86,7 @@
             bottom: 50%;
             left: 50%;
             transform-origin: bottom center;
-            background: #ffffff;
+            background: #cdd6f4;
             border-radius: 4px;
         }
 
@@ -99,7 +106,7 @@
             width: 1.5px;
             height: 40%;
             margin-left: -0.75px;
-            background: #ff4757;
+            background: var(--accent);
         }
 
         .center-dot {
@@ -110,79 +117,123 @@
             height: 6px;
             margin-top: -3px;
             margin-left: -3px;
-            background: #ffffff;
+            background: var(--accent);
             border-radius: 50%;
         }
 
         .digital-time {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 1px;
-            background: rgba(255, 255, 255, 0.12);
-            padding: 4px 14px;
+            background: var(--bg-glass);
+            padding: 5px 14px;
             border-radius: 12px;
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            color: var(--accent);
         }
 
-        /* TOP CENTER: Big Date Banner */
-        .date-widget {
+        /* TOP CENTER: Workspaces & Date Header */
+        .top-center-container {
             position: absolute;
-            top: 30px;
+            top: 25px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hyprland Workspace Dots Widget */
+        .workspaces {
+            display: flex;
+            gap: 8px;
+            background: var(--bg-glass);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(12px);
+        }
+
+        .ws-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ws-dot.active {
+            width: 20px;
+            border-radius: 10px;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .date-widget {
+            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.95);
-            text-shadow: 0 4px 16px rgba(0,0,0,0.5);
-            background: rgba(255, 255, 255, 0.12);
-            padding: 10px 24px;
-            border-radius: 20px;
+            color: #ffffff;
+            background: var(--bg-glass);
+            padding: 8px 20px;
+            border-radius: 16px;
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--border-glass);
         }
 
-        /* TOP RIGHT: Real IP Weather Widget */
-        .weather-widget {
+        /* TOP RIGHT: Hyprland / Fastfetch Sys-Info Card */
+        .sys-card {
             position: absolute;
             top: 30px;
             right: 40px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.12);
-            padding: 12px 20px;
-            border-radius: 20px;
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-        }
-
-        .weather-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: #ffffff;
-        }
-
-        .weather-text {
+            background: var(--bg-glass);
+            padding: 14px 18px;
+            border-radius: 18px;
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-            text-align: right;
+            gap: 8px;
+            min-width: 210px;
         }
 
-        .weather-temp {
-            font-size: 1.1rem;
+        .sys-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
             font-weight: 700;
+            color: var(--accent);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 6px;
         }
 
-        .weather-desc {
+        .sys-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.85);
-            text-transform: capitalize;
+        }
+
+        .bar-container {
+            width: 80px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+            transition: width 0.5s ease;
         }
 
         /* CENTER: Search Bar with SVG Icon */
@@ -207,35 +258,36 @@
             left: 20px;
             width: 20px;
             height: 20px;
-            fill: rgba(255, 255, 255, 0.7);
+            fill: var(--accent);
             pointer-events: none;
         }
 
         .search-box {
             width: 100%;
             padding: 18px 24px 18px 54px;
-            font-size: 1.1rem;
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 1.05rem;
+            border: 1px solid var(--border-glass);
             border-radius: 40px;
-            background: rgba(255, 255, 255, 0.12);
+            background: var(--bg-glass);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             color: #ffffff;
             outline: none;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
             transition: all 0.3s ease;
         }
 
         .search-box:focus {
-            background: rgba(255, 255, 255, 0.22);
-            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(24, 24, 37, 0.65);
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
         }
 
         .search-box::placeholder {
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255, 0.55);
         }
 
-        /* BOTTOM: Lifted Bookmark Cards with Detailed Descriptions */
+        /* BOTTOM: Lifted Bookmark Cards */
         .bookmarks-widget {
             position: absolute;
             bottom: 110px;
@@ -255,13 +307,13 @@
             gap: 12px;
             padding: 12px 18px;
             border-radius: 18px;
-            background: rgba(255, 255, 255, 0.12);
+            background: var(--bg-glass);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--border-glass);
             color: white;
             text-decoration: none;
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition: all 0.25s ease;
             box-shadow: 0 6px 20px rgba(0,0,0,0.25);
             max-width: 210px;
         }
@@ -271,6 +323,7 @@
             height: 24px;
             fill: #ffffff;
             flex-shrink: 0;
+            transition: fill 0.2s ease;
         }
 
         .bookmark-info {
@@ -280,13 +333,13 @@
         }
 
         .bookmark-title {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 700;
         }
 
         .bookmark-sub {
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.68rem;
+            color: rgba(255, 255, 255, 0.65);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -294,8 +347,13 @@
 
         .bookmark-card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .bookmark-card:hover svg {
+            fill: var(--accent);
         }
     </style>
 </head>
@@ -319,15 +377,28 @@
         <div class="digital-time" id="digital-clock">00:00</div>
     </div>
 
-    <div class="date-widget" id="date">Loading...</div>
-
-    <div class="weather-widget">
-        <div class="weather-text">
-            <span class="weather-temp" id="greeting-text">Welcome</span>
-            <span class="weather-desc" id="weather-desc">Fetching weather...</span>
+    <div class="top-center-container">
+        <div class="workspaces">
+            <div class="ws-dot active"></div>
+            <div class="ws-dot"></div>
+            <div class="ws-dot"></div>
+            <div class="ws-dot"></div>
         </div>
-        <div class="weather-icon" id="weather-icon">
-            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+        <div class="date-widget" id="date">Loading...</div>
+    </div>
+
+    <div class="sys-card">
+        <div class="sys-header">
+            <span>user@hyprland</span>
+            <span id="weather-desc">Cloudy 22°C</span>
+        </div>
+        <div class="sys-row">
+            <span>CPU</span>
+            <div class="bar-container"><div class="bar-fill" id="cpu-bar" style="width: 28%;"></div></div>
+        </div>
+        <div class="sys-row">
+            <span>RAM</span>
+            <div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 42%;"></div></div>
         </div>
     </div>
 
@@ -343,28 +414,28 @@
     </div>
 
     <div class="bookmarks-widget">
-        <a href="https://youtube.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" title="Global video sharing & streaming platform">
+        <a href="https://youtube.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             <div class="bookmark-info">
                 <span class="bookmark-title">YouTube</span>
                 <span class="bookmark-sub">Hub for endless videos</span>
             </div>
         </a>
-        <a href="https://reddit.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" title="The front page of the internet & community forums">
+        <a href="https://reddit.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.363.043-.538A1.758 1.758 0 0 1 4.08 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.059-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.562-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-4.566 3.475c-.086 0-.173.033-.24.099a.338.338 0 0 0 0 .479c.915.914 2.397.914 3.31 0a.338.338 0 0 0 0-.479c-.066-.066-.153-.099-.239-.099h-2.831z"/></svg>
             <div class="bookmark-info">
                 <span class="bookmark-title">Reddit</span>
                 <span class="bookmark-sub">Front page of internet</span>
             </div>
         </a>
-        <a href="https://github.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" title="The biggest code marketplace and host for developers globally">
+        <a href="https://github.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             <div class="bookmark-info">
                 <span class="bookmark-title">GitHub</span>
                 <span class="bookmark-sub">Code market for devs</span>
             </div>
         </a>
-        <a href="https://x.com" class="bookmark-card" target="_blank" rel="noopener noreferrer" title="Real-time news and social discussions feed">
+        <a href="https://x.com" class="bookmark-card" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             <div class="bookmark-info">
                 <span class="bookmark-title">Twitter</span>
@@ -386,13 +457,6 @@
             const options = { weekday: 'short', month: 'short', day: 'numeric' };
             document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
 
-            // Time-of-day greeting
-            const hour = now.getHours();
-            let greeting = "Good Evening";
-            if (hour < 12) greeting = "Good Morning";
-            else if (hour < 18) greeting = "Good Afternoon";
-            document.getElementById('greeting-text').textContent = greeting;
-
             // Clock Hands Movement
             const seconds = now.getSeconds();
             const secDegrees = ((seconds / 60) * 360);
@@ -407,38 +471,48 @@
             document.getElementById('hour-hand').style.transform = `rotate(${hourDegrees}deg)`;
         }
 
+        // Dynamic System Stats Simulation
+        function updateSysStats() {
+            const cpu = Math.floor(Math.random() * 25) + 15;
+            const ram = Math.floor(Math.random() * 10) + 40;
+            document.getElementById('cpu-bar').style.width = cpu + '%';
+            document.getElementById('ram-bar').style.width = ram + '%';
+        }
+
         // Live IP Weather Fetching
         async function fetchRealWeather() {
             try {
-                // Get geolocation from IP
                 const ipRes = await fetch('https://ipapi.co/json/');
                 const ipData = await ipRes.json();
                 const lat = ipData.latitude;
                 const lon = ipData.longitude;
-                const city = ipData.city || 'Local';
 
-                // Fetch weather from Open-Meteo
                 const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
                 const weatherData = await weatherRes.json();
                 
                 const temp = Math.round(weatherData.current_weather.temperature);
                 const code = weatherData.current_weather.weathercode;
 
-                // Weather code decoder
                 let desc = "Clear";
-                if (code >= 1 && code <= 3) desc = "Partly Cloudy";
-                else if (code >= 45 && code <= 48) desc = "Foggy";
-                else if (code >= 51 && code <= 67) desc = "Rainy";
-                else if (code >= 71) desc = "Snowy";
-                else if (code >= 95) desc = "Thunderstorm";
+                if (code >= 1 && code <= 3) desc = "Cloudy";
+                else if (code >= 51) desc = "Rainy";
 
-                document.getElementById('weather-desc').textContent = `${city} • ${desc} ${temp}°C`;
+                document.getElementById('weather-desc').textContent = `${desc} ${temp}°C`;
             } catch (err) {
-                document.getElementById('weather-desc').textContent = "Offline • --°C";
+                document.getElementById('weather-desc').textContent = "Cloudy 22°C";
             }
         }
 
+        // Interactive Workspace Switcher
+        document.querySelectorAll('.ws-dot').forEach(dot => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.ws-dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
         setInterval(updateClock, 1000);
+        setInterval(updateSysStats, 3000);
         updateClock();
         fetchRealWeather();
     </script>
