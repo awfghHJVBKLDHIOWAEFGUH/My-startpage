@@ -17,12 +17,13 @@
         #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.45); backdrop-filter: blur(4px); z-index: -1; }
 
+        /* Compact Dashboard Grid to fit viewports cleanly */
         .dashboard {
             display: grid;
             grid-template-columns: 310px 1fr 310px;
-            grid-template-rows: 75px 1fr auto auto;
+            grid-template-rows: 70px 1fr;
             height: 100vh;
-            padding: 20px 35px;
+            padding: 16px 35px;
             gap: 12px;
             max-width: 1600px;
             margin: 0 auto;
@@ -30,69 +31,60 @@
 
         /* Top Bar Widgets */
         .top-left { display: flex; align-items: center; gap: 10px; grid-column: 1; grid-row: 1; }
-        .clock-widget { width: 50px; height: 50px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
+        .clock-widget { width: 45px; height: 45px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
         .hand.hour { width: 3px; height: 26%; margin-left: -1.5px; }
         .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
         .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
         .center-dot { position: absolute; top: 50%; left: 50%; width: 5px; height: 5px; margin-top: -2.5px; margin-left: -2.5px; background: var(--accent); border-radius: 50%; }
-        .digital-time { font-size: 0.7rem; font-weight: 600; background: var(--bg-glass); padding: 4px 8px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
+        .digital-time { font-size: 0.68rem; font-weight: 600; background: var(--bg-glass); padding: 3px 8px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
 
-        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; grid-column: 2; grid-row: 1; }
+        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; grid-column: 2; grid-row: 1; }
         .workspaces { display: flex; gap: 6px; background: var(--bg-glass); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
         .ws-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
         .ws-dot.active { width: 18px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-        .date-widget { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 3px 10px; border-radius: 10px; border: 1px solid var(--border-glass); }
+        .date-widget { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 10px; border-radius: 10px; border: 1px solid var(--border-glass); }
 
-        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 6px 10px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 3px; width: 170px; font-size: 0.65rem; }
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 5px 10px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 2px; width: 165px; font-size: 0.62rem; }
         .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; }
-        .bar-container { width: 60px; height: 3px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
+        .bar-container { width: 55px; height: 3px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
         /* Side Panes */
-        .side-pane { grid-row: 2 / span 1; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; max-height: calc(100vh - 210px); }
+        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; max-height: calc(100vh - 110px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; }
         .side-pane-right { grid-column: 3; }
         
-        .pane-title { font-size: 0.78rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .pane-title { font-size: 0.75rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
         .pane-title svg { width: 12px; height: 12px; fill: var(--accent); }
         .live-tag { font-size: 0.5rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
 
-        /* Feed item cards with thumbnail slot (matching your sketch) */
+        /* Clean Feed Cards */
         .item-card { background: rgba(255, 255, 255, 0.04); padding: 7px 9px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; }
         .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
         .item-thumb { width: 48px; height: 32px; border-radius: 6px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
         .item-content { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
-        .item-card h4 { font-size: 0.7rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card h4 { font-size: 0.68rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.56rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* Center Stack (Search + Bigger Info Box) */
-        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 0 15px; }
+        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 15px; }
         
-        .search-container { width: 100%; max-width: 500px; }
+        .search-container { width: 100%; max-width: 480px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
-        .search-icon-svg { position: absolute; left: 18px; width: 16px; height: 16px; fill: var(--accent); }
-        .search-box { width: 100%; padding: 12px 20px 12px 48px; font-size: 0.9rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
+        .search-icon-svg { position: absolute; left: 18px; width: 15px; height: 15px; fill: var(--accent); }
+        .search-box { width: 100%; padding: 11px 20px 11px 46px; font-size: 0.88rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Bigger Bottom Card as requested in sketch */
-        .bottom-card { width: 100%; max-width: 540px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 14px; box-shadow: 0 0 25px var(--accent-glow); }
-        .bottom-card svg { width: 28px; height: 28px; fill: var(--accent); flex-shrink: 0; margin-top: 2px; }
-        .bottom-info h3 { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
-        .bottom-info p { font-size: 0.74rem; color: rgba(255, 255, 255, 0.85); line-height: 1.45; }
-
-        /* Bottom Dock Menu */
-        .dock-container { grid-column: 1 / span 3; grid-row: 3; display: flex; justify-content: center; padding-top: 5px; }
-        .dock { display: flex; gap: 8px; background: var(--bg-glass); padding: 6px 14px; border-radius: 20px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-        .dock-item { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s; cursor: pointer; }
-        .dock-item:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); }
-        .dock-item svg { width: 15px; height: 15px; fill: var(--accent); }
-        .dock-text span { display: block; font-size: 0.65rem; font-weight: 700; }
-        .dock-text small { display: block; font-size: 0.5rem; color: rgba(255,255,255,0.6); }
+        /* Expanded Bottom Card */
+        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 15px 18px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 0 25px var(--accent-glow); }
+        .bottom-card svg { width: 26px; height: 26px; fill: var(--accent); flex-shrink: 0; margin-top: 2px; }
+        .bottom-info h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 3px; color: #fff; }
+        .bottom-info p { font-size: 0.72rem; color: rgba(255, 255, 255, 0.85); line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -138,7 +130,7 @@
             <div class="pane-title">
                 <span style="display:flex; align-items:center; gap:5px;">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span id="left-pane-title">Trending Feed</span>
+                    <span id="left-pane-title">YouTube Live Feed</span>
                 </span>
                 <span class="live-tag">
                     <svg viewBox="0 0 24 24" style="width:5px;height:5px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
@@ -146,8 +138,7 @@
                 </span>
             </div>
             <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;">
-                <div class="item-card"><h4>Loading feed instantly...</h4></div>
-            </div>
+                </div>
         </div>
 
         <div class="center-stack">
@@ -178,57 +169,11 @@
                 <span class="live-tag" id="ping-tag">18ms</span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 6px;">
-                <div class="item-card">
-                    <div class="item-content" style="width:100%;">
-                        <h4>Daemon Status</h4>
-                        <p id="socket-status" style="color: #a6e3a1;">Connected to local socket</p>
-                    </div>
-                </div>
-                <div class="item-card">
-                    <div class="item-content" style="width:100%;">
-                        <h4>Active Shell Window</h4>
-                        <p>hyprland - workspace 1</p>
-                    </div>
-                </div>
-                <div class="item-card">
-                    <div class="item-content" style="width:100%;">
-                        <h4>Network Bandwidth</h4>
-                        <p>0.4 MB/s down | 0.1 MB/s up</p>
-                    </div>
-                </div>
-                <div class="item-card">
-                    <div class="item-content" style="width:100%;">
-                        <h4>Disk Usage</h4>
-                        <p>124 GB / 500 GB (24%)</p>
-                    </div>
-                </div>
-                <div class="item-card">
-                    <div class="item-content" style="width:100%;">
-                        <h4>GPU Load</h4>
-                        <p>NVIDIA RTX 4070 • 35°C</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="dock-container">
-            <div class="dock">
-                <a href="#" class="dock-item" onclick="switchTab(0); return false;">
-                    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    <div class="dock-text"><span>YouTube</span><small>Live Feed Hub</small></div>
-                </a>
-                <a href="#" class="dock-item" onclick="switchTab(1); return false;">
-                    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <div class="dock-text"><span>GitHub</span><small>Code repos</small></div>
-                </a>
-                <a href="#" class="dock-item" onclick="switchTab(2); return false;">
-                    <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-1.25 1.25h-1.11v1.11a1.25 1.25 0 0 1-2.5 0v-1.11h-1.11a1.25 1.25 0 0 1 0-2.5h1.11V4.993a1.25 1.25 0 0 1 2.5 0v1.11h1.11z"/></svg>
-                    <div class="dock-text"><span>Reddit</span><small>Community boards</small></div>
-                </a>
-                <a href="#" class="dock-item" onclick="switchTab(3); return false;">
-                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    <div class="dock-text"><span>X / Twitter</span><small>Global feed</small></div>
-                </a>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Daemon Status</h4><p style="color: #a6e3a1;">Connected to local socket</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Active Shell Window</h4><p>hyprland - workspace 1</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Network Bandwidth</h4><p>0.4 MB/s down | 0.1 MB/s up</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Disk Usage</h4><p>124 GB / 500 GB (24%)</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>GPU Load</h4><p>NVIDIA RTX 4070 • 35°C</p></div></div>
             </div>
         </div>
     </div>
@@ -251,7 +196,10 @@
                 title: "YouTube Workspace",
                 desc: "YouTube is a global video-sharing and social media platform featuring creator channels, live streams, and developer logs.",
                 isRealYouTube: true,
-                feed: [] 
+                feed: [
+                    { h: "Lofi Hip Hop Radio", p: "24/7 Chill Beats Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Hyprland Rice Setup", p: "Complete Customization Guide", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" }
+                ] 
             },
             {
                 title: "GitHub Workspace",
@@ -285,9 +233,11 @@
             }
         ];
 
+        // Instant render default tab right away
+        switchTab(0);
+
         async function fetchYouTubeFeed() {
             try {
-                // Using a fast alternative API endpoint with instant response caching
                 const channelID = "UC52X5nvz_c_N04tP7eA5oTg"; 
                 const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)}`);
                 const data = await res.json();
@@ -312,11 +262,7 @@
                     }
                 }
             } catch (e) {
-                tabs[0].feed = [
-                    { h: "Lofi Hip Hop Radio", p: "24/7 Chill Beats Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
-                    { h: "Hyprland Rice Setup", p: "Complete Customization Guide", link: "https://youtube.com", thumb: "" }
-                ];
-                switchTab(0);
+                // Falls back gracefully without locking up UI
             }
         }
 
