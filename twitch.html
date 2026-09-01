@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyprland Rice - Twitch</title>
+    <style>
+        :root {
+            --accent: #9146ff;
+            --accent-glow: rgba(145, 70, 255, 0.35);
+            --bg-glass: rgba(17, 17, 27, 0.55);
+            --border-glass: rgba(255, 255, 255, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, sans-serif; }
+        body { height: 100vh; width: 100vw; overflow: hidden; position: relative; color: #cdd6f4; }
+        #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.45); backdrop-filter: blur(4px); z-index: -1; }
+
+        .clock-widget-container { position: absolute; top: 25px; left: 35px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .clock-widget { width: 85px; height: 85px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); }
+        .analog-clock { width: 100%; height: 100%; position: relative; }
+        .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
+        .hand.hour { width: 3px; height: 26%; margin-left: -1.5px; }
+        .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
+        .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
+        .center-dot { position: absolute; top: 50%; left: 50%; width: 6px; height: 6px; margin-top: -3px; margin-left: -3px; background: var(--accent); border-radius: 50%; }
+        .digital-time { font-size: 0.85rem; font-weight: 600; background: var(--bg-glass); padding: 4px 12px; border-radius: 12px; border: 1px solid var(--border-glass); color: var(--accent); }
+
+        .top-center-container { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .workspaces { display: flex; gap: 8px; background: var(--bg-glass); padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
+        .ws-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; text-decoration: none; transition: all 0.3s ease; }
+        .ws-dot.active { width: 22px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+        .date-widget { font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 6px 18px; border-radius: 14px; border: 1px solid var(--border-glass); }
+
+        .side-pane { position: absolute; top: 135px; width: 270px; height: calc(100vh - 300px); background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+        .side-pane-left { left: 35px; }
+        .side-pane-right { right: 35px; }
+        .pane-title { font-size: 0.95rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 8px; }
+
+        .item-card { background: rgba(255, 255, 255, 0.06); padding: 10px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: white; transition: 0.2s ease; display: flex; flex-direction: column; gap: 4px; }
+        .item-card:hover { background: rgba(255, 255, 255, 0.15); border-color: var(--accent); }
+        .item-card h4 { font-size: 0.8rem; font-weight: 600; }
+        .item-card p { font-size: 0.7rem; color: rgba(255, 255, 255, 0.65); }
+
+        .search-container { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; }
+        .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
+        .search-icon-svg { position: absolute; left: 20px; width: 18px; height: 18px; fill: var(--accent); }
+        .search-box { width: 100%; padding: 16px 20px 16px 50px; font-size: 1rem; border: 1px solid var(--border-glass); border-radius: 40px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+        .bottom-card { position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 650px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 20px; padding: 14px 20px; display: flex; align-items: center; gap: 16px; box-shadow: 0 0 20px var(--accent-glow); }
+        .bottom-card svg { width: 38px; height: 38px; fill: var(--accent); flex-shrink: 0; }
+        .bottom-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+        .bottom-info p { font-size: 0.75rem; color: rgba(255, 255, 255, 0.75); line-height: 1.35; }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline id="bg-video"><source src="Purple.mp4" type="video/mp4"></video>
+    <div class="overlay"></div>
+
+    <div class="clock-widget-container">
+        <div class="clock-widget">
+            <div class="analog-clock">
+                <div class="hand hour" id="hour-hand"></div>
+                <div class="hand minute" id="min-hand"></div>
+                <div class="hand second" id="sec-hand"></div>
+                <div class="center-dot"></div>
+            </div>
+        </div>
+        <div class="digital-time" id="digital-clock">00:00</div>
+    </div>
+
+    <div class="top-center-container">
+        <div class="workspaces">
+            <a href="index.html" class="ws-dot" title="YouTube Workspace"></a>
+            <a href="github.html" class="ws-dot" title="GitHub Workspace"></a>
+            <a href="x.html" class="ws-dot" title="X Workspace"></a>
+            <a href="twitch.html" class="ws-dot active" title="Twitch Workspace"></a>
+        </div>
+        <div class="date-widget" id="date">Loading...</div>
+    </div>
+
+    <div class="side-pane side-pane-left">
+        <div class="pane-title">🎮 Top Categories</div>
+        <a href="https://twitch.tv/directory" target="_blank" class="item-card">
+            <h4>Just Chatting</h4>
+            <p>280k viewers</p>
+        </a>
+        <a href="https://twitch.tv/directory" target="_blank" class="item-card">
+            <h4>Valorant</h4>
+            <p>145k viewers</p>
+        </a>
+        <a href="https://twitch.tv/directory" target="_blank" class="item-card">
+            <h4>Software & Game Dev</h4>
+            <p>18k viewers</p>
+        </a>
+    </div>
+
+    <div class="side-pane side-pane-right">
+        <div class="pane-title">🔴 Live Stream Radar</div>
+        <div class="item-card">
+            <h4>pirate_software</h4>
+            <p>Live: Game Dev & Tech Chat</p>
+        </div>
+        <div class="item-card">
+            <h4>primeagen</h4>
+            <p>Live: Vim & Linux Rants</p>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <form action="https://twitch.tv/search" method="GET">
+            <div class="search-wrapper">
+                <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" name="term" class="search-box" placeholder="Search Twitch Streams..." autofocus autocomplete="off">
+            </div>
+        </form>
+    </div>
+
+    <div class="bottom-card">
+        <svg viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143h-1.715zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+        <div class="bottom-info">
+            <h3>Twitch</h3>
+            <p>Twitch is an interactive live streaming service for content spanning gaming, entertainment, sports, music, and creative arts. Founded in 2011, it is owned by Amazon.</p>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('digital-clock').textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            document.getElementById('sec-hand').style.transform = `rotate(${(now.getSeconds() / 60) * 360}deg)`;
+            document.getElementById('min-hand').style.transform = `rotate(${((now.getMinutes() / 60) * 360) + ((now.getSeconds() / 60) * 6)}deg)`;
+            document.getElementById('hour-hand').style.transform = `rotate(${((now.getHours() / 12) * 360) + ((now.getMinutes() / 60) * 30)}deg)`;
+        }
+        setInterval(updateClock, 1000); updateClock();
+    </script>
+</body>
+</html>
