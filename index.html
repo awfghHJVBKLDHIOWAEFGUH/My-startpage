@@ -51,12 +51,12 @@
         .bar-container { width: 45px; height: 2px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
-        /* Side Panes - Absolute Glass View */
+        /* Side Panes - Sized exactly to user drawing boxes */
         .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(8px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow-y: auto; height: calc(100vh - 66px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; }
-        .side-pane-right { grid-column: 3; justify-content: space-between; }
+        .side-pane-right { grid-column: 3; justify-content: flex-start; height: 350px; } /* Trimmed down height to match right-side red box drawing */
         
         .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; }
         .pane-title svg { width: 10px; height: 10px; fill: var(--accent); }
@@ -76,15 +76,15 @@
         
         .search-container { width: 100%; max-width: 440px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
-        .search-icon-svg { position: absolute; left: 16px; width: 15px; height: 15px; fill: var(--accent); pointer-events: none; }
+        .search-icon-svg { position: absolute; left: 16px; width: 15px; height: 15px; fill: var(--accent); pointer-events: none; z-index: 2; }
         .search-box { width: 100%; padding: 10px 18px 10px 42px; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(12px); color: #ffffff; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Wikipedia Card with Medium Workspace Logo */
+        /* Wikipedia Card with MacOS Fastfetch Logo */
         .bottom-card { width: 100%; max-width: 460px; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-decoration: none; color: inherit; transition: 0.2s ease; }
         .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.1); }
-        .bottom-logo-container { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
-        .bottom-logo-container svg { width: 32px; height: 32px; }
+        .bottom-logo-container { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .bottom-logo-container svg { width: 30px; height: 30px; }
         .bottom-info { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
         .bottom-info h3 { font-size: 0.72rem; font-weight: 700; color: #fff; }
         .bottom-info p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.75); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -154,7 +154,13 @@
             </div>
 
             <a href="#" target="_blank" class="bottom-card" id="wiki-card">
-                <div class="bottom-logo-container" id="bottom-logo"></div>
+                <div class="bottom-logo-container">
+                    <svg viewBox="0 0 170 170" width="100%" height="100%">
+                        <path fill="#ea4335" d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.1-1.91-14.24-6.12-3.3-2.73-7.2-7.38-11.7-13.95-6.85-10.02-12.2-21.13-16.06-33.32-3.87-12.18-5.8-23.75-5.8-34.71 0-14.54 3.65-26.24 10.96-35.11 7.31-8.87 16.59-13.38 27.84-13.38 5.66 0 11.41 1.34 17.26 4.02 5.84 2.68 9.77 4.02 11.8 4.02 1.83 0 5.86-1.39 12.09-4.17 6.22-2.78 12.06-4.11 17.51-3.98 12.23.43 21.87 4.96 28.91 13.59-10.85 6.6-16.14 15.82-15.87 27.67.27 10.59 4.38 19.14 12.33 25.64 7.96 6.5 17.3 9.87 28.03 10.11-2.92 9.07-6.9 18.06-11.94 26.97z"/>
+                        <path fill="#4285f4" d="M119.22 32.55c0 7.84-2.83 14.94-8.5 21.31-5.66 6.37-12.63 10.05-20.9 11.04-.33-4.02.65-8.25 2.94-12.69 2.29-4.44 5.51-8.19 9.66-11.25 4.15-3.06 8.52-5.07 13.11-6.04 3.32-.65 5.09-.3 5.3 1.06-.03.22-.05.86-.05 1.92z"/>
+                        <path fill="#fbbc05" d="M119.22 32.55c0 7.84-2.83 14.94-8.5 21.31-5.66 6.37-12.63 10.05-20.9 11.04-.33-4.02.65-8.25 2.94-12.69 2.29-4.44 5.51-8.19 9.66-11.25 4.15-3.06 8.52-5.07 13.11-6.04 3.32-.65 5.09-.3 5.3 1.06-.03.22-.05.86-.05 1.92z" opacity="0"/>
+                    </svg>
+                </div>
                 <div class="bottom-info">
                     <h3 id="info-title">Loading Wikipedia...</h3>
                     <p id="info-desc">Fetching live intro excerpt from Wikipedia data endpoint...</p>
@@ -192,34 +198,13 @@
                     <div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div>
                 </div>
             </div>
-            <div style="font-size: 0.48rem; color: rgba(255,255,255,0.4); text-align: center; padding-top: 2px;">A16 Silicon Core Active</div>
         </div>
     </div>
 
     <script>
-        const logos = {
-            youtube: `<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
-            github: `<svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`,
-            twitch: `<svg viewBox="0 0 24 24"><path d="M2.149 0L.535 4.296v15.405h5.906v4.296h4.296l4.296-4.296h3.222L23.465 13.92V0H2.149zm19.296 12.852l-3.222 3.222h-4.296l-4.296 4.296v-4.296H5.352V2.149h16.093v10.703zM15.556 6.426v5.352h-2.148V6.426h2.148zm-5.352 0v5.352H8.056V6.426h2.148z"/></svg>`,
-            twitter: `<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
-        };
-
-        function updateClock() {
-            const now = new Date();
-            document.getElementById('digital-clock').textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-            document.getElementById('date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-            document.getElementById('sec-hand').style.transform = `rotate(${(now.getSeconds() / 60) * 360}deg)`;
-            document.getElementById('min-hand').style.transform = `rotate(${((now.getMinutes() / 60) * 360) + ((now.getSeconds() / 60) * 6)}deg)`;
-            document.getElementById('hour-hand').style.transform = `rotate(${((now.getHours() / 12) * 360) + ((now.getMinutes() / 60) * 30)}deg)`;
-            
-            document.getElementById('cpu-bar').style.width = (18 + Math.floor(Math.random() * 12)) + '%';
-            document.getElementById('ram-bar').style.width = (55 + Math.floor(Math.random() * 4)) + '%';
-        }
-
         const tabs = [
             {
                 title: "YouTube Trending",
-                logoKey: "youtube",
                 wikiPage: "YouTube",
                 paneTitle: "Trending YouTube Feed",
                 feed: [
@@ -237,7 +222,6 @@
             },
             {
                 title: "GitHub Trending",
-                logoKey: "github",
                 wikiPage: "GitHub",
                 paneTitle: "Trending Repositories",
                 feed: [
@@ -255,7 +239,6 @@
             },
             {
                 title: "Twitch Trending",
-                logoKey: "twitch",
                 wikiPage: "Twitch_(service)",
                 paneTitle: "Live Twitch Channels",
                 feed: [
@@ -273,7 +256,6 @@
             },
             {
                 title: "X / Twitter Trending",
-                logoKey: "twitter",
                 wikiPage: "X_(social_network)",
                 paneTitle: "Global Trends",
                 feed: [
@@ -317,8 +299,6 @@
             });
 
             document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
-            document.getElementById('bottom-logo').innerHTML = logos[tabs[index].logoKey];
-            
             fetchWikiSnippet(tabs[index].title, tabs[index].wikiPage);
 
             const feedContainer = document.getElementById('left-feed');
@@ -335,6 +315,18 @@
                 card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
                 feedContainer.appendChild(card);
             });
+        }
+
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('digital-clock').textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            document.getElementById('sec-hand').style.transform = `rotate(${(now.getSeconds() / 60) * 360}deg)`;
+            document.getElementById('min-hand').style.transform = `rotate(${((now.getMinutes() / 60) * 360) + ((now.getSeconds() / 60) * 6)}deg)`;
+            document.getElementById('hour-hand').style.transform = `rotate(${((now.getHours() / 12) * 360) + ((now.getMinutes() / 60) * 30)}deg)`;
+            
+            document.getElementById('cpu-bar').style.width = (18 + Math.floor(Math.random() * 12)) + '%';
+            document.getElementById('ram-bar').style.width = (55 + Math.floor(Math.random() * 4)) + '%';
         }
 
         switchTab(0);
