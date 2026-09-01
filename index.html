@@ -62,15 +62,16 @@
         .pane-title svg { width: 12px; height: 12px; fill: var(--accent); }
         .live-tag { font-size: 0.5rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
 
-        /* Clean Feed Cards with Thumbs */
-        .item-card { background: rgba(255, 255, 255, 0.04); padding: 7px 9px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; }
+        /* Feed Cards */
+        .item-card { background: rgba(255, 255, 255, 0.04); padding: 6px 9px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; }
         .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
-        .item-thumb { width: 48px; height: 32px; border-radius: 6px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+        .item-thumb { width: 44px; height: 30px; border-radius: 5px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+        .item-icon { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
         .item-content { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
-        .item-card h4 { font-size: 0.68rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.56rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card h4 { font-size: 0.66rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.54rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* Center Stack (Search + Expanded Wikipedia Info Box) */
+        /* Center Stack */
         .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 15px; }
         
         .search-container { width: 100%; max-width: 480px; }
@@ -79,9 +80,9 @@
         .search-box { width: 100%; padding: 11px 20px 11px 46px; font-size: 0.88rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 15px 18px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 0 25px var(--accent-glow); }
-        .bottom-card svg { width: 26px; height: 26px; fill: var(--accent); flex-shrink: 0; margin-top: 2px; }
-        .bottom-info h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 14px 18px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 0 25px var(--accent-glow); }
+        .bottom-logo-container { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; fill: var(--accent); }
+        .bottom-info h3 { font-size: 0.86rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
         .bottom-info p { font-size: 0.7rem; color: rgba(255, 255, 255, 0.85); line-height: 1.45; }
     </style>
 </head>
@@ -104,10 +105,10 @@
 
         <div class="top-center">
             <div class="workspaces">
-                <div class="ws-dot active" onclick="switchTab(0)"></div>
-                <div class="ws-dot" onclick="switchTab(1)"></div>
-                <div class="ws-dot" onclick="switchTab(2)"></div>
-                <div class="ws-dot" onclick="switchTab(3)"></div>
+                <div class="ws-dot active" onclick="switchTab(0)" title="YouTube"></div>
+                <div class="ws-dot" onclick="switchTab(1)" title="GitHub"></div>
+                <div class="ws-dot" onclick="switchTab(2)" title="Twitch"></div>
+                <div class="ws-dot" onclick="switchTab(3)" title="X / Twitter"></div>
             </div>
             <div class="date-widget" id="date">Loading...</div>
         </div>
@@ -128,14 +129,14 @@
             <div class="pane-title">
                 <span style="display:flex; align-items:center; gap:5px;">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span id="left-pane-title">Trending Feed</span>
+                    <span id="left-pane-title">Live Stream Feed</span>
                 </span>
                 <span class="live-tag">
                     <svg viewBox="0 0 24 24" style="width:5px;height:5px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
-                    ACTIVE
+                    LIVE
                 </span>
             </div>
-            <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;"></div>
+            <div id="left-feed" style="display: flex; flex-direction: column; gap: 5px;"></div>
         </div>
 
         <div class="center-stack">
@@ -149,7 +150,7 @@
             </div>
 
             <div class="bottom-card" id="info-box">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <div class="bottom-logo-container" id="bottom-logo"></div>
                 <div class="bottom-info">
                     <h3 id="info-title">YouTube Workspace</h3>
                     <p id="info-desc">YouTube is an American online video sharing and social media platform headquartered in San Bruno, California. Launched in February 2005 by Chad Hurley, Steve Chen, and Jawed Karim, it allows billions of users to discover, watch, upload, and share user-generated and corporate video content globally.</p>
@@ -166,16 +167,38 @@
                 <span class="live-tag" id="ping-tag">12ms</span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 6px;">
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Hardware Processor</h4><p style="color: var(--accent);">Apple A16 Bionic (6-core)</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Operating System</h4><p>iPadOS Webkit Environment</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Memory Allocation</h4><p>4GB LPDDR5 • Active Cache</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Display Specs</h4><p>Liquid Retina • 60Hz Viewport</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div></div>
+                <div class="item-card">
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
+                    <div class="item-content" style="width:100%;"><h4>Hardware Processor</h4><p style="color: var(--accent);">Apple A16 Bionic (6-core)</p></div>
+                </div>
+                <div class="item-card">
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                    <div class="item-content" style="width:100%;"><h4>Operating System</h4><p>iPadOS Webkit Environment</p></div>
+                </div>
+                <div class="item-card">
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+                    <div class="item-content" style="width:100%;"><h4>Memory Allocation</h4><p>4GB LPDDR5 • Active Cache</p></div>
+                </div>
+                <div class="item-card">
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
+                    <div class="item-content" style="width:100%;"><h4>Display Specs</h4><p>Liquid Retina • 60Hz Viewport</p></div>
+                </div>
+                <div class="item-card">
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
+                    <div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        const logos = {
+            youtube: `<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+            github: `<svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`,
+            twitch: `<svg viewBox="0 0 24 24"><path d="M2.149 0L.535 4.296v15.405h5.906v4.296h4.296l4.296-4.296h3.222L23.465 13.92V0H2.149zm19.296 12.852l-3.222 3.222h-4.296l-4.296 4.296v-4.296H5.352V2.149h16.093v10.703zM15.556 6.426v5.352h-2.148V6.426h2.148zm-5.352 0v5.352H8.056V6.426h2.148z"/></svg>`,
+            twitter: `<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
+        };
+
         function updateClock() {
             const now = new Date();
             document.getElementById('digital-clock').textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
@@ -191,42 +214,54 @@
         const tabs = [
             {
                 title: "YouTube Workspace",
+                logoKey: "youtube",
                 desc: "YouTube is an American online video sharing and social media platform headquartered in San Bruno, California. Launched in February 2005 by Chad Hurley, Steve Chen, and Jawed Karim, it allows billions of users to discover, watch, upload, and share user-generated and corporate video content globally.",
                 paneTitle: "Trending YouTube Feed",
                 feed: [
-                    { h: "Lofi Hip Hop Radio - Beats to Relax/Study to", p: "Lofi Girl • 24/7 Live Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
-                    { h: "Building an Ultimate iPad Pro Setup", p: "Tech Gadgets • 1.2M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" },
-                    { h: "Lo-Fi Beats to Code/Relax to", p: "Synthwave Boy • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" }
+                    { h: "Lofi Hip Hop Radio - Beats to Study to", p: "Lofi Girl • Live Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Synthwave Radio - Chill Synth/Retrowave", p: "Lofi Girl Synth • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" },
+                    { h: "Apple iPad Event Live Stream Replay", p: "Apple Official • 4M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" },
+                    { h: "Never Gonna Give You Up", p: "Rick Astley • 1.5B views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" },
+                    { h: "Coding a Start Page in HTML & CSS", p: "Dev Channel • 320k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" }
                 ] 
             },
             {
                 title: "GitHub Workspace",
-                desc: "GitHub, Inc. is a developer platform that allows developers to create, store, manage and share their source code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking, feature requests, task management, continuous integration, and wikis for every project.",
+                logoKey: "github",
+                desc: "GitHub, Inc. is a developer platform that allows developers to create, store, manage and share their source code. It uses Git software, providing distributed version control of Git plus access control, bug tracking, feature requests, task management, continuous integration, and wikis for every project.",
                 paneTitle: "Trending Repositories",
                 feed: [
-                    { h: "torvalds / linux", p: "Linux kernel source tree", link: "https://github.com/torvalds/linux", thumb: "https://opengraph.githubassets.com/1/torvalds/linux" },
-                    { h: "facebook / react", p: "The library for web and native user interfaces", link: "https://github.com/facebook/react", thumb: "https://opengraph.githubassets.com/1/facebook/react" },
-                    { h: "tailwindlabs / tailwindcss", p: "A utility-first CSS framework", link: "https://github.com/tailwindlabs/tailwindcss", thumb: "https://opengraph.githubassets.com/1/tailwindlabs/tailwindcss" }
+                    { h: "torvalds / linux", p: "Linux kernel source tree repository", link: "https://github.com/torvalds/linux", thumb: "https://opengraph.githubassets.com/1/torvalds/linux" },
+                    { h: "facebook / react", p: "The library for web and native UI", link: "https://github.com/facebook/react", thumb: "https://opengraph.githubassets.com/1/facebook/react" },
+                    { h: "tailwindlabs / tailwindcss", p: "A utility-first CSS framework", link: "https://github.com/tailwindlabs/tailwindcss", thumb: "https://opengraph.githubassets.com/1/tailwindlabs/tailwindcss" },
+                    { h: "shadcn / ui", p: "Beautifully designed component system", link: "https://github.com/shadcn/ui", thumb: "https://opengraph.githubassets.com/1/shadcn/ui" },
+                    { h: "oven-sh / bun", p: "Incredibly fast JavaScript runtime", link: "https://github.com/oven-sh/bun", thumb: "https://opengraph.githubassets.com/1/oven-sh/bun" }
                 ]
             },
             {
-                title: "Reddit Workspace",
-                desc: "Reddit is an American social news aggregation, content rating, and discussion website. Registered members submit content to the site such as links, text posts, images, and videos, which are then voted up or down by other members to build vibrant online communities.",
-                paneTitle: "Trending Communities",
+                title: "Twitch Workspace",
+                logoKey: "twitch",
+                desc: "Twitch is an American video live streaming service that focuses on video game live streaming, including broadcasts of eSports competitions, creative content, music streams, and 'In Real Life' personality streams owned by Amazon.",
+                paneTitle: "Live Twitch Channels",
                 feed: [
-                    { h: "r/technology", p: "General discussions about tech news and updates", link: "https://reddit.com/r/technology", thumb: "" },
-                    { h: "r/apple", p: "News and discussions about Apple products and iOS", link: "https://reddit.com/r/apple", thumb: "" },
-                    { h: "r/webdev", p: "A community dedicated to all things web development", link: "https://reddit.com/r/webdev", thumb: "" }
+                    { h: "Shroud", p: "Playing Valorant • 24.1k viewers", link: "https://twitch.tv/shroud", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_shroud-440x248.jpg" },
+                    { h: "xQc", p: "Just Chatting • 45.8k viewers", link: "https://twitch.tv/xqcow", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-440x248.jpg" },
+                    { h: "Lirik", p: "Variety Gaming • 18.3k viewers", link: "https://twitch.tv/lirik", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-440x248.jpg" },
+                    { h: "Tarik", p: "Valorant Watch Parties • 30.5k viewers", link: "https://twitch.tv/tarik", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_tarik-440x248.jpg" },
+                    { h: "Summit1g", p: "Escape from Tarkov • 15.2k viewers", link: "https://twitch.tv/summit1g", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-440x248.jpg" }
                 ]
             },
             {
                 title: "X / Twitter Workspace",
+                logoKey: "twitter",
                 desc: "X (formerly Twitter) is a global social media platform focused on real-time microblogging and public conversation. It allows users to broadcast short text updates, media attachments, and engage in fast-moving global dialogue across diverse topics.",
                 paneTitle: "Global Trends",
                 feed: [
                     { h: "#WebDevelopment", p: "Discussions on modern browser engines", link: "https://x.com", thumb: "" },
                     { h: "#Apple", p: "Latest iPadOS architecture updates", link: "https://x.com", thumb: "" },
-                    { h: "#OpenSource", p: "New releases from independent developers", link: "https://x.com", thumb: "" }
+                    { h: "#OpenSource", p: "New releases from independent creators", link: "https://x.com", thumb: "" },
+                    { h: "#TechNews", p: "Hardware innovations and silicon drops", link: "https://x.com", thumb: "" },
+                    { h: "#Design", p: "Minimalist glassmorphism UI layouts", link: "https://x.com", thumb: "" }
                 ]
             }
         ];
@@ -240,6 +275,7 @@
             document.getElementById('info-title').textContent = tabs[index].title;
             document.getElementById('info-desc').textContent = tabs[index].desc;
             document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
+            document.getElementById('bottom-logo').innerHTML = logos[tabs[index].logoKey];
 
             const feedContainer = document.getElementById('left-feed');
             feedContainer.innerHTML = '';
