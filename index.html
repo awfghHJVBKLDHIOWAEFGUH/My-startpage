@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Hyprland Start Page</title>
+    <title>My iPad Start Page</title>
     <style>
         :root {
             --accent: #cba6f7;
@@ -17,7 +17,6 @@
         #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.45); backdrop-filter: blur(4px); z-index: -1; }
 
-        /* Compact Dashboard Grid to fit viewports cleanly */
         .dashboard {
             display: grid;
             grid-template-columns: 310px 1fr 310px;
@@ -63,7 +62,7 @@
         .pane-title svg { width: 12px; height: 12px; fill: var(--accent); }
         .live-tag { font-size: 0.5rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
 
-        /* Clean Feed Cards */
+        /* Clean Feed Cards with Thumbs */
         .item-card { background: rgba(255, 255, 255, 0.04); padding: 7px 9px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; }
         .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
         .item-thumb { width: 48px; height: 32px; border-radius: 6px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
@@ -71,7 +70,7 @@
         .item-card h4 { font-size: 0.68rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .item-card p { font-size: 0.56rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* Center Stack (Search + Bigger Info Box) */
+        /* Center Stack (Search + Expanded Wikipedia Info Box) */
         .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 15px; }
         
         .search-container { width: 100%; max-width: 480px; }
@@ -80,11 +79,10 @@
         .search-box { width: 100%; padding: 11px 20px 11px 46px; font-size: 0.88rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Expanded Bottom Card */
         .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 15px 18px; display: flex; align-items: flex-start; gap: 12px; box-shadow: 0 0 25px var(--accent-glow); }
         .bottom-card svg { width: 26px; height: 26px; fill: var(--accent); flex-shrink: 0; margin-top: 2px; }
-        .bottom-info h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 3px; color: #fff; }
-        .bottom-info p { font-size: 0.72rem; color: rgba(255, 255, 255, 0.85); line-height: 1.4; }
+        .bottom-info h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+        .bottom-info p { font-size: 0.7rem; color: rgba(255, 255, 255, 0.85); line-height: 1.45; }
     </style>
 </head>
 <body>
@@ -116,29 +114,28 @@
 
         <div class="top-right">
             <div class="sys-header">
-                <span>user@hyprland</span>
+                <span>ipad@a16</span>
                 <span style="display:flex; align-items:center; gap:3px;">
                     <svg viewBox="0 0 24 24" style="width:9px;height:9px;fill:var(--accent);"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
-                    17°C
+                    21°C
                 </span>
             </div>
-            <div class="sys-row"><span>CPU</span><div class="bar-container"><div class="bar-fill" id="cpu-bar" style="width: 25%;"></div></div></div>
-            <div class="sys-row"><span>RAM</span><div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 42%;"></div></div></div>
+            <div class="sys-row"><span>CPU</span><div class="bar-container"><div class="bar-fill" id="cpu-bar" style="width: 22%;"></div></div></div>
+            <div class="sys-row"><span>RAM</span><div class="bar-container"><div class="bar-fill" id="ram-bar" style="width: 58%;"></div></div></div>
         </div>
 
         <div class="side-pane side-pane-left">
             <div class="pane-title">
                 <span style="display:flex; align-items:center; gap:5px;">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span id="left-pane-title">YouTube Live Feed</span>
+                    <span id="left-pane-title">Trending Feed</span>
                 </span>
                 <span class="live-tag">
                     <svg viewBox="0 0 24 24" style="width:5px;height:5px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
                     ACTIVE
                 </span>
             </div>
-            <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;">
-                </div>
+            <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;"></div>
         </div>
 
         <div class="center-stack">
@@ -155,7 +152,7 @@
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
                 <div class="bottom-info">
                     <h3 id="info-title">YouTube Workspace</h3>
-                    <p id="info-desc">YouTube is an online video sharing and social media platform created in Feb 2005. It features millions of user-generated videos, live streams, and global creators.</p>
+                    <p id="info-desc">YouTube is an American online video sharing and social media platform headquartered in San Bruno, California. Launched in February 2005 by Chad Hurley, Steve Chen, and Jawed Karim, it allows billions of users to discover, watch, upload, and share user-generated and corporate video content globally.</p>
                 </div>
             </div>
         </div>
@@ -164,16 +161,16 @@
             <div class="pane-title">
                 <span style="display:flex; align-items:center; gap:5px;">
                     <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.45-.32-2.83-.88-4.07l-2.6 1.53c.3.79.48 1.64.48 2.54 0 3.87-3.13 7-7 7z"/></svg>
-                    Telemetry Stream
+                    Apple Device Telemetry
                 </span>
-                <span class="live-tag" id="ping-tag">18ms</span>
+                <span class="live-tag" id="ping-tag">12ms</span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 6px;">
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Daemon Status</h4><p style="color: #a6e3a1;">Connected to local socket</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Active Shell Window</h4><p>hyprland - workspace 1</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Network Bandwidth</h4><p>0.4 MB/s down | 0.1 MB/s up</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Disk Usage</h4><p>124 GB / 500 GB (24%)</p></div></div>
-                <div class="item-card"><div class="item-content" style="width:100%;"><h4>GPU Load</h4><p>NVIDIA RTX 4070 • 35°C</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Hardware Processor</h4><p style="color: var(--accent);">Apple A16 Bionic (6-core)</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Operating System</h4><p>iPadOS Webkit Environment</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Memory Allocation</h4><p>4GB LPDDR5 • Active Cache</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Display Specs</h4><p>Liquid Retina • 60Hz Viewport</p></div></div>
+                <div class="item-card"><div class="item-content" style="width:100%;"><h4>Battery Status</h4><p style="color: #a6e3a1;">Charging • 100% Health</p></div></div>
             </div>
         </div>
     </div>
@@ -187,84 +184,52 @@
             document.getElementById('min-hand').style.transform = `rotate(${((now.getMinutes() / 60) * 360) + ((now.getSeconds() / 60) * 6)}deg)`;
             document.getElementById('hour-hand').style.transform = `rotate(${((now.getHours() / 12) * 360) + ((now.getMinutes() / 60) * 30)}deg)`;
             
-            document.getElementById('cpu-bar').style.width = (20 + Math.floor(Math.random() * 25)) + '%';
-            document.getElementById('ram-bar').style.width = (40 + Math.floor(Math.random() * 5)) + '%';
+            document.getElementById('cpu-bar').style.width = (18 + Math.floor(Math.random() * 12)) + '%';
+            document.getElementById('ram-bar').style.width = (55 + Math.floor(Math.random() * 4)) + '%';
         }
 
         const tabs = [
             {
                 title: "YouTube Workspace",
-                desc: "YouTube is a global video-sharing and social media platform featuring creator channels, live streams, and developer logs.",
-                isRealYouTube: true,
+                desc: "YouTube is an American online video sharing and social media platform headquartered in San Bruno, California. Launched in February 2005 by Chad Hurley, Steve Chen, and Jawed Karim, it allows billions of users to discover, watch, upload, and share user-generated and corporate video content globally.",
+                paneTitle: "Trending YouTube Feed",
                 feed: [
-                    { h: "Lofi Hip Hop Radio", p: "24/7 Chill Beats Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
-                    { h: "Hyprland Rice Setup", p: "Complete Customization Guide", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" }
+                    { h: "Lofi Hip Hop Radio - Beats to Relax/Study to", p: "Lofi Girl • 24/7 Live Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Building an Ultimate iPad Pro Setup", p: "Tech Gadgets • 1.2M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" },
+                    { h: "Lo-Fi Beats to Code/Relax to", p: "Synthwave Boy • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" }
                 ] 
             },
             {
                 title: "GitHub Workspace",
-                desc: "GitHub hosts millions of open-source software repositories, developer toolkits, and code packages.",
-                isRealYouTube: false,
+                desc: "GitHub, Inc. is a developer platform that allows developers to create, store, manage and share their source code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking, feature requests, task management, continuous integration, and wikis for every project.",
+                paneTitle: "Trending Repositories",
                 feed: [
-                    { h: "hyprwm / Hyprland", p: "Dynamic tiling Wayland compositor", link: "https://github.com/hyprwm/Hyprland", thumb: "https://opengraph.githubassets.com/1/hyprwm/Hyprland" },
-                    { h: "catppuccin / catppuccin", p: "Soothing pastel color themes", link: "https://github.com/catppuccin/catppuccin", thumb: "https://opengraph.githubassets.com/1/catppuccin/catppuccin" },
-                    { h: "fastfetch-cli / fastfetch", p: "Neofetch alternative written in C", link: "https://github.com/fastfetch-cli/fastfetch", thumb: "https://opengraph.githubassets.com/1/fastfetch-cli/fastfetch" }
+                    { h: "torvalds / linux", p: "Linux kernel source tree", link: "https://github.com/torvalds/linux", thumb: "https://opengraph.githubassets.com/1/torvalds/linux" },
+                    { h: "facebook / react", p: "The library for web and native user interfaces", link: "https://github.com/facebook/react", thumb: "https://opengraph.githubassets.com/1/facebook/react" },
+                    { h: "tailwindlabs / tailwindcss", p: "A utility-first CSS framework", link: "https://github.com/tailwindlabs/tailwindcss", thumb: "https://opengraph.githubassets.com/1/tailwindlabs/tailwindcss" }
                 ]
             },
             {
                 title: "Reddit Workspace",
-                desc: "Reddit is a network of communities where people dive into custom hardware ricing setups and tech hobbies.",
-                isRealYouTube: false,
+                desc: "Reddit is an American social news aggregation, content rating, and discussion website. Registered members submit content to the site such as links, text posts, images, and videos, which are then voted up or down by other members to build vibrant online communities.",
+                paneTitle: "Trending Communities",
                 feed: [
-                    { h: "r/unixporn", p: "Top rice: Cyberpunk GTK Theme", link: "https://reddit.com/r/unixporn", thumb: "" },
-                    { h: "r/ProgrammerHumor", p: "When production crashes on Friday", link: "https://reddit.com/r/ProgrammerHumor", thumb: "" },
-                    { h: "r/hyprland", p: "Help with animations config syntax", link: "https://reddit.com/r/hyprland", thumb: "" }
+                    { h: "r/technology", p: "General discussions about tech news and updates", link: "https://reddit.com/r/technology", thumb: "" },
+                    { h: "r/apple", p: "News and discussions about Apple products and iOS", link: "https://reddit.com/r/apple", thumb: "" },
+                    { h: "r/webdev", p: "A community dedicated to all things web development", link: "https://reddit.com/r/webdev", thumb: "" }
                 ]
             },
             {
                 title: "X / Twitter Workspace",
-                desc: "Real-time microblogging network tracking global news, tech conversations, and instant community updates.",
-                isRealYouTube: false,
+                desc: "X (formerly Twitter) is a global social media platform focused on real-time microblogging and public conversation. It allows users to broadcast short text updates, media attachments, and engage in fast-moving global dialogue across diverse topics.",
+                paneTitle: "Global Trends",
                 feed: [
-                    { h: "#ArchLinux", p: "New stable kernel release rolling out", link: "https://x.com", thumb: "" },
-                    { h: "#WebDevelopment", p: "Shifting towards fast local tooling", link: "https://x.com", thumb: "" },
-                    { h: "Tech Trends", p: "AI workflows taking over setups", link: "https://x.com", thumb: "" }
+                    { h: "#WebDevelopment", p: "Discussions on modern browser engines", link: "https://x.com", thumb: "" },
+                    { h: "#Apple", p: "Latest iPadOS architecture updates", link: "https://x.com", thumb: "" },
+                    { h: "#OpenSource", p: "New releases from independent developers", link: "https://x.com", thumb: "" }
                 ]
             }
         ];
-
-        // Instant render default tab right away
-        switchTab(0);
-
-        async function fetchYouTubeFeed() {
-            try {
-                const channelID = "UC52X5nvz_c_N04tP7eA5oTg"; 
-                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)}`);
-                const data = await res.json();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(data.contents, "text/xml");
-                const entries = xml.querySelectorAll("entry");
-                
-                let fetchedItems = [];
-                for (let i = 0; i < Math.min(entries.length, 4); i++) {
-                    const entry = entries[i];
-                    const title = entry.querySelector("title").textContent;
-                    const link = entry.querySelector("link").getAttribute("href");
-                    const videoId = entry.querySelector("videoId") ? entry.querySelector("videoId").textContent : "";
-                    const thumb = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : "";
-                    fetchedItems.push({ h: title, p: "YouTube Creator Upload", link: link, thumb: thumb });
-                }
-                
-                if (fetchedItems.length > 0) {
-                    tabs[0].feed = fetchedItems;
-                    if(document.querySelector('.ws-dot.active').getAttribute('onclick').includes('0')) {
-                        switchTab(0);
-                    }
-                }
-            } catch (e) {
-                // Falls back gracefully without locking up UI
-            }
-        }
 
         function switchTab(index) {
             const dots = document.querySelectorAll('.ws-dot');
@@ -274,7 +239,7 @@
 
             document.getElementById('info-title').textContent = tabs[index].title;
             document.getElementById('info-desc').textContent = tabs[index].desc;
-            document.getElementById('left-pane-title').textContent = tabs[index].isRealYouTube ? "YouTube Live Feed" : "Trending Feed";
+            document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
 
             const feedContainer = document.getElementById('left-feed');
             feedContainer.innerHTML = '';
@@ -292,9 +257,9 @@
             });
         }
 
+        switchTab(0);
         setInterval(updateClock, 1000);
         updateClock();
-        fetchYouTubeFeed();
     </script>
 </body>
 </html>
