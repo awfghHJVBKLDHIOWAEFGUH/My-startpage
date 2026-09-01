@@ -63,8 +63,6 @@
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; height: fit-content; max-height: calc(100vh - 66px); overflow-y: auto; align-self: start; }
-
-        /* Restricted Right Pane: sized to fit its content (title + specs + logos), not the full column height */
         .side-pane-right { grid-column: 3; justify-content: flex-start; height: fit-content; overflow-y: visible; align-self: start; }
 
         .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; border-radius: 6px 6px 0 0; transition: background 0.2s ease; }
@@ -82,9 +80,7 @@
         .item-card h4 { font-size: 0.58rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .item-card p { font-size: 0.48rem; color: rgba(255, 255, 255, 0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* Center Stack — now just an initial-position wrapper; the two children are independent widgets */
         .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 10px; height: calc(100vh - 66px); }
-
         .widget { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 100%; max-width: 460px; }
 
         .drag-handle { width: 38px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.25); cursor: grab; touch-action: none; transition: background 0.2s ease, width 0.2s ease; }
@@ -97,7 +93,6 @@
         .search-box { width: 100%; padding: 10px 18px 10px 42px; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(12px); color: #ffffff; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        /* Wikipedia Card with Real YouTube Logo */
         .bottom-card { width: 100%; max-width: 460px; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-decoration: none; color: inherit; transition: 0.2s ease; }
         .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.1); }
         .bottom-logo-container { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -106,7 +101,6 @@
         .bottom-info h3 { font-size: 0.72rem; font-weight: 700; color: #fff; }
         .bottom-info p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.75); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-        /* Logos Footer under specs — stacked vertically: macOS on top, Arch below */
         .logos-footer { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-top: 6px; padding: 8px 0 4px 0; border-top: 1px solid var(--border-glass); }
         .fastfetch-logo-wrap { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
     </style>
@@ -174,7 +168,7 @@
                     <form action="https://www.startpage.com/do/dsearch" method="GET">
                         <div class="search-wrapper">
                             <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                            <input type="text" name="query" class="search-box" placeholder="Search Startpage..." autofocus autocomplete="off">
+                            <input type="text" name="query" class="search-box" placeholder="Search Startpage..." autocomplete="off">
                         </div>
                     </form>
                 </div>
@@ -379,24 +373,20 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        /* ================= DRAG SYSTEM ================= */
-        // Every widget starts in its normal grid/flex position (the "organized" layout).
-        // On the first pointerdown on a widget's handle, it's frozen to its current
-        // on-screen rect and switched to position:fixed, then dragged freely.
-        // The top bar (.top-left / .top-center / .top-right) never gets a handle,
-        // so it can never be moved.
+        /* ================= DRAG SYSTEM (Pointer Events + Touch Fixes) ================= */
         function makeDraggable(widgetEl, handleEl) {
             if (!widgetEl || !handleEl) return;
             let dragging = false;
             let offsetX = 0, offsetY = 0;
-            const TOP_BAR_HEIGHT = 58; // keep widgets from being dragged under the fixed top bar
+            const TOP_BAR_HEIGHT = 58;
 
             function getPoint(e) {
+                if (e.targetTouches && e.targetTouches.length) return { x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY };
                 if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
                 return { x: e.clientX, y: e.clientY };
             }
 
-            function onPointerDown(e) {
+            function onStart(e) {
                 const rect = widgetEl.getBoundingClientRect();
                 widgetEl.style.position = 'fixed';
                 widgetEl.style.left = rect.left + 'px';
@@ -414,14 +404,15 @@
                 dragging = true;
                 widgetEl.classList.add('dragging');
 
-                window.addEventListener('pointermove', onPointerMove, { passive: false });
-                window.addEventListener('pointerup', onPointerUp);
-                window.addEventListener('touchmove', onPointerMove, { passive: false });
-                window.addEventListener('touchend', onPointerUp);
+                window.addEventListener('pointermove', onMove, { passive: false });
+                window.addEventListener('pointerup', onEnd);
+                window.addEventListener('touchmove', onMove, { passive: false });
+                window.addEventListener('touchend', onEnd);
+                window.addEventListener('touchcancel', onEnd);
                 e.preventDefault();
             }
 
-            function onPointerMove(e) {
+            function onMove(e) {
                 if (!dragging) return;
                 e.preventDefault();
                 const p = getPoint(e);
@@ -435,17 +426,19 @@
                 widgetEl.style.top = newTop + 'px';
             }
 
-            function onPointerUp() {
+            function onEnd() {
+                if (!dragging) return;
                 dragging = false;
                 widgetEl.classList.remove('dragging');
-                window.removeEventListener('pointermove', onPointerMove);
-                window.removeEventListener('pointerup', onPointerUp);
-                window.removeEventListener('touchmove', onPointerMove);
-                window.removeEventListener('touchend', onPointerUp);
+                window.removeEventListener('pointermove', onMove);
+                window.removeEventListener('pointerup', onEnd);
+                window.removeEventListener('touchmove', onMove);
+                window.removeEventListener('touchend', onEnd);
+                window.removeEventListener('touchcancel', onEnd);
             }
 
-            handleEl.addEventListener('pointerdown', onPointerDown);
-            handleEl.addEventListener('touchstart', onPointerDown, { passive: false });
+            handleEl.addEventListener('pointerdown', onStart);
+            handleEl.addEventListener('touchstart', onStart, { passive: false });
         }
 
         makeDraggable(document.getElementById('pane-left'), document.getElementById('pane-left').querySelector('.pane-title'));
@@ -453,7 +446,6 @@
         makeDraggable(document.getElementById('widget-search'), document.getElementById('widget-search').querySelector('.drag-handle'));
         makeDraggable(document.getElementById('widget-wiki'), document.getElementById('widget-wiki').querySelector('.drag-handle'));
 
-        // Reset button: simplest, most reliable way back to the organized start state.
         document.getElementById('reset-layout').addEventListener('click', () => location.reload());
     </script>
 </body>
