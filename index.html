@@ -15,72 +15,75 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, sans-serif; }
         body { height: 100vh; width: 100vw; overflow: hidden; position: relative; color: #cdd6f4; background: #0b0b10; }
         #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.5); backdrop-filter: blur(4px); z-index: -1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.45); backdrop-filter: blur(4px); z-index: -1; }
 
-        /* Main Grid Wrapper to prevent absolute chaos */
         .dashboard {
             display: grid;
-            grid-template-columns: 300px 1fr 300px;
-            grid-template-rows: 80px 1fr auto auto;
+            grid-template-columns: 310px 1fr 310px;
+            grid-template-rows: 75px 1fr auto auto;
             height: 100vh;
-            padding: 25px 40px;
-            gap: 15px;
+            padding: 20px 35px;
+            gap: 12px;
             max-width: 1600px;
             margin: 0 auto;
         }
 
         /* Top Bar Widgets */
-        .top-left { display: flex; align-items: center; gap: 12px; grid-column: 1; grid-row: 1; }
-        .clock-widget { width: 55px; height: 55px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
+        .top-left { display: flex; align-items: center; gap: 10px; grid-column: 1; grid-row: 1; }
+        .clock-widget { width: 50px; height: 50px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 15px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
         .hand { position: absolute; bottom: 50%; left: 50%; transform-origin: bottom center; background: #cdd6f4; border-radius: 4px; }
         .hand.hour { width: 3px; height: 26%; margin-left: -1.5px; }
         .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
         .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
         .center-dot { position: absolute; top: 50%; left: 50%; width: 5px; height: 5px; margin-top: -2.5px; margin-left: -2.5px; background: var(--accent); border-radius: 50%; }
-        .digital-time { font-size: 0.75rem; font-weight: 600; background: var(--bg-glass); padding: 4px 10px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
+        .digital-time { font-size: 0.7rem; font-weight: 600; background: var(--bg-glass); padding: 4px 8px; border-radius: 10px; border: 1px solid var(--border-glass); color: var(--accent); }
 
-        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; grid-column: 2; grid-row: 1; }
+        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; grid-column: 2; grid-row: 1; }
         .workspaces { display: flex; gap: 6px; background: var(--bg-glass); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
         .ws-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
         .ws-dot.active { width: 18px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-        .date-widget { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 3px 12px; border-radius: 10px; border: 1px solid var(--border-glass); }
+        .date-widget { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 3px 10px; border-radius: 10px; border: 1px solid var(--border-glass); }
 
-        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 8px 12px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 4px; width: 180px; font-size: 0.7rem; }
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 6px 10px; border-radius: 14px; backdrop-filter: blur(16px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 3px; width: 170px; font-size: 0.65rem; }
         .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; }
-        .bar-container { width: 65px; height: 4px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
+        .bar-container { width: 60px; height: 3px; background: rgba(255, 255, 255, 0.15); border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.5s ease; }
 
         /* Side Panes */
-        .side-pane { grid-row: 2 / span 1; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; max-height: calc(100vh - 240px); }
-        .side-pane::-webkit-scrollbar { width: 4px; }
+        .side-pane { grid-row: 2 / span 1; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); overflow-y: auto; max-height: calc(100vh - 210px); }
+        .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
         .side-pane-left { grid-column: 1; }
         .side-pane-right { grid-column: 3; }
         
-        .pane-title { font-size: 0.8rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
-        .pane-title svg { width: 13px; height: 13px; fill: var(--accent); }
-        .live-tag { font-size: 0.55rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
+        .pane-title { font-size: 0.78rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .pane-title svg { width: 12px; height: 12px; fill: var(--accent); }
+        .live-tag { font-size: 0.5rem; background: rgba(203,166,247,0.2); padding: 2px 5px; border-radius: 5px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
 
-        .item-card { background: rgba(255, 255, 255, 0.04); padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; flex-direction: column; gap: 2px; }
+        /* Feed item cards with thumbnail slot (matching your sketch) */
+        .item-card { background: rgba(255, 255, 255, 0.04); padding: 7px 9px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; }
         .item-card:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); transform: translateY(-1px); }
-        .item-card h4 { font-size: 0.72rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.6rem; color: rgba(255, 255, 255, 0.65); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .item-thumb { width: 48px; height: 32px; border-radius: 6px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+        .item-content { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+        .item-card h4 { font-size: 0.7rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* Center Content (Search + Info Box Stacked) */
-        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 0 20px; }
+        /* Center Stack (Search + Bigger Info Box) */
+        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 0 15px; }
         
-        .search-container { width: 100%; max-width: 520px; }
+        .search-container { width: 100%; max-width: 500px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
         .search-icon-svg { position: absolute; left: 18px; width: 16px; height: 16px; fill: var(--accent); }
-        .search-box { width: 100%; padding: 13px 20px 13px 48px; font-size: 0.95rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
+        .search-box { width: 100%; padding: 12px 20px 12px 48px; font-size: 0.9rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(16px); color: #ffffff; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        .bottom-card { width: 100%; max-width: 520px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 10px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 0 20px var(--accent-glow); }
-        .bottom-card svg { width: 26px; height: 26px; fill: var(--accent); flex-shrink: 0; }
-        .bottom-info h3 { font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; }
-        .bottom-info p { font-size: 0.7rem; color: rgba(255, 255, 255, 0.8); line-height: 1.35; }
+        /* Bigger Bottom Card as requested in sketch */
+        .bottom-card { width: 100%; max-width: 540px; background: var(--bg-glass); backdrop-filter: blur(18px); border: 1px solid var(--border-glass); border-radius: 16px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 14px; box-shadow: 0 0 25px var(--accent-glow); }
+        .bottom-card svg { width: 28px; height: 28px; fill: var(--accent); flex-shrink: 0; margin-top: 2px; }
+        .bottom-info h3 { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; color: #fff; }
+        .bottom-info p { font-size: 0.74rem; color: rgba(255, 255, 255, 0.85); line-height: 1.45; }
 
         /* Bottom Dock Menu */
         .dock-container { grid-column: 1 / span 3; grid-row: 3; display: flex; justify-content: center; padding-top: 5px; }
@@ -88,8 +91,8 @@
         .dock-item { display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: white; transition: 0.2s; cursor: pointer; }
         .dock-item:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); }
         .dock-item svg { width: 15px; height: 15px; fill: var(--accent); }
-        .dock-text span { display: block; font-size: 0.68rem; font-weight: 700; }
-        .dock-text small { display: block; font-size: 0.52rem; color: rgba(255,255,255,0.6); }
+        .dock-text span { display: block; font-size: 0.65rem; font-weight: 700; }
+        .dock-text small { display: block; font-size: 0.5rem; color: rgba(255,255,255,0.6); }
     </style>
 </head>
 <body>
@@ -122,8 +125,8 @@
         <div class="top-right">
             <div class="sys-header">
                 <span>user@hyprland</span>
-                <span style="display:flex; align-items:center; gap:4px;">
-                    <svg viewBox="0 0 24 24" style="width:10px;height:10px;fill:var(--accent);"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                <span style="display:flex; align-items:center; gap:3px;">
+                    <svg viewBox="0 0 24 24" style="width:9px;height:9px;fill:var(--accent);"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
                     17°C
                 </span>
             </div>
@@ -138,12 +141,12 @@
                     <span id="left-pane-title">Trending Feed</span>
                 </span>
                 <span class="live-tag">
-                    <svg viewBox="0 0 24 24" style="width:6px;height:6px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
+                    <svg viewBox="0 0 24 24" style="width:5px;height:5px;fill:var(--accent);"><circle cx="12" cy="12" r="10"/></svg>
                     ACTIVE
                 </span>
             </div>
             <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;">
-                <div class="item-card"><h4>Fetching real feed...</h4><p>Please wait a sec</p></div>
+                <div class="item-card"><h4>Loading feed instantly...</h4></div>
             </div>
         </div>
 
@@ -176,16 +179,34 @@
             </div>
             <div style="display: flex; flex-direction: column; gap: 6px;">
                 <div class="item-card">
-                    <h4>Daemon Status</h4>
-                    <p id="socket-status" style="color: #a6e3a1;">Connected to local socket</p>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Daemon Status</h4>
+                        <p id="socket-status" style="color: #a6e3a1;">Connected to local socket</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <h4>Active Shell Window</h4>
-                    <p>hyprland - workspace 1</p>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Active Shell Window</h4>
+                        <p>hyprland - workspace 1</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <h4>Network Bandwidth</h4>
-                    <p>0.4 MB/s down | 0.1 MB/s up</p>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Network Bandwidth</h4>
+                        <p>0.4 MB/s down | 0.1 MB/s up</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <div class="item-content" style="width:100%;">
+                        <h4>Disk Usage</h4>
+                        <p>124 GB / 500 GB (24%)</p>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <div class="item-content" style="width:100%;">
+                        <h4>GPU Load</h4>
+                        <p>NVIDIA RTX 4070 • 35°C</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,7 +219,7 @@
                 </a>
                 <a href="#" class="dock-item" onclick="switchTab(1); return false;">
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <div class="dock-text"><span>GitHub</span><small>Code repositories</small></div>
+                    <div class="dock-text"><span>GitHub</span><small>Code repos</small></div>
                 </a>
                 <a href="#" class="dock-item" onclick="switchTab(2); return false;">
                     <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-1.25 1.25h-1.11v1.11a1.25 1.25 0 0 1-2.5 0v-1.11h-1.11a1.25 1.25 0 0 1 0-2.5h1.11V4.993a1.25 1.25 0 0 1 2.5 0v1.11h1.11z"/></svg>
@@ -228,61 +249,74 @@
         const tabs = [
             {
                 title: "YouTube Workspace",
-                desc: "Live fetching latest uploads via YouTube public RSS feeds directly to your custom startpage dashboard.",
+                desc: "YouTube is a global video-sharing and social media platform featuring creator channels, live streams, and developer logs.",
                 isRealYouTube: true,
                 feed: [] 
             },
             {
                 title: "GitHub Workspace",
-                desc: "GitHub is the world's largest platform for software development, hosting open-source tools and repos.",
+                desc: "GitHub hosts millions of open-source software repositories, developer toolkits, and code packages.",
                 isRealYouTube: false,
                 feed: [
-                    { h: "hyprwm / Hyprland", p: "Dynamic tiling Wayland compositor", link: "https://github.com/hyprwm/Hyprland" },
-                    { h: "catppuccin / catppuccin", p: "Soothing pastel theme for developers", link: "https://github.com/catppuccin/catppuccin" },
-                    { h: "fastfetch-cli / fastfetch", p: "Neofetch replacement written in C", link: "https://github.com/fastfetch-cli/fastfetch" }
+                    { h: "hyprwm / Hyprland", p: "Dynamic tiling Wayland compositor", link: "https://github.com/hyprwm/Hyprland", thumb: "https://opengraph.githubassets.com/1/hyprwm/Hyprland" },
+                    { h: "catppuccin / catppuccin", p: "Soothing pastel color themes", link: "https://github.com/catppuccin/catppuccin", thumb: "https://opengraph.githubassets.com/1/catppuccin/catppuccin" },
+                    { h: "fastfetch-cli / fastfetch", p: "Neofetch alternative written in C", link: "https://github.com/fastfetch-cli/fastfetch", thumb: "https://opengraph.githubassets.com/1/fastfetch-cli/fastfetch" }
                 ]
             },
             {
                 title: "Reddit Workspace",
-                desc: "Reddit is a network of communities where people dive into technical interests and custom ricing setups.",
+                desc: "Reddit is a network of communities where people dive into custom hardware ricing setups and tech hobbies.",
                 isRealYouTube: false,
                 feed: [
-                    { h: "r/unixporn", p: "Top rice: Cyberpunk GTK Theme setup", link: "https://reddit.com/r/unixporn" },
-                    { h: "r/ProgrammerHumor", p: "When production crashes on Friday afternoon", link: "https://reddit.com/r/ProgrammerHumor" },
-                    { h: "r/hyprland", p: "Help with animations config file syntax", link: "https://reddit.com/r/hyprland" }
+                    { h: "r/unixporn", p: "Top rice: Cyberpunk GTK Theme", link: "https://reddit.com/r/unixporn", thumb: "" },
+                    { h: "r/ProgrammerHumor", p: "When production crashes on Friday", link: "https://reddit.com/r/ProgrammerHumor", thumb: "" },
+                    { h: "r/hyprland", p: "Help with animations config syntax", link: "https://reddit.com/r/hyprland", thumb: "" }
                 ]
             },
             {
                 title: "X / Twitter Workspace",
-                desc: "Real-time microblogging network tracking global news, tech discussions, and community updates.",
+                desc: "Real-time microblogging network tracking global news, tech conversations, and instant community updates.",
                 isRealYouTube: false,
                 feed: [
-                    { h: "#ArchLinux", p: "New stable kernel release rolling out today", link: "https://x.com" },
-                    { h: "#WebDevelopment", p: "Shifting towards blazing fast local tools", link: "https://x.com" },
-                    { h: "Tech Trends", p: "AI workflows and custom browsers taking over", link: "https://x.com" }
+                    { h: "#ArchLinux", p: "New stable kernel release rolling out", link: "https://x.com", thumb: "" },
+                    { h: "#WebDevelopment", p: "Shifting towards fast local tooling", link: "https://x.com", thumb: "" },
+                    { h: "Tech Trends", p: "AI workflows taking over setups", link: "https://x.com", thumb: "" }
                 ]
             }
         ];
 
         async function fetchYouTubeFeed() {
             try {
-                // Lofi Girl channel ID (UC52X5nvz_c_N04tP7eA5oTg) as a default live feed example
+                // Using a fast alternative API endpoint with instant response caching
                 const channelID = "UC52X5nvz_c_N04tP7eA5oTg"; 
-                const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D${channelID}`);
+                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)}`);
                 const data = await res.json();
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(data.contents, "text/xml");
+                const entries = xml.querySelectorAll("entry");
                 
-                if (data.status === 'ok') {
-                    tabs[0].feed = data.items.slice(0, 4).map(item => ({
-                        h: item.title,
-                        p: `Published: ${item.pubDate.split(' ')[0]}`,
-                        link: item.link
-                    }));
+                let fetchedItems = [];
+                for (let i = 0; i < Math.min(entries.length, 4); i++) {
+                    const entry = entries[i];
+                    const title = entry.querySelector("title").textContent;
+                    const link = entry.querySelector("link").getAttribute("href");
+                    const videoId = entry.querySelector("videoId") ? entry.querySelector("videoId").textContent : "";
+                    const thumb = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : "";
+                    fetchedItems.push({ h: title, p: "YouTube Creator Upload", link: link, thumb: thumb });
+                }
+                
+                if (fetchedItems.length > 0) {
+                    tabs[0].feed = fetchedItems;
                     if(document.querySelector('.ws-dot.active').getAttribute('onclick').includes('0')) {
                         switchTab(0);
                     }
                 }
             } catch (e) {
-                tabs[0].feed = [{ h: "Lofi Hip Hop Radio", p: "Stream active on YouTube", link: "https://youtube.com" }];
+                tabs[0].feed = [
+                    { h: "Lofi Hip Hop Radio", p: "24/7 Chill Beats Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Hyprland Rice Setup", p: "Complete Customization Guide", link: "https://youtube.com", thumb: "" }
+                ];
+                switchTab(0);
             }
         }
 
@@ -304,7 +338,10 @@
                 card.href = item.link;
                 card.target = '_blank';
                 card.className = 'item-card';
-                card.innerHTML = `<h4>${item.h}</h4><p>${item.p}</p>`;
+                
+                let thumbHtml = item.thumb ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--accent);">📌</div>`;
+                
+                card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
                 feedContainer.appendChild(card);
             });
         }
