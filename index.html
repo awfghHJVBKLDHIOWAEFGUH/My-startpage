@@ -361,32 +361,65 @@
                 document.getElementById('info-desc').textContent = "Offline or network restriction prevented Wikipedia fetch.";
             }
         }
+async function switchTab(index) {
+    const dots = document.querySelectorAll('.ws-dot');
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
 
-        function switchTab(index) {
-            const dots = document.querySelectorAll('.ws-dot');
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
+    document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
+    document.getElementById('wiki-logo').innerHTML = tabs[index].logo;
+    fetchWikiSnippet(tabs[index].title, tabs[index].wikiPage);
+const feedContainer = document.getElementById('left-feed');
+        feedContainer.innerHTML = '';
 
-            document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
-            document.getElementById('wiki-logo').innerHTML = tabs[index].logo;
-            fetchWikiSnippet(tabs[index].title, tabs[index].wikiPage);
+        let currentFeed = tabs[index].feed; // Default fallback
 
-            const feedContainer = document.getElementById('left-feed');
-            feedContainer.innerHTML = '';
-            
-            tabs[index].feed.forEach(item => {
-                const card = document.createElement('a');
-                card.href = item.link;
-                card.target = '_blank';
-                card.className = 'item-card';
-                
-                let thumbHtml = item.thumb ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;"><svg class="sys-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>`;
-                
-                card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
-                feedContainer.appendChild(card);
-            });
+        // Map tab indexes to keys in our auto-generated JSON file
+        const tabKeys = ["youtube", "github", "twitch", "x"];
+        const key = tabKeys[index];
+
+        try {
+            const res = await fetch('./feed-data.json');
+            if (res.ok) {
+                const liveData = await res.json();
+                if (liveData[key] && liveData[key].length > 0) {
+                    currentFeed = liveData[key];
+                }
+            }
+        } catch (e) {
+            console.error("Using fallback static data:", e);
         }
+
+        currentFeed.forEach(item => {
+            const card = document.createElement('a');
+            card.href = item.link;
+            card.target = '_blank';
+            card.className = 'item-card';
+
+            let thumbHtml = item.thumb ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;"><svg class="sys-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>`;
+
+            card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
+            feedContainer.appendChild(card);
+    }
+
+
+    currentFeed.forEach(item => {
+        const card = document.createElement('a');
+        card.href = item.link;
+        card.target = '_blank';
+        card.className = 'item-card';
+
+        let thumbHtml = item.thumb 
+            ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` 
+            : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;"><svg class="sys-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>`;
+
+        card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
+        feedContainer.appendChild(card);
+    });
+}
+
+    
 
         function updateClock() {
             const now = new Date();
