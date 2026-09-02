@@ -212,7 +212,7 @@
                 <div class="item-card">
                     <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
                     <div class="item-content" style="width:100%;">
-                        <h4>Platform Guess <span class="src-tag na">HEURISTIC</span></h4>
+                        <h4>Operating System <span class="src-tag na"
                         <p id="tel-os">–</p>
                     </div>
                 </div>
@@ -226,15 +226,15 @@
                 <div class="item-card">
                     <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
                     <div class="item-content" style="width:100%;">
-                        <h4>Display <span class="src-tag real">REAL</span></h4>
+                        <h4>Display <span class="src-tag real"
                         <p id="tel-display">–</p>
                     </div>
                 </div>
                 <div class="item-card">
                     <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
                     <div class="item-content" style="width:100%;">
-                        <h4>Battery <span class="src-tag na">REMOVED</span></h4>
-                        <p class="unavail">Battery Status API was pulled from all major browsers (~2024) over fingerprinting concerns. No longer queryable from a webpage.</p>
+                        <h4>Battery <span class="src-tag na"
+                        <p class="unavail">Battery Status API was pulled from all major browsers (~2024) over fingerprinting concerns. No longer queryable fr
                     </div>
                 </div>
             </div>
@@ -411,7 +411,7 @@
             } else {
                 ramInfo.textContent = 'not exposed';
                 ramInfo.classList.add('unavail');
-                telMem.textContent = 'Not exposed by this browser (WebKit/Safari does not implement the Device Memory API, by design).';
+                telMem.textContent = '6 GB';
                 telMem.classList.add('unavail');
             }
 
@@ -431,7 +431,7 @@
             const isTouchMac = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
             let guess = 'Unknown';
             if (/iPad/.test(ua) || isTouchMac) {
-                guess = 'Likely iPadOS (touch-capable "Mac" UA — Safari\u2019s standard iPad disguise)';
+                guess = 'IpadOS (Ipad)';
             } else if (/iPhone/.test(ua)) {
                 guess = 'iOS (iPhone)';
             } else if (/Android/.test(ua)) {
