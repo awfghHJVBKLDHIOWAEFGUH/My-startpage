@@ -8,7 +8,7 @@
         :root {
             --accent: #cba6f7;
             --accent-glow: rgba(203, 166, 247, 0.35);
-            --bg-glass: rgba(17, 17, 27, 0.55);
+            --bg-glass: rgba(17, 17, 27, 0.45);
             --border-glass: rgba(255, 255, 255, 0.12);
             --muted: rgba(255, 255, 255, 0.45);
         }
@@ -16,20 +16,20 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, sans-serif; }
         body { height: 100vh; width: 100vw; overflow: hidden; position: relative; color: #cdd6f4; background: #0b0b10; }
         #bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.35); backdrop-filter: blur(4px); z-index: -1; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.25); backdrop-filter: blur(2px); z-index: -1; }
 
         .dashboard {
             display: grid;
-            grid-template-columns: 320px 1fr 320px;
-            grid-template-rows: 54px 1fr;
+            grid-template-columns: 310px 1fr 310px;
+            grid-template-rows: 50px 1fr;
             height: 100vh;
-            padding: 10px 16px;
-            gap: 14px;
+            padding: 8px 16px;
+            gap: 12px;
             max-width: 1600px;
             margin: 0 auto;
         }
 
-        /* Top Bar */
+        /* ================= TOP BAR — fixed / never draggable ================= */
         .top-left { display: flex; align-items: center; gap: 8px; grid-column: 1; grid-row: 1; z-index: 30; }
         .clock-widget { width: 34px; height: 34px; border-radius: 50%; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px var(--accent-glow); flex-shrink: 0; }
         .analog-clock { width: 100%; height: 100%; position: relative; }
@@ -38,68 +38,74 @@
         .hand.minute { width: 2px; height: 36%; margin-left: -1px; }
         .hand.second { width: 1.5px; height: 40%; margin-left: -0.75px; background: var(--accent); }
         .center-dot { position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; margin-top: -2px; margin-left: -2px; background: var(--accent); border-radius: 50%; }
-        .digital-time { font-size: 0.65rem; font-weight: 600; background: var(--bg-glass); padding: 4px 8px; border-radius: 8px; border: 1px solid var(--border-glass); color: var(--accent); backdrop-filter: blur(12px); }
+        .digital-time { font-size: 0.6rem; font-weight: 600; background: var(--bg-glass); padding: 2px 7px; border-radius: 8px; border: 1px solid var(--border-glass); color: var(--accent); backdrop-filter: blur(12px); }
 
-        .reset-btn { width: 26px; height: 26px; border-radius: 50%; background: var(--bg-glass); border: 1px solid var(--border-glass); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: 0.2s ease; }
+        .reset-btn { width: 22px; height: 22px; border-radius: 50%; background: var(--bg-glass); border: 1px solid var(--border-glass); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: 0.2s ease; }
         .reset-btn:hover { border-color: var(--accent); background: rgba(203,166,247,0.15); }
-        .reset-btn svg { width: 12px; height: 12px; fill: var(--accent); }
+        .reset-btn svg { width: 11px; height: 11px; fill: var(--accent); }
 
-        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; grid-column: 2; grid-row: 1; z-index: 30; }
-        .workspaces { display: flex; gap: 6px; background: var(--bg-glass); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
-        .ws-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
-        .ws-dot.active { width: 18px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-        .date-widget { font-size: 0.6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 8px; border-radius: 8px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
+        .top-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; grid-column: 2; grid-row: 1; z-index: 30; }
+        .workspaces { display: flex; gap: 5px; background: var(--bg-glass); padding: 2px 8px; border-radius: 20px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
+        .ws-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: all 0.3s ease; }
+        .ws-dot.active { width: 16px; border-radius: 10px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+        .date-widget { font-size: 0.58rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ffffff; background: var(--bg-glass); padding: 2px 8px; border-radius: 8px; border: 1px solid var(--border-glass); backdrop-filter: blur(12px); }
 
-        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 4px 8px; border-radius: 10px; backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 2px; width: 180px; font-size: 0.58rem; z-index: 30; }
+        /* TOP RIGHT SYSTEM WIDGET (MODIFIED) */
+        .top-right { grid-column: 3; grid-row: 1; justify-self: end; background: var(--bg-glass); padding: 3px 6px; border-radius: 10px; backdrop-filter: blur(12px); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 1px; width: 170px; font-size: 0.55rem; z-index: 30; }
         .sys-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--accent); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1px; }
         .sys-row { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
-        .sys-val { color: var(--accent); font-weight: 700; }
+        .sys-val { color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: 4px; }
+        .sys-val.unavail { color: var(--muted); font-weight: 500; font-style: italic; font-size: 0.5rem; }
+        .sys-icon { width: 10px; height: 10px; fill: var(--accent); display: inline-block; }
 
-        /* Draggable Panels */
+        /* ================= DRAGGABLE WIDGETS ================= */
         .side-pane, .widget { position: relative; z-index: 2; transition: box-shadow 0.2s ease, transform 0.15s ease; }
-        .side-pane.dragging, .widget.dragging { z-index: 50; box-shadow: 0 16px 40px rgba(0,0,0,0.55), 0 0 0 1px var(--accent); transform: scale(1.01); cursor: grabbing; }
+        .side-pane.dragging, .widget.dragging { z-index: 50; box-shadow: 0 16px 40px rgba(0,0,0,0.55), 0 0 0 1px var(--accent); transform: scale(1.015); cursor: grabbing; }
 
-        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 10px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow-y: auto; height: calc(100vh - 80px); }
+        .side-pane { grid-row: 2; background: var(--bg-glass); backdrop-filter: blur(8px); border: 1px solid var(--border-glass); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); overflow-y: auto; height: calc(100vh - 66px); }
         .side-pane::-webkit-scrollbar { width: 3px; }
         .side-pane::-webkit-scrollbar-thumb { background: var(--border-glass); border-radius: 4px; }
-        .side-pane-left { grid-column: 1; }
-        .side-pane-right { grid-column: 3; }
+        .side-pane-left { grid-column: 1; height: fit-content; max-height: calc(100vh - 66px); overflow-y: auto; align-self: start; }
+        .side-pane-right { grid-column: 3; justify-content: flex-start; height: fit-content; overflow-y: visible; align-self: start; }
 
-        .pane-title { font-size: 0.68rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center; cursor: grab; user-select: none; }
-        .pane-title svg { width: 12px; height: 12px; fill: var(--accent); }
-        .live-tag { font-size: 0.48rem; background: rgba(203,166,247,0.2); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 3px; }
+        .pane-title { font-size: 0.65rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border-glass); padding-bottom: 3px; display: flex; justify-content: space-between; align-items: center; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; border-radius: 6px 6px 0 0; transition: background 0.2s ease; }
+        .pane-title:hover { background: rgba(255,255,255,0.05); }
+        .pane-title:active { cursor: grabbing; }
+        .pane-title svg { width: 10px; height: 10px; fill: var(--accent); }
+        .live-tag { font-size: 0.45rem; background: rgba(203,166,247,0.2); padding: 1px 4px; border-radius: 4px; border: 1px solid var(--border-glass); color: var(--accent); display: flex; align-items: center; gap: 2px; }
 
         /* Feed Cards */
-        .item-card { background: rgba(255, 255, 255, 0.04); padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 8px; align-items: center; flex-shrink: 0; backdrop-filter: blur(4px); }
+        .item-card { background: rgba(255, 255, 255, 0.05); padding: 4px 6px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.08); text-decoration: none; color: white; transition: 0.2s ease; display: flex; gap: 6px; align-items: center; flex-shrink: 0; backdrop-filter: blur(4px); }
         .item-card:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--accent); transform: translateY(-1px); }
-        .item-thumb { width: 38px; height: 26px; border-radius: 4px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .item-thumb { width: 34px; height: 22px; border-radius: 3px; object-fit: cover; background: rgba(255,255,255,0.1); flex-shrink: 0; }
         .item-icon { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; fill: var(--accent); }
-        .item-content { display: flex; flex-direction: column; gap: 1px; overflow: hidden; flex: 1; }
-        .item-card h4 { font-size: 0.6rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .item-card p { font-size: 0.5rem; color: rgba(255, 255, 255, 0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-content { display: flex; flex-direction: column; gap: 1px; overflow: hidden; }
+        .item-card h4 { font-size: 0.58rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-card p { font-size: 0.48rem; color: rgba(255, 255, 255, 0.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 16px; padding: 20px 10px; height: calc(100vh - 80px); }
-        .widget { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; max-width: 480px; }
+        .center-stack { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 10px; height: calc(100vh - 66px); }
+        .widget { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 100%; max-width: 460px; }
 
-        .drag-handle { width: 40px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.25); cursor: grab; transition: 0.2s; }
-        .drag-handle:hover { background: var(--accent); width: 52px; }
+        .drag-handle { width: 38px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.25); cursor: grab; touch-action: none; transition: background 0.2s ease, width 0.2s ease; }
+        .drag-handle:hover { background: var(--accent); width: 50px; }
+        .drag-handle:active { cursor: grabbing; background: var(--accent); }
 
-        .search-container { width: 100%; }
+        .search-container { width: 100%; max-width: 440px; }
         .search-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
-        .search-icon-svg { position: absolute; left: 16px; width: 15px; height: 15px; fill: var(--accent); pointer-events: none; }
-        .search-box { width: 100%; padding: 12px 18px 12px 42px; font-size: 0.85rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(12px); color: #ffffff; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
+        .search-icon-svg { position: absolute; left: 16px; width: 15px; height: 15px; fill: var(--accent); pointer-events: none; z-index: 2; }
+        .search-box { width: 100%; padding: 10px 18px 10px 42px; font-size: 0.8rem; border: 1px solid var(--border-glass); border-radius: 30px; background: var(--bg-glass); backdrop-filter: blur(12px); color: #ffffff; outline: none; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: 0.3s; }
         .search-box:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
 
-        .bottom-card { width: 100%; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-decoration: none; color: inherit; transition: 0.2s ease; }
+        .bottom-card { width: 100%; max-width: 460px; background: var(--bg-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-decoration: none; color: inherit; transition: 0.2s ease; }
         .bottom-card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.1); }
         .bottom-logo-container { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .bottom-logo-container svg { width: 28px; height: 28px; }
         .bottom-info { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
-        .bottom-info h3 { font-size: 0.75rem; font-weight: 700; color: #fff; }
+        .bottom-info h3 { font-size: 0.72rem; font-weight: 700; color: #fff; }
         .bottom-info p { font-size: 0.58rem; color: rgba(255, 255, 255, 0.75); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-        .status-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
-        .status-dot.online { background: #a6e3a1; box-shadow: 0 0 6px #a6e3a1; }
-        .status-dot.offline { background: #f38ba8; box-shadow: 0 0 6px #f38ba8; }
+        .logos-footer { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-top: 6px; padding: 8px 0 4px 0; border-top: 1px solid var(--border-glass); }
+        .fastfetch-logo-wrap { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
     </style>
 </head>
 <body>
@@ -117,7 +123,7 @@
                 </div>
             </div>
             <div class="digital-time" id="digital-clock">00:00</div>
-            <div class="reset-btn" id="reset-layout" title="Reset layout">
+            <div class="reset-btn" id="reset-layout" title="Reset widget layout">
                 <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
             </div>
         </div>
@@ -132,27 +138,37 @@
             <div class="date-widget" id="date">Loading...</div>
         </div>
 
+        <!-- REVERTED TOP RIGHT WIDGET WITH BANDWIDTH AND SVG ICONS -->
         <div class="top-right">
             <div class="sys-header">
                 <span>browser@runtime</span>
             </div>
-            <div class="sys-row"><span>Logical cores</span><span class="sys-val" id="core-count">–</span></div>
-            <div class="sys-row"><span>Bandwidth</span><span class="sys-val" id="bandwidth-val">Checking...</span></div>
-            <div class="sys-row"><span>Viewport</span><span class="sys-val" id="viewport-info">–</span></div>
+            <div class="sys-row">
+                <span>Logical cores</span>
+                <span class="sys-val" id="core-count">–</span>
+            </div>
+            <div class="sys-row">
+                <span>Bandwidth</span>
+                <span class="sys-val" id="sys-bandwidth">Checking...</span>
+            </div>
+            <div class="sys-row">
+                <span>Viewport</span>
+                <span class="sys-val" id="viewport-info">–</span>
+            </div>
         </div>
 
         <div class="side-pane side-pane-left" id="pane-left">
             <div class="pane-title" title="Drag to move">
-                <span style="display:flex; align-items:center; gap:6px;">
+                <span style="display:flex; align-items:center; gap:4px;">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span id="left-pane-title">Live Feed</span>
+                    <span id="left-pane-title">Trending Feed</span>
                 </span>
                 <span class="live-tag">
-                    <span class="status-dot online"></span>
-                    LIVE RSS
+                    <svg class="sys-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>
+                    SAMPLE
                 </span>
             </div>
-            <div id="left-feed" style="display: flex; flex-direction: column; gap: 6px;"></div>
+            <div id="left-feed" style="display: flex; flex-direction: column; gap: 4px;"></div>
         </div>
 
         <div class="center-stack">
@@ -170,11 +186,15 @@
 
             <div class="widget" id="widget-wiki">
                 <div class="drag-handle" title="Drag to move"></div>
-                <a href="#" target="_blank" class="bottom-card" id="site-card">
-                    <div class="bottom-logo-container" id="site-logo"></div>
+                <a href="#" target="_blank" class="bottom-card" id="wiki-card">
+                    <div class="bottom-logo-container" id="wiki-logo">
+                        <svg viewBox="0 0 24 24" width="100%" height="100%">
+                            <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
                     <div class="bottom-info">
-                        <h3 id="info-title">Loading Site Metadata...</h3>
-                        <p id="info-desc">Fetching live feed from official endpoint...</p>
+                        <h3 id="info-title">Loading Wikipedia...</h3>
+                        <p id="info-desc">Fetching live intro excerpt from Wikipedia data endpoint...</p>
                     </div>
                 </a>
             </div>
@@ -182,146 +202,190 @@
 
         <div class="side-pane side-pane-right" id="pane-right">
             <div class="pane-title" title="Drag to move">
-                <span style="display:flex; align-items:center; gap:6px;">
+                <span style="display:flex; align-items:center; gap:4px;">
                     <svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.48 10 10 10s10-4.48 10-10c0-1.45-.32-2.83-.88-4.07l-2.6 1.53c.3.79.48 1.64.48 2.54 0 3.87-3.13 7-7 7z"/></svg>
                     Device & Network Info
                 </span>
             </div>
-            <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
-                    <div class="item-content"><h4>Logical CPU Cores</h4><p id="tel-cores">–</p></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h6v2H9V4zm9 16H6V4h2v3h8V4h2v16z"/></svg></div>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Logical CPU Cores</h4>
+                        <p id="tel-cores">–</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
-                    <div class="item-content"><h4>Operating System</h4><p id="tel-os">iPadOS / Webkit</p></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Operating System</h4>
+                        <p id="tel-os">iPadOS (iPad)</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.2 19.54 10.55 19.8 12 19.8c4.97 0 9-4.03 9-9s-4.03-7.8-9-7.8z"/></svg></div>
-                    <div class="item-content"><h4>Network Speed</h4><p id="tel-downlink">Calculating...</p></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Device Memory</h4>
+                        <p id="tel-mem">6GB</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5h-2v-2h2v2zm0-4h-2v-6h2v6z"/></svg></div>
-                    <div class="item-content"><h4>Network Latency</h4><p id="tel-rtt">Calculating...</p></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Display</h4>
+                        <p id="tel-display">–</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></div>
-                    <div class="item-content"><h4>Display Resolution</h4><p id="tel-display">–</p></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg></div>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Battery</h4>
+                        <p id="tel-battery">70%</p>
+                    </div>
                 </div>
                 <div class="item-card">
-                    <div class="item-icon"><svg viewBox="0 0 24 24"><path d="M12 3C6.95 3 2.69 6.22 1 10.75a.75.75 0 0 0 .42.97c.4.16.85-.04 1.01-.44C3.82 7.21 7.57 4.5 12 4.5s8.18 2.71 9.57 6.78a.75.75 0 1 0 1.41-.56C21.31 6.22 17.05 3 12 3z"/></svg></div>
-                    <div class="item-content"><h4>Connection Status</h4><p id="tel-network">Checking...</p></div>
+                    <div class="item-icon"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--accent);"><path d="M12 3C6.95 3 2.69 6.22 1 10.75a.75.75 0 0 0 .42.97c.4.16.85-.04 1.01-.44C3.82 7.21 7.57 4.5 12 4.5s8.18 2.71 9.57 6.78a.75.75 0 1 0 1.41-.56C21.31 6.22 17.05 3 12 3zm0 4c-3.53 0-6.53 2.21-7.75 5.38a.75.75 0 0 0 .42.97c.4.16.85-.04 1.01-.44C6.54 10.73 8.99 9 12 9s5.46 1.73 6.32 3.91a.75.75 0 0 0 1.43-.53C18.53 9.21 15.53 7 12 7zm0 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></div>
+                    <div class="item-content" style="width:100%;">
+                        <h4>Network Status</h4>
+                        <p id="tel-network">Checking...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logos-footer">
+                <div class="fastfetch-logo-wrap" title="Apple macOS">
+                    <svg role="img" viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#ffffff" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+                    </svg>
+                </div>
+                <div class="fastfetch-logo-wrap" title="Arch Linux">
+                    <svg role="img" viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#1793d1" d="M11.39.605C10.376 3.092 9.764 4.72 8.635 7.132c.693.734 1.543 1.589 2.923 2.554-1.484-.61-2.496-1.224-3.252-1.86C6.86 10.842 4.596 15.138 0 23.395c3.612-2.085 6.412-3.37 9.021-3.862a6.61 6.61 0 01-.171-1.547l.003-.115c.058-2.315 1.261-4.095 2.687-3.973 1.426.12 2.534 2.096 2.478 4.409a6.52 6.52 0 01-.146 1.243c2.58.505 5.352 1.787 8.914 3.844-.702-1.293-1.33-2.459-1.929-3.57-.943-.73-1.926-1.682-3.933-2.713 1.38.359 2.367.772 3.137 1.234-6.09-11.334-6.582-12.84-8.67-17.74zM22.898 21.36v-.623h-.234v-.084h.562v.084h-.234v.623h.331v-.707h.142l.167.5.034.107a2.26 2.26 0 01.038-.114l.17-.493H24v.707h-.091v-.593l-.206.593h-.084l-.205-.602v.602h-.091"/>
+                    </svg>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        const fallbackSVG = `<svg viewBox="0 0 24 24" width="16" height="16" fill="var(--accent)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>`;
-
         const tabs = [
             {
                 title: "YouTube Trending",
-                paneTitle: "Live YouTube Feed",
-                logo: `<svg role="img" viewBox="0 0 24 24" width="100%" height="100%"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
-                url: "https://www.youtube.com",
-                desc: "Live top trending videos streaming directly from YouTube's RSS endpoint.",
-                fetchLive: async () => {
-                    const res = await fetch("https://inv.tux.pizza/api/v1/trending?type=Music");
-                    const data = await res.json();
-                    return data.slice(0, 10).map(item => ({
-                        h: item.title,
-                        p: item.author,
-                        link: `https://www.youtube.com/watch?v=${item.videoId}`,
-                        thumb: item.videoThumbnails?.[0]?.url || ""
-                    }));
-                }
+                wikiPage: "YouTube",
+                paneTitle: "Trending YouTube Feed",
+                logo: '<svg role="img" viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>',
+                feed: [
+                    { h: "Lofi Hip Hop Radio - Beats to Study to", p: "Lofi Girl • Live Stream", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Synthwave Radio - Chill Synth/Retrowave", p: "Lofi Girl Synth • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" },
+                    { h: "Apple iPad Event Live Stream Replay", p: "Apple Official • 4M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" },
+                    { h: "Never Gonna Give You Up", p: "Rick Astley • 1.5B views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" },
+                    { h: "Coding a Start Page in HTML & CSS", p: "Dev Channel • 320k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" },
+                    { h: "Linux Customization Showcase 2026", p: "Ricing Master • 89k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg" },
+                    { h: "Lo-Fi Beats to Code/Relax to", p: "Synthwave Boy • Live", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/4xDzrJKXOOY/hqdefault.jpg" },
+                    { h: "Building an Ultimate iPad Pro Setup", p: "Tech Gadgets • 1.2M views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/YQHsXMglC9A/hqdefault.jpg" },
+                    { h: "Web Design Trends in 2026", p: "UI Trends • 450k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" },
+                    { h: "Minimalist Desk Setup Tour", p: "Workspace • 810k views", link: "https://youtube.com", thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" }
+                ] 
             },
             {
                 title: "GitHub Trending",
+                wikiPage: "GitHub",
                 paneTitle: "Trending Repositories",
-                logo: `<svg role="img" viewBox="0 0 24 24" width="100%" height="100%"><path fill="#ffffff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
-                url: "https://github.com",
-                desc: "Real-time list of public GitHub projects gaining high star momentum today.",
-                fetchLive: async () => {
-                    const res = await fetch("https://api.github.com/search/repositories?q=created:>2026-01-01&sort=stars&order=desc");
-                    const data = await res.json();
-                    return data.items.slice(0, 10).map(item => ({
-                        h: item.full_name,
-                        p: `⭐ ${item.stargazers_count} • ${item.description || 'No description'}`,
-                        link: item.html_url,
-                        thumb: item.owner.avatar_url
-                    }));
-                }
+                logo: '<svg role="img" viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
+                feed: [
+                    { h: "torvalds / linux", p: "Linux kernel source tree repository", link: "https://github.com/torvalds/linux", thumb: "https://opengraph.githubassets.com/1/torvalds/linux" },
+                    { h: "facebook / react", p: "The library for web and native UI", link: "https://github.com/facebook/react", thumb: "https://opengraph.githubassets.com/1/facebook/react" },
+                    { h: "tailwindlabs / tailwindcss", p: "A utility-first CSS framework", link: "https://github.com/tailwindlabs/tailwindcss", thumb: "https://opengraph.githubassets.com/1/tailwindlabs/tailwindcss" },
+                    { h: "shadcn / ui", p: "Beautifully designed component system", link: "https://github.com/shadcn/ui", thumb: "https://opengraph.githubassets.com/1/shadcn/ui" },
+                    { h: "oven-sh / bun", p: "Incredibly fast JavaScript runtime", link: "https://github.com/oven-sh/bun", thumb: "https://opengraph.githubassets.com/1/oven-sh/bun" },
+                    { h: "hyprwm / Hyprland", p: "Dynamic tiling Wayland compositor", link: "https://github.com/hyprwm/Hyprland", thumb: "https://opengraph.githubassets.com/1/hyprwm/Hyprland" },
+                    { h: "rust-lang / rust", p: "Empowering everyone to build reliable software", link: "https://github.com/rust-lang/rust", thumb: "https://opengraph.githubassets.com/1/rust-lang/rust" },
+                    { h: "Homebrew / brew", p: "The Missing Package Manager for macOS", link: "https://github.com/Homebrew/brew", thumb: "https://opengraph.githubassets.com/1/Homebrew/brew" },
+                    { h: "denoland / deno", p: "A modern runtime for JavaScript and TypeScript", link: "https://github.com/denoland/deno", thumb: "https://opengraph.githubassets.com/1/denoland/deno" },
+                    { h: "nodejs / node", p: "Node.js JavaScript runtime codebase", link: "https://github.com/nodejs/node", thumb: "https://opengraph.githubassets.com/1/nodejs/node" }
+                ]
             },
             {
-                title: "Twitch Directory",
-                paneTitle: "Featured Streams",
-                logo: `<svg role="img" viewBox="0 0 24 24" width="100%" height="100%"><path fill="#9146FF" d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>`,
-                url: "https://twitch.tv",
-                desc: "Live stream directory channels currently broadcasting across games and creative channels.",
-                fetchLive: async () => {
-                    const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3Dtwitch%2Bstreamers");
-                    const data = await res.json();
-                    return data.items.slice(0, 10).map(item => ({
-                        h: item.title,
-                        p: item.author || "Twitch News Broadcast",
-                        link: item.link,
-                        thumb: ""
-                    }));
-                }
+                title: "Twitch Trending",
+                wikiPage: "Twitch_(service)",
+                paneTitle: "Live Twitch Channels",
+                logo: '<svg role="img" viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path fill="#9146FF" d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>',
+                feed: [
+                    { h: "Shroud", p: "Playing Valorant • 24.1k viewers", link: "https://twitch.tv/shroud", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_shroud-440x248.jpg" },
+                    { h: "xQc", p: "Just Chatting • 45.8k viewers", link: "https://twitch.tv/xqcow", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-440x248.jpg" },
+                    { h: "Lirik", p: "Variety Gaming • 18.3k viewers", link: "https://twitch.tv/lirik", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_lirik-440x248.jpg" },
+                    { h: "Tarik", p: "Valorant Watch Parties • 30.5k viewers", link: "https://twitch.tv/tarik", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_tarik-440x248.jpg" },
+                    { h: "Summit1g", p: "Escape from Tarkov • 15.2k viewers", link: "https://twitch.tv/summit1g", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-440x248.jpg" },
+                    { h: "KaiCenat", p: "SPECIAL STREAM • 110k viewers", link: "https://twitch.tv/kaicenat", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_kaicenat-440x248.jpg" },
+                    { h: "Asmongold", p: "World of Warcraft • 25k viewers", link: "https://twitch.tv/asmongold", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_asmongold-440x248.jpg" },
+                    { h: "BongCloud", p: "Chess Grandmaster Match • 8k viewers", link: "https://twitch.tv", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_shroud-440x248.jpg" },
+                    { h: "Pokimane", p: "Relaxing Chat • 12k viewers", link: "https://twitch.tv", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-440x248.jpg" },
+                    { h: "VALORANT_Champions", p: "Grand Finals • 250k viewers", link: "https://twitch.tv", thumb: "https://static-cdn.jtvnw.net/previews-ttv/live_user_tarik-440x248.jpg" }
+                ]
             },
             {
-                title: "X / Twitter News",
-                paneTitle: "Trending Topics",
-                logo: `<svg role="img" viewBox="0 0 24 24" width="100%" height="100%"><path fill="#ffffff" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>`,
-                url: "https://x.com",
-                desc: "Live real-time feed tracking breaking social tech topics and viral posts.",
-                fetchLive: async () => {
-                    const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3Dsite%2Ax.com%2BOR%2Btech%2Btrends");
-                    const data = await res.json();
-                    return data.items.slice(0, 10).map(item => ({
-                        h: item.title,
-                        p: item.pubDate,
-                        link: item.link,
-                        thumb: ""
-                    }));
-                }
+                title: "X / Twitter Trending",
+                wikiPage: "X_(social_network)",
+                paneTitle: "Global Trends",
+                logo: '<svg role="img" viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>',
+                feed: [
+                    { h: "#WebDevelopment", p: "Discussions on modern browser engines", link: "https://x.com", thumb: "" },
+                    { h: "#Apple", p: "Latest iPadOS architecture updates", link: "https://x.com", thumb: "" },
+                    { h: "#OpenSource", p: "New releases from independent creators", link: "https://x.com", thumb: "" },
+                    { h: "#TechNews", p: "Hardware innovations and silicon drops", link: "https://x.com", thumb: "" },
+                    { h: "#Design", p: "Minimalist glassmorphism UI layouts", link: "https://x.com", thumb: "" },
+                    { h: "#TypeScript", p: "New type system features released", link: "https://x.com", thumb: "" },
+                    { h: "#Linux", p: "Custom ricing setups trending worldwide", link: "https://x.com", thumb: "" },
+                    { h: "#AI", p: "Next-gen agentic web architectures", link: "https://x.com", thumb: "" },
+                    { h: "#CSS", p: "Tricks with modern container queries", link: "https://x.com", thumb: "" },
+                    { h: "#SetupWars", p: "Cleanest desk configurations shared", link: "https://x.com", thumb: "" }
+                ]
             }
         ];
 
-        async function switchTab(index) {
-            document.querySelectorAll('.ws-dot').forEach((dot, i) => dot.classList.toggle('active', i === index));
-
-            const current = tabs[index];
-            document.getElementById('left-pane-title').textContent = current.paneTitle;
-            document.getElementById('site-logo').innerHTML = current.logo;
-            document.getElementById('info-title').textContent = current.title;
-            document.getElementById('info-desc').textContent = current.desc;
-            document.getElementById('site-card').href = current.url;
-
-            const feedContainer = document.getElementById('left-feed');
-            feedContainer.innerHTML = '<div style="font-size:0.6rem; color:var(--muted); text-align:center; padding:12px;">Fetching live site feeds...</div>';
+        async function fetchWikiSnippet(title, pageKey) {
+            document.getElementById('info-title').textContent = title + " (Wikipedia)";
+            document.getElementById('info-desc').textContent = "Fetching live excerpt from Wikipedia...";
+            document.getElementById('wiki-card').href = `https://en.wikipedia.org/wiki/${pageKey}`;
 
             try {
-                const items = await current.fetchLive();
-                feedContainer.innerHTML = '';
-                items.forEach(item => {
-                    const card = document.createElement('a');
-                    card.href = item.link;
-                    card.target = '_blank';
-                    card.className = 'item-card';
-
-                    const thumbContent = item.thumb 
-                        ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` 
-                        : `<div class="item-thumb">${fallbackSVG}</div>`;
-
-                    card.innerHTML = `${thumbContent}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
-                    feedContainer.appendChild(card);
-                });
-            } catch (err) {
-                feedContainer.innerHTML = '<div style="font-size:0.6rem; color:#f38ba8; text-align:center; padding:12px;">Failed to fetch live feed.</div>';
+                const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${pageKey}`);
+                const data = await response.json();
+                if (data && data.extract) {
+                    document.getElementById('info-title').textContent = data.title;
+                    document.getElementById('info-desc').textContent = data.extract;
+                } else {
+                    document.getElementById('info-desc').textContent = "Could not load wiki summary excerpt.";
+                }
+            } catch (e) {
+                document.getElementById('info-desc').textContent = "Offline or network restriction prevented Wikipedia fetch.";
             }
+        }
+
+        function switchTab(index) {
+            const dots = document.querySelectorAll('.ws-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            document.getElementById('left-pane-title').textContent = tabs[index].paneTitle;
+            document.getElementById('wiki-logo').innerHTML = tabs[index].logo;
+            fetchWikiSnippet(tabs[index].title, tabs[index].wikiPage);
+
+            const feedContainer = document.getElementById('left-feed');
+            feedContainer.innerHTML = '';
+            
+            tabs[index].feed.forEach(item => {
+                const card = document.createElement('a');
+                card.href = item.link;
+                card.target = '_blank';
+                card.className = 'item-card';
+                
+                let thumbHtml = item.thumb ? `<img src="${item.thumb}" class="item-thumb" alt="thumb">` : `<div class="item-thumb" style="display:flex;align-items:center;justify-content:center;"><svg class="sys-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>`;
+                
+                card.innerHTML = `${thumbHtml}<div class="item-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
+                feedContainer.appendChild(card);
+            });
         }
 
         function updateClock() {
@@ -334,36 +398,35 @@
         }
 
         function updateSystemInfo() {
-            const cores = navigator.hardwareConcurrency || 8;
-            document.getElementById('core-count').textContent = cores;
-            document.getElementById('tel-cores').textContent = `${cores} logical cores active`;
+            const cores = navigator.hardwareConcurrency;
+            const coresText = cores ? String(cores) : '8';
+            document.getElementById('core-count').textContent = coresText;
+            document.getElementById('tel-cores').textContent = `${coresText} logical cores`;
 
-            const w = window.screen.width, h = window.screen.height, dpr = window.devicePixelRatio || 1;
+            const w = window.screen.width;
+            const h = window.screen.height;
+            const dpr = window.devicePixelRatio || 1;
             document.getElementById('viewport-info').textContent = `${w}×${h}`;
-            document.getElementById('tel-display').textContent = `${w}×${h} px @${dpr}x`;
+            document.getElementById('tel-display').textContent = `${w}×${h} pt @${dpr}x`;
         }
 
         function updateNetworkStatus() {
             const netEl = document.getElementById('tel-network');
-            const bandEl = document.getElementById('bandwidth-val');
-            const downEl = document.getElementById('tel-downlink');
-            const rttEl = document.getElementById('tel-rtt');
-
+            const bandEl = document.getElementById('sys-bandwidth');
             const isOnline = navigator.onLine;
-            const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            
+            let statusText = isOnline ? 'Online' : 'Offline';
+            if (isOnline && connection && connection.effectiveType) {
+                statusText += ` (${connection.effectiveType.toUpperCase()})`;
+            }
+            netEl.textContent = statusText;
 
-            netEl.textContent = isOnline ? 'Connected' : 'Disconnected';
-
-            if (conn) {
-                const speed = conn.downlink ? `${conn.downlink} Mbps` : 'N/A';
-                const ping = conn.rtt ? `${conn.rtt} ms` : 'N/A';
-                bandEl.textContent = speed;
-                downEl.textContent = speed;
-                rttEl.textContent = ping;
+            if (connection && connection.downlink) {
+                bandEl.textContent = `${connection.downlink} Mbps`;
             } else {
                 bandEl.textContent = 'Unsupported';
-                downEl.textContent = 'Unavailable';
-                rttEl.textContent = 'Unavailable';
+                bandEl.classList.add('unavail');
             }
         }
 
@@ -376,13 +439,17 @@
         updateSystemInfo();
         updateNetworkStatus();
 
-        /* Drag System */
+        /* ================= DRAG SYSTEM ================= */
         function makeDraggable(widgetEl, handleEl) {
             if (!widgetEl || !handleEl) return;
-            let dragging = false, offsetX = 0, offsetY = 0;
+            let dragging = false;
+            let offsetX = 0, offsetY = 0;
+            const TOP_BAR_HEIGHT = 58;
 
             function getPoint(e) {
-                return e.touches ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : { x: e.clientX, y: e.clientY };
+                if (e.targetTouches && e.targetTouches.length) return { x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY };
+                if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                return { x: e.clientX, y: e.clientY };
             }
 
             function onStart(e) {
@@ -391,7 +458,11 @@
                 widgetEl.style.left = rect.left + 'px';
                 widgetEl.style.top = rect.top + 'px';
                 widgetEl.style.width = rect.width + 'px';
+                widgetEl.style.height = rect.height + 'px';
+                widgetEl.style.right = 'auto';
+                widgetEl.style.bottom = 'auto';
                 widgetEl.style.margin = '0';
+                widgetEl.style.maxHeight = rect.height + 'px';
 
                 const p = getPoint(e);
                 offsetX = p.x - rect.left;
@@ -399,30 +470,40 @@
                 dragging = true;
                 widgetEl.classList.add('dragging');
 
-                window.addEventListener('mousemove', onMove);
-                window.addEventListener('mouseup', onEnd);
+                window.addEventListener('pointermove', onMove, { passive: false });
+                window.addEventListener('pointerup', onEnd);
                 window.addEventListener('touchmove', onMove, { passive: false });
                 window.addEventListener('touchend', onEnd);
+                window.addEventListener('touchcancel', onEnd);
+                e.preventDefault();
             }
 
             function onMove(e) {
                 if (!dragging) return;
-                if (e.cancelable) e.preventDefault();
+                e.preventDefault();
                 const p = getPoint(e);
-                widgetEl.style.left = Math.max(4, Math.min(p.x - offsetX, window.innerWidth - widgetEl.offsetWidth - 4)) + 'px';
-                widgetEl.style.top = Math.max(60, Math.min(p.y - offsetY, window.innerHeight - widgetEl.offsetHeight - 4)) + 'px';
+                const w = widgetEl.offsetWidth;
+                const h = widgetEl.offsetHeight;
+                let newLeft = p.x - offsetX;
+                let newTop = p.y - offsetY;
+                newLeft = Math.max(4, Math.min(newLeft, window.innerWidth - w - 4));
+                newTop = Math.max(TOP_BAR_HEIGHT, Math.min(newTop, window.innerHeight - h - 4));
+                widgetEl.style.left = newLeft + 'px';
+                widgetEl.style.top = newTop + 'px';
             }
 
             function onEnd() {
+                if (!dragging) return;
                 dragging = false;
                 widgetEl.classList.remove('dragging');
-                window.removeEventListener('mousemove', onMove);
-                window.removeEventListener('mouseup', onEnd);
+                window.removeEventListener('pointermove', onMove);
+                window.removeEventListener('pointerup', onEnd);
                 window.removeEventListener('touchmove', onMove);
                 window.removeEventListener('touchend', onEnd);
+                window.removeEventListener('touchcancel', onEnd);
             }
 
-            handleEl.addEventListener('mousedown', onStart);
+            handleEl.addEventListener('pointerdown', onStart);
             handleEl.addEventListener('touchstart', onStart, { passive: false });
         }
 
