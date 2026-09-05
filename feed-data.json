@@ -8,34 +8,16 @@
       "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
     },
     {
-      "h": "DietrichGebert/ponytail\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/DietrichGebert/ponytail\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail\" data-view-component=\"true"
-    },
-    {
-      "h": "fmtlib/fmt\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/fmtlib/fmt\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/fmtlib/fmt\" data-view-component=\"true"
-    },
-    {
       "h": "affaan-m/ECC\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/affaan-m/ECC\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/affaan-m/ECC\" data-view-component=\"true"
     },
     {
-      "h": "anthropics/skills\" data-view-component=\"true",
+      "h": "DietrichGebert/ponytail\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
-    },
-    {
-      "h": "blader/humanizer\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/blader/humanizer\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/blader/humanizer\" data-view-component=\"true"
+      "link": "https://github.com/DietrichGebert/ponytail\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail\" data-view-component=\"true"
     },
     {
       "h": "NousResearch/hermes-agent\" data-view-component=\"true",
@@ -44,22 +26,40 @@
       "thumb": "https://opengraph.githubassets.com/1/NousResearch/hermes-agent\" data-view-component=\"true"
     },
     {
-      "h": "JuliusBrussee/caveman\" data-view-component=\"true",
+      "h": "fmtlib/fmt\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/JuliusBrussee/caveman\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/JuliusBrussee/caveman\" data-view-component=\"true"
+      "link": "https://github.com/fmtlib/fmt\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/fmtlib/fmt\" data-view-component=\"true"
     },
     {
-      "h": "magnitudedev/magnitude\" data-view-component=\"true",
+      "h": "anthropics/skills\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/magnitudedev/magnitude\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/magnitudedev/magnitude\" data-view-component=\"true"
+      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
     },
     {
-      "h": "bikini/exploitarium\" data-view-component=\"true",
+      "h": "cathrynlavery/diagram-design\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/bikini/exploitarium\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/bikini/exploitarium\" data-view-component=\"true"
+      "link": "https://github.com/cathrynlavery/diagram-design\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cathrynlavery/diagram-design\" data-view-component=\"true"
+    },
+    {
+      "h": "anomalyco/opencode\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anomalyco/opencode\" data-view-component=\"true"
+    },
+    {
+      "h": "ruvnet/ruflo\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/ruvnet/ruflo\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ruvnet/ruflo\" data-view-component=\"true"
+    },
+    {
+      "h": "humanlayer/skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/humanlayer/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/humanlayer/skills\" data-view-component=\"true"
     }
   ],
   "twitch": [],
