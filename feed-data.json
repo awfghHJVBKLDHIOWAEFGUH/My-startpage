@@ -14,10 +14,28 @@
       "thumb": "https://opengraph.githubassets.com/1/bilawalsidhu/gods-eye-view\" data-view-component=\"true"
     },
     {
-      "h": "obra/superpowers\" data-view-component=\"true",
+      "h": "nab138/iloader\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/obra/superpowers\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/obra/superpowers\" data-view-component=\"true"
+      "link": "https://github.com/nab138/iloader\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/nab138/iloader\" data-view-component=\"true"
+    },
+    {
+      "h": "melgarafael/DeskcommCRM\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/melgarafael/DeskcommCRM\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/melgarafael/DeskcommCRM\" data-view-component=\"true"
+    },
+    {
+      "h": "vastsa/PI-Desktop\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/vastsa/PI-Desktop\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/vastsa/PI-Desktop\" data-view-component=\"true"
+    },
+    {
+      "h": "armory3d/armorpaint\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/armory3d/armorpaint\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/armory3d/armorpaint\" data-view-component=\"true"
     },
     {
       "h": "alsk1992/CloddsBot\" data-view-component=\"true",
@@ -26,40 +44,22 @@
       "thumb": "https://opengraph.githubassets.com/1/alsk1992/CloddsBot\" data-view-component=\"true"
     },
     {
-      "h": "Tencent/teamai-cli\" data-view-component=\"true",
+      "h": "nashsu/llm_wiki\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Tencent/teamai-cli\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Tencent/teamai-cli\" data-view-component=\"true"
+      "link": "https://github.com/nashsu/llm_wiki\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/nashsu/llm_wiki\" data-view-component=\"true"
     },
     {
-      "h": "AlexsJones/llmfit\" data-view-component=\"true",
+      "h": "obra/superpowers\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/AlexsJones/llmfit\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/AlexsJones/llmfit\" data-view-component=\"true"
+      "link": "https://github.com/obra/superpowers\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/obra/superpowers\" data-view-component=\"true"
     },
     {
-      "h": "liquidslr/system-design-notes\" data-view-component=\"true",
+      "h": "Sonarr/Sonarr\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/liquidslr/system-design-notes\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/liquidslr/system-design-notes\" data-view-component=\"true"
-    },
-    {
-      "h": "cathrynlavery/diagram-design\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/cathrynlavery/diagram-design\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cathrynlavery/diagram-design\" data-view-component=\"true"
-    },
-    {
-      "h": "freestylefly/awesome-gpt-image-2\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/freestylefly/awesome-gpt-image-2\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/freestylefly/awesome-gpt-image-2\" data-view-component=\"true"
-    },
-    {
-      "h": "armory3d/armorpaint\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/armory3d/armorpaint\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/armory3d/armorpaint\" data-view-component=\"true"
+      "link": "https://github.com/Sonarr/Sonarr\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Sonarr/Sonarr\" data-view-component=\"true"
     }
   ],
   "twitch": [],
