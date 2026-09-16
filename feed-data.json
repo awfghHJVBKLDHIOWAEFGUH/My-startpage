@@ -8,10 +8,40 @@
       "thumb": "https://opengraph.githubassets.com/1/alibaba/open-code-review\" data-view-component=\"true"
     },
     {
+      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
+    },
+    {
       "h": "JustVugg/colibri\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/JustVugg/colibri\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/JustVugg/colibri\" data-view-component=\"true"
+    },
+    {
+      "h": "abue-ammar/tinycast\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/abue-ammar/tinycast\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/abue-ammar/tinycast\" data-view-component=\"true"
+    },
+    {
+      "h": "jamiepine/voicebox\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/jamiepine/voicebox\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/jamiepine/voicebox\" data-view-component=\"true"
+    },
+    {
+      "h": "Lakr233/vphone-cli\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/Lakr233/vphone-cli\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Lakr233/vphone-cli\" data-view-component=\"true"
+    },
+    {
+      "h": "anthropics/knowledge-work-plugins\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/anthropics/knowledge-work-plugins\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/knowledge-work-plugins\" data-view-component=\"true"
     },
     {
       "h": "ever-co/ever-gauzy\" data-view-component=\"true",
@@ -20,46 +50,16 @@
       "thumb": "https://opengraph.githubassets.com/1/ever-co/ever-gauzy\" data-view-component=\"true"
     },
     {
-      "h": "debpalash/VoiceStudio\" data-view-component=\"true",
+      "h": "ankitects/anki\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
-    },
-    {
-      "h": "Homebrew/BrewUI\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Homebrew/BrewUI\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Homebrew/BrewUI\" data-view-component=\"true"
-    },
-    {
-      "h": "melgarafael/DeskcommCRM\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/melgarafael/DeskcommCRM\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/melgarafael/DeskcommCRM\" data-view-component=\"true"
-    },
-    {
-      "h": "alphaXiv/OpenResearch\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/alphaXiv/OpenResearch\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/alphaXiv/OpenResearch\" data-view-component=\"true"
+      "link": "https://github.com/ankitects/anki\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ankitects/anki\" data-view-component=\"true"
     },
     {
       "h": "NationalSecurityAgency/ghidra\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/NationalSecurityAgency/ghidra\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/NationalSecurityAgency/ghidra\" data-view-component=\"true"
-    },
-    {
-      "h": "danny-avila/LibreChat\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/danny-avila/LibreChat\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/danny-avila/LibreChat\" data-view-component=\"true"
-    },
-    {
-      "h": "pacifio/atlas\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/pacifio/atlas\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/pacifio/atlas\" data-view-component=\"true"
     }
   ],
   "twitch": [],
