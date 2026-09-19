@@ -8,28 +8,10 @@
       "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
     },
     {
-      "h": "anthropics/claude-code\" data-view-component=\"true",
+      "h": "trycua/cua\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/claude-code\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-code\" data-view-component=\"true"
-    },
-    {
-      "h": "alibaba/open-code-review\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/alibaba/open-code-review\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/alibaba/open-code-review\" data-view-component=\"true"
-    },
-    {
-      "h": "affaan-m/ECC\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/affaan-m/ECC\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/affaan-m/ECC\" data-view-component=\"true"
-    },
-    {
-      "h": "Tencent/BrowserSkill\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Tencent/BrowserSkill\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Tencent/BrowserSkill\" data-view-component=\"true"
+      "link": "https://github.com/trycua/cua\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/trycua/cua\" data-view-component=\"true"
     },
     {
       "h": "addyosmani/agent-skills\" data-view-component=\"true",
@@ -38,28 +20,46 @@
       "thumb": "https://opengraph.githubassets.com/1/addyosmani/agent-skills\" data-view-component=\"true"
     },
     {
-      "h": "TencentCloud/Octop\" data-view-component=\"true",
+      "h": "coder/coder\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/TencentCloud/Octop\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/TencentCloud/Octop\" data-view-component=\"true"
+      "link": "https://github.com/coder/coder\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/coder/coder\" data-view-component=\"true"
     },
     {
-      "h": "Fission-AI/OpenSpec\" data-view-component=\"true",
+      "h": "anthropics/claude-code\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Fission-AI/OpenSpec\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Fission-AI/OpenSpec\" data-view-component=\"true"
+      "link": "https://github.com/anthropics/claude-code\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-code\" data-view-component=\"true"
     },
     {
-      "h": "ankitects/anki\" data-view-component=\"true",
+      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/ankitects/anki\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ankitects/anki\" data-view-component=\"true"
+      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
     },
     {
-      "h": "anthropics/knowledge-work-plugins\" data-view-component=\"true",
+      "h": "higgsfield-ai/higgsfield\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/knowledge-work-plugins\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/knowledge-work-plugins\" data-view-component=\"true"
+      "link": "https://github.com/higgsfield-ai/higgsfield\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/higgsfield-ai/higgsfield\" data-view-component=\"true"
+    },
+    {
+      "h": "docling-project/docling\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/docling-project/docling\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/docling-project/docling\" data-view-component=\"true"
+    },
+    {
+      "h": "cloudflare/quiche\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/cloudflare/quiche\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cloudflare/quiche\" data-view-component=\"true"
+    },
+    {
+      "h": "asciimoo/hister\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/asciimoo/hister\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/asciimoo/hister\" data-view-component=\"true"
     }
   ],
   "twitch": [],
