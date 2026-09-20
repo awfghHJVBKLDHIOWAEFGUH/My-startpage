@@ -2,6 +2,18 @@
   "youtube": [],
   "github": [
     {
+      "h": "affaan-m/ECC\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/affaan-m/ECC\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/affaan-m/ECC\" data-view-component=\"true"
+    },
+    {
+      "h": "BuilderIO/agent-native\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/BuilderIO/agent-native\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/BuilderIO/agent-native\" data-view-component=\"true"
+    },
+    {
       "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
@@ -14,16 +26,16 @@
       "thumb": "https://opengraph.githubassets.com/1/trycua/cua\" data-view-component=\"true"
     },
     {
-      "h": "addyosmani/agent-skills\" data-view-component=\"true",
+      "h": "anthropics/financial-services\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/addyosmani/agent-skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/addyosmani/agent-skills\" data-view-component=\"true"
+      "link": "https://github.com/anthropics/financial-services\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/financial-services\" data-view-component=\"true"
     },
     {
-      "h": "coder/coder\" data-view-component=\"true",
+      "h": "paperless-ngx/paperless-ngx\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/coder/coder\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/coder/coder\" data-view-component=\"true"
+      "link": "https://github.com/paperless-ngx/paperless-ngx\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/paperless-ngx/paperless-ngx\" data-view-component=\"true"
     },
     {
       "h": "anthropics/claude-code\" data-view-component=\"true",
@@ -32,10 +44,10 @@
       "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-code\" data-view-component=\"true"
     },
     {
-      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
+      "h": "mihail911/modern-software-dev-assignments\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
+      "link": "https://github.com/mihail911/modern-software-dev-assignments\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mihail911/modern-software-dev-assignments\" data-view-component=\"true"
     },
     {
       "h": "higgsfield-ai/higgsfield\" data-view-component=\"true",
@@ -44,22 +56,10 @@
       "thumb": "https://opengraph.githubassets.com/1/higgsfield-ai/higgsfield\" data-view-component=\"true"
     },
     {
-      "h": "docling-project/docling\" data-view-component=\"true",
+      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/docling-project/docling\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/docling-project/docling\" data-view-component=\"true"
-    },
-    {
-      "h": "cloudflare/quiche\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/quiche\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/quiche\" data-view-component=\"true"
-    },
-    {
-      "h": "asciimoo/hister\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/asciimoo/hister\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/asciimoo/hister\" data-view-component=\"true"
+      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
     }
   ],
   "twitch": [],
