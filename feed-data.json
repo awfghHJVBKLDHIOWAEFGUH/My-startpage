@@ -2,22 +2,10 @@
   "youtube": [],
   "github": [
     {
-      "h": "affaan-m/ECC\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/affaan-m/ECC\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/affaan-m/ECC\" data-view-component=\"true"
-    },
-    {
       "h": "BuilderIO/agent-native\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/BuilderIO/agent-native\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/BuilderIO/agent-native\" data-view-component=\"true"
-    },
-    {
-      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
     },
     {
       "h": "trycua/cua\" data-view-component=\"true",
@@ -26,40 +14,52 @@
       "thumb": "https://opengraph.githubassets.com/1/trycua/cua\" data-view-component=\"true"
     },
     {
+      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
+    },
+    {
+      "h": "akitaonrails/ai-memory\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/akitaonrails/ai-memory\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/akitaonrails/ai-memory\" data-view-component=\"true"
+    },
+    {
+      "h": "coder/coder\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/coder/coder\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/coder/coder\" data-view-component=\"true"
+    },
+    {
       "h": "anthropics/financial-services\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/anthropics/financial-services\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/anthropics/financial-services\" data-view-component=\"true"
     },
     {
-      "h": "paperless-ngx/paperless-ngx\" data-view-component=\"true",
+      "h": "cloudflare/quiche\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/paperless-ngx/paperless-ngx\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/paperless-ngx/paperless-ngx\" data-view-component=\"true"
+      "link": "https://github.com/cloudflare/quiche\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cloudflare/quiche\" data-view-component=\"true"
     },
     {
-      "h": "anthropics/claude-code\" data-view-component=\"true",
+      "h": "mvt-project/mvt\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/claude-code\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-code\" data-view-component=\"true"
+      "link": "https://github.com/mvt-project/mvt\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mvt-project/mvt\" data-view-component=\"true"
     },
     {
-      "h": "mihail911/modern-software-dev-assignments\" data-view-component=\"true",
+      "h": "zhouxiaoka/autoclip\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/mihail911/modern-software-dev-assignments\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/mihail911/modern-software-dev-assignments\" data-view-component=\"true"
+      "link": "https://github.com/zhouxiaoka/autoclip\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/zhouxiaoka/autoclip\" data-view-component=\"true"
     },
     {
-      "h": "higgsfield-ai/higgsfield\" data-view-component=\"true",
+      "h": "ruanyf/weekly\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/higgsfield-ai/higgsfield\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/higgsfield-ai/higgsfield\" data-view-component=\"true"
-    },
-    {
-      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
+      "link": "https://github.com/ruanyf/weekly\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ruanyf/weekly\" data-view-component=\"true"
     }
   ],
   "twitch": [],
