@@ -2,46 +2,34 @@
   "youtube": [],
   "github": [
     {
-      "h": "BuilderIO/agent-native\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/BuilderIO/agent-native\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/BuilderIO/agent-native\" data-view-component=\"true"
-    },
-    {
-      "h": "trycua/cua\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/trycua/cua\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/trycua/cua\" data-view-component=\"true"
-    },
-    {
-      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
-    },
-    {
-      "h": "akitaonrails/ai-memory\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/akitaonrails/ai-memory\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/akitaonrails/ai-memory\" data-view-component=\"true"
-    },
-    {
-      "h": "coder/coder\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/coder/coder\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/coder/coder\" data-view-component=\"true"
-    },
-    {
       "h": "anthropics/financial-services\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/anthropics/financial-services\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/anthropics/financial-services\" data-view-component=\"true"
     },
     {
-      "h": "cloudflare/quiche\" data-view-component=\"true",
+      "h": "agent-substrate/substrate\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/quiche\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/quiche\" data-view-component=\"true"
+      "link": "https://github.com/agent-substrate/substrate\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/agent-substrate/substrate\" data-view-component=\"true"
+    },
+    {
+      "h": "dream-num/univer\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/dream-num/univer\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/dream-num/univer\" data-view-component=\"true"
+    },
+    {
+      "h": "davila7/claude-code-templates\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/davila7/claude-code-templates\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/davila7/claude-code-templates\" data-view-component=\"true"
+    },
+    {
+      "h": "google/ax\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/google/ax\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/google/ax\" data-view-component=\"true"
     },
     {
       "h": "mvt-project/mvt\" data-view-component=\"true",
@@ -50,16 +38,16 @@
       "thumb": "https://opengraph.githubassets.com/1/mvt-project/mvt\" data-view-component=\"true"
     },
     {
-      "h": "zhouxiaoka/autoclip\" data-view-component=\"true",
+      "h": "superdesigndev/treg\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/zhouxiaoka/autoclip\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/zhouxiaoka/autoclip\" data-view-component=\"true"
+      "link": "https://github.com/superdesigndev/treg\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/superdesigndev/treg\" data-view-component=\"true"
     },
     {
-      "h": "ruanyf/weekly\" data-view-component=\"true",
+      "h": "browser-use/video-use\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/ruanyf/weekly\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ruanyf/weekly\" data-view-component=\"true"
+      "link": "https://github.com/browser-use/video-use\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/browser-use/video-use\" data-view-component=\"true"
     }
   ],
   "twitch": [],
