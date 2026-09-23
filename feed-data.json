@@ -8,16 +8,10 @@
       "thumb": "https://opengraph.githubassets.com/1/anthropics/financial-services\" data-view-component=\"true"
     },
     {
-      "h": "agent-substrate/substrate\" data-view-component=\"true",
+      "h": "google/ax\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/agent-substrate/substrate\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/agent-substrate/substrate\" data-view-component=\"true"
-    },
-    {
-      "h": "dream-num/univer\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/dream-num/univer\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/dream-num/univer\" data-view-component=\"true"
+      "link": "https://github.com/google/ax\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/google/ax\" data-view-component=\"true"
     },
     {
       "h": "davila7/claude-code-templates\" data-view-component=\"true",
@@ -26,28 +20,46 @@
       "thumb": "https://opengraph.githubassets.com/1/davila7/claude-code-templates\" data-view-component=\"true"
     },
     {
-      "h": "google/ax\" data-view-component=\"true",
+      "h": "BuilderIO/agent-native\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/google/ax\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/google/ax\" data-view-component=\"true"
+      "link": "https://github.com/BuilderIO/agent-native\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/BuilderIO/agent-native\" data-view-component=\"true"
     },
     {
-      "h": "mvt-project/mvt\" data-view-component=\"true",
+      "h": "obra/superpowers\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/mvt-project/mvt\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/mvt-project/mvt\" data-view-component=\"true"
+      "link": "https://github.com/obra/superpowers\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/obra/superpowers\" data-view-component=\"true"
     },
     {
-      "h": "superdesigndev/treg\" data-view-component=\"true",
+      "h": "dream-num/univer\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/superdesigndev/treg\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/superdesigndev/treg\" data-view-component=\"true"
+      "link": "https://github.com/dream-num/univer\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/dream-num/univer\" data-view-component=\"true"
     },
     {
-      "h": "browser-use/video-use\" data-view-component=\"true",
+      "h": "Open-Dev-Society/OpenStock\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/browser-use/video-use\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/browser-use/video-use\" data-view-component=\"true"
+      "link": "https://github.com/Open-Dev-Society/OpenStock\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Open-Dev-Society/OpenStock\" data-view-component=\"true"
+    },
+    {
+      "h": "agent-substrate/substrate\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/agent-substrate/substrate\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/agent-substrate/substrate\" data-view-component=\"true"
+    },
+    {
+      "h": "strands-agents/harness-sdk\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/strands-agents/harness-sdk\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/strands-agents/harness-sdk\" data-view-component=\"true"
+    },
+    {
+      "h": "HKUDS/CLI-Anything\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/HKUDS/CLI-Anything\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/HKUDS/CLI-Anything\" data-view-component=\"true"
     }
   ],
   "twitch": [],
