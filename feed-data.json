@@ -2,10 +2,16 @@
   "youtube": [],
   "github": [
     {
-      "h": "rohitg00/ai-engineering-from-scratch\" data-view-component=\"true",
+      "h": "paperclipai/paperclip\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/rohitg00/ai-engineering-from-scratch\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/rohitg00/ai-engineering-from-scratch\" data-view-component=\"true"
+      "link": "https://github.com/paperclipai/paperclip\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/paperclipai/paperclip\" data-view-component=\"true"
+    },
+    {
+      "h": "anthropics/claude-plugins-official\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/anthropics/claude-plugins-official\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-plugins-official\" data-view-component=\"true"
     },
     {
       "h": "vectorize-io/hindsight\" data-view-component=\"true",
@@ -14,52 +20,46 @@
       "thumb": "https://opengraph.githubassets.com/1/vectorize-io/hindsight\" data-view-component=\"true"
     },
     {
+      "h": "obra/superpowers\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/obra/superpowers\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/obra/superpowers\" data-view-component=\"true"
+    },
+    {
+      "h": "mattpocock/skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/mattpocock/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
+    },
+    {
       "h": "dream-num/univer\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/dream-num/univer\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/dream-num/univer\" data-view-component=\"true"
     },
     {
-      "h": "google/ax\" data-view-component=\"true",
+      "h": "anthropics/skills\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/google/ax\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/google/ax\" data-view-component=\"true"
+      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
     },
     {
-      "h": "NVIDIA/Model-Optimizer\" data-view-component=\"true",
+      "h": "androoAGI/starnet\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/NVIDIA/Model-Optimizer\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/NVIDIA/Model-Optimizer\" data-view-component=\"true"
+      "link": "https://github.com/androoAGI/starnet\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/androoAGI/starnet\" data-view-component=\"true"
     },
     {
-      "h": "FxEmbed/FxEmbed\" data-view-component=\"true",
+      "h": "derv82/wifit3\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/FxEmbed/FxEmbed\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/FxEmbed/FxEmbed\" data-view-component=\"true"
+      "link": "https://github.com/derv82/wifit3\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/derv82/wifit3\" data-view-component=\"true"
     },
     {
-      "h": "anthropics/financial-services\" data-view-component=\"true",
+      "h": "kelseyhightower/kubernetes-the-hard-way\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/financial-services\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/financial-services\" data-view-component=\"true"
-    },
-    {
-      "h": "HKUDS/CLI-Anything\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/HKUDS/CLI-Anything\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/HKUDS/CLI-Anything\" data-view-component=\"true"
-    },
-    {
-      "h": "mvt-project/mvt\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/mvt-project/mvt\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/mvt-project/mvt\" data-view-component=\"true"
-    },
-    {
-      "h": "obra/superpowers\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/obra/superpowers\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/obra/superpowers\" data-view-component=\"true"
+      "link": "https://github.com/kelseyhightower/kubernetes-the-hard-way\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/kelseyhightower/kubernetes-the-hard-way\" data-view-component=\"true"
     }
   ],
   "twitch": [],
