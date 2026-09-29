@@ -8,10 +8,10 @@
       "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
     },
     {
-      "h": "paperclipai/paperclip\" data-view-component=\"true",
+      "h": "NVIDIA/OpenShell\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/paperclipai/paperclip\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/paperclipai/paperclip\" data-view-component=\"true"
+      "link": "https://github.com/NVIDIA/OpenShell\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/NVIDIA/OpenShell\" data-view-component=\"true"
     },
     {
       "h": "vectorize-io/hindsight\" data-view-component=\"true",
@@ -20,22 +20,16 @@
       "thumb": "https://opengraph.githubassets.com/1/vectorize-io/hindsight\" data-view-component=\"true"
     },
     {
-      "h": "NawfalMotii79/PLFM_RADAR\" data-view-component=\"true",
+      "h": "paperclipai/paperclip\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/NawfalMotii79/PLFM_RADAR\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/NawfalMotii79/PLFM_RADAR\" data-view-component=\"true"
+      "link": "https://github.com/paperclipai/paperclip\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/paperclipai/paperclip\" data-view-component=\"true"
     },
     {
-      "h": "cs341-illinois/coursebook\" data-view-component=\"true",
+      "h": "t8y2/dbx\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/cs341-illinois/coursebook\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cs341-illinois/coursebook\" data-view-component=\"true"
-    },
-    {
-      "h": "byoungd/up\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/byoungd/up\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/byoungd/up\" data-view-component=\"true"
+      "link": "https://github.com/t8y2/dbx\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/t8y2/dbx\" data-view-component=\"true"
     },
     {
       "h": "mvschwarz/openrig\" data-view-component=\"true",
@@ -44,10 +38,28 @@
       "thumb": "https://opengraph.githubassets.com/1/mvschwarz/openrig\" data-view-component=\"true"
     },
     {
-      "h": "dream-num/univer\" data-view-component=\"true",
+      "h": "oblien/openship\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/dream-num/univer\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/dream-num/univer\" data-view-component=\"true"
+      "link": "https://github.com/oblien/openship\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/oblien/openship\" data-view-component=\"true"
+    },
+    {
+      "h": "averygan/reclip\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/averygan/reclip\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/averygan/reclip\" data-view-component=\"true"
+    },
+    {
+      "h": "cs341-illinois/coursebook\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/cs341-illinois/coursebook\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cs341-illinois/coursebook\" data-view-component=\"true"
+    },
+    {
+      "h": "rohitg00/ai-engineering-from-scratch\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/rohitg00/ai-engineering-from-scratch\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/rohitg00/ai-engineering-from-scratch\" data-view-component=\"true"
     }
   ],
   "twitch": [],
