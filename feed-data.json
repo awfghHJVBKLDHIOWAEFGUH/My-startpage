@@ -2,34 +2,16 @@
   "youtube": [],
   "github": [
     {
-      "h": "debpalash/VoiceStudio\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
-    },
-    {
       "h": "NVIDIA/OpenShell\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/NVIDIA/OpenShell\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/NVIDIA/OpenShell\" data-view-component=\"true"
     },
     {
-      "h": "vectorize-io/hindsight\" data-view-component=\"true",
+      "h": "debpalash/VoiceStudio\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/vectorize-io/hindsight\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/vectorize-io/hindsight\" data-view-component=\"true"
-    },
-    {
-      "h": "paperclipai/paperclip\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/paperclipai/paperclip\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/paperclipai/paperclip\" data-view-component=\"true"
-    },
-    {
-      "h": "t8y2/dbx\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/t8y2/dbx\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/t8y2/dbx\" data-view-component=\"true"
+      "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
     },
     {
       "h": "mvschwarz/openrig\" data-view-component=\"true",
@@ -38,28 +20,46 @@
       "thumb": "https://opengraph.githubassets.com/1/mvschwarz/openrig\" data-view-component=\"true"
     },
     {
-      "h": "oblien/openship\" data-view-component=\"true",
+      "h": "mksglu/context-mode\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/oblien/openship\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/oblien/openship\" data-view-component=\"true"
+      "link": "https://github.com/mksglu/context-mode\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mksglu/context-mode\" data-view-component=\"true"
     },
     {
-      "h": "averygan/reclip\" data-view-component=\"true",
+      "h": "DietrichGebert/ponytail\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/averygan/reclip\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/averygan/reclip\" data-view-component=\"true"
+      "link": "https://github.com/DietrichGebert/ponytail\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail\" data-view-component=\"true"
     },
     {
-      "h": "cs341-illinois/coursebook\" data-view-component=\"true",
+      "h": "harry0703/MoneyPrinterTurbo\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/cs341-illinois/coursebook\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cs341-illinois/coursebook\" data-view-component=\"true"
+      "link": "https://github.com/harry0703/MoneyPrinterTurbo\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/harry0703/MoneyPrinterTurbo\" data-view-component=\"true"
     },
     {
-      "h": "rohitg00/ai-engineering-from-scratch\" data-view-component=\"true",
+      "h": "openclaw/openclaw\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/rohitg00/ai-engineering-from-scratch\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/rohitg00/ai-engineering-from-scratch\" data-view-component=\"true"
+      "link": "https://github.com/openclaw/openclaw\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/openclaw/openclaw\" data-view-component=\"true"
+    },
+    {
+      "h": "ComposioHQ/awesome-claude-skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/ComposioHQ/awesome-claude-skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ComposioHQ/awesome-claude-skills\" data-view-component=\"true"
+    },
+    {
+      "h": "mattpocock/skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/mattpocock/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
+    },
+    {
+      "h": "heygen-com/hyperframes\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/heygen-com/hyperframes\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/heygen-com/hyperframes\" data-view-component=\"true"
     }
   ],
   "twitch": [],
