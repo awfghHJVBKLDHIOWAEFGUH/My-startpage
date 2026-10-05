@@ -8,22 +8,16 @@
       "thumb": "https://opengraph.githubassets.com/1/tester-army/e2e\" data-view-component=\"true"
     },
     {
-      "h": "pbakaus/impeccable\" data-view-component=\"true",
+      "h": "thedotmack/claude-mem\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/pbakaus/impeccable\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/pbakaus/impeccable\" data-view-component=\"true"
+      "link": "https://github.com/thedotmack/claude-mem\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/thedotmack/claude-mem\" data-view-component=\"true"
     },
     {
-      "h": "coreyhaines31/marketingskills\" data-view-component=\"true",
+      "h": "michael-denyer/pstack-claude\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/coreyhaines31/marketingskills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/coreyhaines31/marketingskills\" data-view-component=\"true"
-    },
-    {
-      "h": "DietrichGebert/ponytail\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/DietrichGebert/ponytail\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail\" data-view-component=\"true"
+      "link": "https://github.com/michael-denyer/pstack-claude\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/michael-denyer/pstack-claude\" data-view-component=\"true"
     },
     {
       "h": "earthtojake/text-to-cad\" data-view-component=\"true",
@@ -32,16 +26,22 @@
       "thumb": "https://opengraph.githubassets.com/1/earthtojake/text-to-cad\" data-view-component=\"true"
     },
     {
+      "h": "pingdotgg/t3code\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/pingdotgg/t3code\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/pingdotgg/t3code\" data-view-component=\"true"
+    },
+    {
+      "h": "boykopovar/AnyPS5\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/boykopovar/AnyPS5\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/boykopovar/AnyPS5\" data-view-component=\"true"
+    },
+    {
       "h": "Panniantong/Agent-Reach\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/Panniantong/Agent-Reach\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/Panniantong/Agent-Reach\" data-view-component=\"true"
-    },
-    {
-      "h": "getsentry/sentry\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/getsentry/sentry\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/getsentry/sentry\" data-view-component=\"true"
     },
     {
       "h": "calesthio/OpenMontage\" data-view-component=\"true",
@@ -50,16 +50,16 @@
       "thumb": "https://opengraph.githubassets.com/1/calesthio/OpenMontage\" data-view-component=\"true"
     },
     {
-      "h": "pingdotgg/t3code\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/pingdotgg/t3code\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/pingdotgg/t3code\" data-view-component=\"true"
-    },
-    {
       "h": "caddyserver/caddy\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/caddyserver/caddy\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/caddyserver/caddy\" data-view-component=\"true"
+    },
+    {
+      "h": "DuarteSantos8/openGym\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/DuarteSantos8/openGym\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/DuarteSantos8/openGym\" data-view-component=\"true"
     }
   ],
   "twitch": [],
