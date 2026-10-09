@@ -2,22 +2,16 @@
   "youtube": [],
   "github": [
     {
-      "h": "boykopovar/AnyPS5\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/boykopovar/AnyPS5\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/boykopovar/AnyPS5\" data-view-component=\"true"
-    },
-    {
-      "h": "cathrynlavery/diagram-design\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/cathrynlavery/diagram-design\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cathrynlavery/diagram-design\" data-view-component=\"true"
-    },
-    {
       "h": "morluto/rea\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/morluto/rea\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/morluto/rea\" data-view-component=\"true"
+    },
+    {
+      "h": "boykopovar/AnyPS5\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/boykopovar/AnyPS5\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/boykopovar/AnyPS5\" data-view-component=\"true"
     },
     {
       "h": "mattpocock/skills\" data-view-component=\"true",
@@ -26,16 +20,16 @@
       "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
     },
     {
-      "h": "thedotmack/claude-mem\" data-view-component=\"true",
+      "h": "cathrynlavery/diagram-design\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/thedotmack/claude-mem\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/thedotmack/claude-mem\" data-view-component=\"true"
+      "link": "https://github.com/cathrynlavery/diagram-design\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cathrynlavery/diagram-design\" data-view-component=\"true"
     },
     {
-      "h": "EpicGames/raddebugger\" data-view-component=\"true",
+      "h": "alibaba/open-code-review\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/EpicGames/raddebugger\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/EpicGames/raddebugger\" data-view-component=\"true"
+      "link": "https://github.com/alibaba/open-code-review\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/alibaba/open-code-review\" data-view-component=\"true"
     },
     {
       "h": "anthropics/knowledge-work-plugins\" data-view-component=\"true",
@@ -44,16 +38,28 @@
       "thumb": "https://opengraph.githubassets.com/1/anthropics/knowledge-work-plugins\" data-view-component=\"true"
     },
     {
+      "h": "BerriAI/litellm\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/BerriAI/litellm\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/BerriAI/litellm\" data-view-component=\"true"
+    },
+    {
+      "h": "addyosmani/agent-skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/addyosmani/agent-skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/addyosmani/agent-skills\" data-view-component=\"true"
+    },
+    {
       "h": "storytold/artcraft\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/storytold/artcraft\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/storytold/artcraft\" data-view-component=\"true"
     },
     {
-      "h": "liquidslr/system-design-notes\" data-view-component=\"true",
+      "h": "Robbyant/lingbot-map\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/liquidslr/system-design-notes\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/liquidslr/system-design-notes\" data-view-component=\"true"
+      "link": "https://github.com/Robbyant/lingbot-map\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Robbyant/lingbot-map\" data-view-component=\"true"
     }
   ],
   "twitch": [],
