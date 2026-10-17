@@ -32,12 +32,6 @@
       "thumb": "https://opengraph.githubassets.com/1/K-Dense-AI/scientific-agent-skills\" data-view-component=\"true"
     },
     {
-      "h": "akitaonrails/ai-memory\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/akitaonrails/ai-memory\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/akitaonrails/ai-memory\" data-view-component=\"true"
-    },
-    {
       "h": "android/skills\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/android/skills\" data-view-component=\"true",
@@ -60,6 +54,12 @@
       "p": "Trending Open Source Repository",
       "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
+    },
+    {
+      "h": "anomalyco/opencode\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anomalyco/opencode\" data-view-component=\"true"
     }
   ],
   "twitch": [],
