@@ -8,28 +8,10 @@
       "thumb": "https://opengraph.githubassets.com/1/MadsLorentzen/ai-job-search\" data-view-component=\"true"
     },
     {
-      "h": "anthropics/claude-plugins-official\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/claude-plugins-official\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-plugins-official\" data-view-component=\"true"
-    },
-    {
       "h": "anomalyco/opencode\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/anomalyco/opencode\" data-view-component=\"true"
-    },
-    {
-      "h": "cursor/plugins\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/cursor/plugins\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cursor/plugins\" data-view-component=\"true"
-    },
-    {
-      "h": "ruvnet/ruflo\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/ruvnet/ruflo\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ruvnet/ruflo\" data-view-component=\"true"
     },
     {
       "h": "akitaonrails/ai-memory\" data-view-component=\"true",
@@ -38,28 +20,46 @@
       "thumb": "https://opengraph.githubassets.com/1/akitaonrails/ai-memory\" data-view-component=\"true"
     },
     {
+      "h": "Comfy-Org/ComfyUI\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/Comfy-Org/ComfyUI\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Comfy-Org/ComfyUI\" data-view-component=\"true"
+    },
+    {
+      "h": "ruvnet/ruflo\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/ruvnet/ruflo\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ruvnet/ruflo\" data-view-component=\"true"
+    },
+    {
       "h": "stablyai/orca\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/stablyai/orca\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/stablyai/orca\" data-view-component=\"true"
     },
     {
+      "h": "headroomlabs-ai/headroom\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/headroomlabs-ai/headroom\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/headroomlabs-ai/headroom\" data-view-component=\"true"
+    },
+    {
+      "h": "withmarbleapp/os-taxonomy\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/withmarbleapp/os-taxonomy\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/withmarbleapp/os-taxonomy\" data-view-component=\"true"
+    },
+    {
+      "h": "Kruk2/jasna\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/Kruk2/jasna\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Kruk2/jasna\" data-view-component=\"true"
+    },
+    {
       "h": "HKUDS/CLI-Anything\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/HKUDS/CLI-Anything\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/HKUDS/CLI-Anything\" data-view-component=\"true"
-    },
-    {
-      "h": "debpalash/VoiceStudio\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
-    },
-    {
-      "h": "android/skills\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/android/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/android/skills\" data-view-component=\"true"
     }
   ],
   "twitch": [],
