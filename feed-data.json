@@ -8,16 +8,22 @@
       "thumb": "https://opengraph.githubassets.com/1/MadsLorentzen/ai-job-search\" data-view-component=\"true"
     },
     {
-      "h": "anomalyco/opencode\" data-view-component=\"true",
+      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anomalyco/opencode\" data-view-component=\"true"
+      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
     },
     {
-      "h": "akitaonrails/ai-memory\" data-view-component=\"true",
+      "h": "stablyai/orca\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/akitaonrails/ai-memory\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/akitaonrails/ai-memory\" data-view-component=\"true"
+      "link": "https://github.com/stablyai/orca\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/stablyai/orca\" data-view-component=\"true"
+    },
+    {
+      "h": "DietrichGebert/ponytail\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/DietrichGebert/ponytail\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail\" data-view-component=\"true"
     },
     {
       "h": "Comfy-Org/ComfyUI\" data-view-component=\"true",
@@ -32,34 +38,28 @@
       "thumb": "https://opengraph.githubassets.com/1/ruvnet/ruflo\" data-view-component=\"true"
     },
     {
-      "h": "stablyai/orca\" data-view-component=\"true",
+      "h": "Graphify-Labs/graphify\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/stablyai/orca\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/stablyai/orca\" data-view-component=\"true"
+      "link": "https://github.com/Graphify-Labs/graphify\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Graphify-Labs/graphify\" data-view-component=\"true"
     },
     {
-      "h": "headroomlabs-ai/headroom\" data-view-component=\"true",
+      "h": "YuJunZhiXue/dsh-purge\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/headroomlabs-ai/headroom\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/headroomlabs-ai/headroom\" data-view-component=\"true"
+      "link": "https://github.com/YuJunZhiXue/dsh-purge\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/YuJunZhiXue/dsh-purge\" data-view-component=\"true"
     },
     {
-      "h": "withmarbleapp/os-taxonomy\" data-view-component=\"true",
+      "h": "anomalyco/opencode\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/withmarbleapp/os-taxonomy\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/withmarbleapp/os-taxonomy\" data-view-component=\"true"
+      "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anomalyco/opencode\" data-view-component=\"true"
     },
     {
-      "h": "Kruk2/jasna\" data-view-component=\"true",
+      "h": "msitarzewski/agency-agents\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Kruk2/jasna\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Kruk2/jasna\" data-view-component=\"true"
-    },
-    {
-      "h": "HKUDS/CLI-Anything\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/HKUDS/CLI-Anything\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/HKUDS/CLI-Anything\" data-view-component=\"true"
+      "link": "https://github.com/msitarzewski/agency-agents\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/msitarzewski/agency-agents\" data-view-component=\"true"
     }
   ],
   "twitch": [],
