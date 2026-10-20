@@ -44,12 +44,6 @@
       "thumb": "https://opengraph.githubassets.com/1/Graphify-Labs/graphify\" data-view-component=\"true"
     },
     {
-      "h": "YuJunZhiXue/dsh-purge\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/YuJunZhiXue/dsh-purge\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/YuJunZhiXue/dsh-purge\" data-view-component=\"true"
-    },
-    {
       "h": "anomalyco/opencode\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
@@ -60,6 +54,12 @@
       "p": "Trending Open Source Repository",
       "link": "https://github.com/msitarzewski/agency-agents\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/msitarzewski/agency-agents\" data-view-component=\"true"
+    },
+    {
+      "h": "headroomlabs-ai/headroom\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/headroomlabs-ai/headroom\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/headroomlabs-ai/headroom\" data-view-component=\"true"
     }
   ],
   "twitch": [],
