@@ -2,12 +2,6 @@
   "youtube": [],
   "github": [
     {
-      "h": "MadsLorentzen/ai-job-search\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/MadsLorentzen/ai-job-search\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/MadsLorentzen/ai-job-search\" data-view-component=\"true"
-    },
-    {
       "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
@@ -60,6 +54,12 @@
       "p": "Trending Open Source Repository",
       "link": "https://github.com/shiyu-coder/Kronos\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/shiyu-coder/Kronos\" data-view-component=\"true"
+    },
+    {
+      "h": "strelov1/freehire\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/strelov1/freehire\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/strelov1/freehire\" data-view-component=\"true"
     }
   ],
   "twitch": [],
