@@ -14,10 +14,22 @@
       "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
     },
     {
+      "h": "vllm-project/vllm\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/vllm-project/vllm\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/vllm-project/vllm\" data-view-component=\"true"
+    },
+    {
       "h": "stablyai/orca\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/stablyai/orca\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/stablyai/orca\" data-view-component=\"true"
+    },
+    {
+      "h": "headroomlabs-ai/headroom\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/headroomlabs-ai/headroom\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/headroomlabs-ai/headroom\" data-view-component=\"true"
     },
     {
       "h": "DietrichGebert/ponytail\" data-view-component=\"true",
@@ -32,34 +44,22 @@
       "thumb": "https://opengraph.githubassets.com/1/Comfy-Org/ComfyUI\" data-view-component=\"true"
     },
     {
-      "h": "ruvnet/ruflo\" data-view-component=\"true",
+      "h": "supabase/supabase\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/ruvnet/ruflo\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ruvnet/ruflo\" data-view-component=\"true"
+      "link": "https://github.com/supabase/supabase\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/supabase/supabase\" data-view-component=\"true"
     },
     {
-      "h": "Graphify-Labs/graphify\" data-view-component=\"true",
+      "h": "twentyhq/twenty\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Graphify-Labs/graphify\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Graphify-Labs/graphify\" data-view-component=\"true"
+      "link": "https://github.com/twentyhq/twenty\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/twentyhq/twenty\" data-view-component=\"true"
     },
     {
-      "h": "anomalyco/opencode\" data-view-component=\"true",
+      "h": "shiyu-coder/Kronos\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/anomalyco/opencode\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anomalyco/opencode\" data-view-component=\"true"
-    },
-    {
-      "h": "msitarzewski/agency-agents\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/msitarzewski/agency-agents\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/msitarzewski/agency-agents\" data-view-component=\"true"
-    },
-    {
-      "h": "headroomlabs-ai/headroom\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/headroomlabs-ai/headroom\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/headroomlabs-ai/headroom\" data-view-component=\"true"
+      "link": "https://github.com/shiyu-coder/Kronos\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/shiyu-coder/Kronos\" data-view-component=\"true"
     }
   ],
   "twitch": [],
