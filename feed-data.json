@@ -2,6 +2,12 @@
   "youtube": [],
   "github": [
     {
+      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
+    },
+    {
       "h": "php/php-src\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/php/php-src\" data-view-component=\"true",
@@ -14,46 +20,34 @@
       "thumb": "https://opengraph.githubassets.com/1/anthropics/knowledge-work-plugins\" data-view-component=\"true"
     },
     {
-      "h": "DietrichGebert/ponytail\" data-view-component=\"true",
+      "h": "NVIDIA/OpenShell\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/DietrichGebert/ponytail\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/DietrichGebert/ponytail\" data-view-component=\"true"
+      "link": "https://github.com/NVIDIA/OpenShell\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/NVIDIA/OpenShell\" data-view-component=\"true"
     },
     {
-      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
+      "h": "Renhuai123/ziwei-doushu\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
+      "link": "https://github.com/Renhuai123/ziwei-doushu\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Renhuai123/ziwei-doushu\" data-view-component=\"true"
     },
     {
-      "h": "Graphify-Labs/graphify\" data-view-component=\"true",
+      "h": "SnailSploit/Claude-Red\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Graphify-Labs/graphify\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Graphify-Labs/graphify\" data-view-component=\"true"
+      "link": "https://github.com/SnailSploit/Claude-Red\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/SnailSploit/Claude-Red\" data-view-component=\"true"
     },
     {
-      "h": "supabase/supabase\" data-view-component=\"true",
+      "h": "OpenBMB/VoxCPM\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/supabase/supabase\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/supabase/supabase\" data-view-component=\"true"
+      "link": "https://github.com/OpenBMB/VoxCPM\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/OpenBMB/VoxCPM\" data-view-component=\"true"
     },
     {
-      "h": "fastapi/fastapi\" data-view-component=\"true",
+      "h": "nodejs/node\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/fastapi/fastapi\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/fastapi/fastapi\" data-view-component=\"true"
-    },
-    {
-      "h": "luongnv89/claude-howto\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/luongnv89/claude-howto\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/luongnv89/claude-howto\" data-view-component=\"true"
-    },
-    {
-      "h": "Meloong-Git/PCL\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Meloong-Git/PCL\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Meloong-Git/PCL\" data-view-component=\"true"
+      "link": "https://github.com/nodejs/node\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/nodejs/node\" data-view-component=\"true"
     }
   ],
   "twitch": [],
