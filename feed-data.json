@@ -8,46 +8,58 @@
       "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
     },
     {
-      "h": "php/php-src\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/php/php-src\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/php/php-src\" data-view-component=\"true"
-    },
-    {
-      "h": "anthropics/knowledge-work-plugins\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/knowledge-work-plugins\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/knowledge-work-plugins\" data-view-component=\"true"
-    },
-    {
       "h": "NVIDIA/OpenShell\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/NVIDIA/OpenShell\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/NVIDIA/OpenShell\" data-view-component=\"true"
     },
     {
-      "h": "Renhuai123/ziwei-doushu\" data-view-component=\"true",
+      "h": "aws/agent-toolkit-for-aws\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/Renhuai123/ziwei-doushu\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Renhuai123/ziwei-doushu\" data-view-component=\"true"
+      "link": "https://github.com/aws/agent-toolkit-for-aws\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/aws/agent-toolkit-for-aws\" data-view-component=\"true"
     },
     {
-      "h": "SnailSploit/Claude-Red\" data-view-component=\"true",
+      "h": "Nutlope/hallmark\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/SnailSploit/Claude-Red\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/SnailSploit/Claude-Red\" data-view-component=\"true"
+      "link": "https://github.com/Nutlope/hallmark\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Nutlope/hallmark\" data-view-component=\"true"
     },
     {
-      "h": "OpenBMB/VoxCPM\" data-view-component=\"true",
+      "h": "luongnv89/claude-howto\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/OpenBMB/VoxCPM\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/OpenBMB/VoxCPM\" data-view-component=\"true"
+      "link": "https://github.com/luongnv89/claude-howto\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/luongnv89/claude-howto\" data-view-component=\"true"
     },
     {
-      "h": "nodejs/node\" data-view-component=\"true",
+      "h": "pbakaus/impeccable\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/nodejs/node\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/nodejs/node\" data-view-component=\"true"
+      "link": "https://github.com/pbakaus/impeccable\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/pbakaus/impeccable\" data-view-component=\"true"
+    },
+    {
+      "h": "pollen-robotics/microduck\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/pollen-robotics/microduck\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/pollen-robotics/microduck\" data-view-component=\"true"
+    },
+    {
+      "h": "google-gemini/gemini-cli\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/google-gemini/gemini-cli\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/google-gemini/gemini-cli\" data-view-component=\"true"
+    },
+    {
+      "h": "jbiaojerry/ebook-treasure-chest\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/jbiaojerry/ebook-treasure-chest\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/jbiaojerry/ebook-treasure-chest\" data-view-component=\"true"
+    },
+    {
+      "h": "makecindy/cindy\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/makecindy/cindy\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/makecindy/cindy\" data-view-component=\"true"
     }
   ],
   "twitch": [],
