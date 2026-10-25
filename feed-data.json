@@ -2,22 +2,10 @@
   "youtube": [],
   "github": [
     {
-      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
+      "h": "makecindy/cindy\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
-    },
-    {
-      "h": "NVIDIA/OpenShell\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/NVIDIA/OpenShell\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/NVIDIA/OpenShell\" data-view-component=\"true"
-    },
-    {
-      "h": "aws/agent-toolkit-for-aws\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/aws/agent-toolkit-for-aws\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/aws/agent-toolkit-for-aws\" data-view-component=\"true"
+      "link": "https://github.com/makecindy/cindy\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/makecindy/cindy\" data-view-component=\"true"
     },
     {
       "h": "Nutlope/hallmark\" data-view-component=\"true",
@@ -26,10 +14,10 @@
       "thumb": "https://opengraph.githubassets.com/1/Nutlope/hallmark\" data-view-component=\"true"
     },
     {
-      "h": "luongnv89/claude-howto\" data-view-component=\"true",
+      "h": "debpalash/VoiceStudio\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/luongnv89/claude-howto\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/luongnv89/claude-howto\" data-view-component=\"true"
+      "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
     },
     {
       "h": "pbakaus/impeccable\" data-view-component=\"true",
@@ -44,22 +32,34 @@
       "thumb": "https://opengraph.githubassets.com/1/pollen-robotics/microduck\" data-view-component=\"true"
     },
     {
-      "h": "google-gemini/gemini-cli\" data-view-component=\"true",
+      "h": "TauricResearch/TradingAgents\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/google-gemini/gemini-cli\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/google-gemini/gemini-cli\" data-view-component=\"true"
+      "link": "https://github.com/TauricResearch/TradingAgents\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/TauricResearch/TradingAgents\" data-view-component=\"true"
     },
     {
-      "h": "jbiaojerry/ebook-treasure-chest\" data-view-component=\"true",
+      "h": "Renhuai123/ziwei-doushu\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/jbiaojerry/ebook-treasure-chest\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/jbiaojerry/ebook-treasure-chest\" data-view-component=\"true"
+      "link": "https://github.com/Renhuai123/ziwei-doushu\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Renhuai123/ziwei-doushu\" data-view-component=\"true"
     },
     {
-      "h": "makecindy/cindy\" data-view-component=\"true",
+      "h": "JetBrains/thinkrail\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/makecindy/cindy\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/makecindy/cindy\" data-view-component=\"true"
+      "link": "https://github.com/JetBrains/thinkrail\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/JetBrains/thinkrail\" data-view-component=\"true"
+    },
+    {
+      "h": "coollabsio/coolify\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/coollabsio/coolify\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/coollabsio/coolify\" data-view-component=\"true"
+    },
+    {
+      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
     }
   ],
   "twitch": [],
