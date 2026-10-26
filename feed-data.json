@@ -2,34 +2,10 @@
   "youtube": [],
   "github": [
     {
-      "h": "makecindy/cindy\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/makecindy/cindy\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/makecindy/cindy\" data-view-component=\"true"
-    },
-    {
       "h": "Nutlope/hallmark\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/Nutlope/hallmark\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/Nutlope/hallmark\" data-view-component=\"true"
-    },
-    {
-      "h": "debpalash/VoiceStudio\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/debpalash/VoiceStudio\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/debpalash/VoiceStudio\" data-view-component=\"true"
-    },
-    {
-      "h": "pbakaus/impeccable\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/pbakaus/impeccable\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/pbakaus/impeccable\" data-view-component=\"true"
-    },
-    {
-      "h": "pollen-robotics/microduck\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/pollen-robotics/microduck\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/pollen-robotics/microduck\" data-view-component=\"true"
     },
     {
       "h": "TauricResearch/TradingAgents\" data-view-component=\"true",
@@ -38,28 +14,52 @@
       "thumb": "https://opengraph.githubassets.com/1/TauricResearch/TradingAgents\" data-view-component=\"true"
     },
     {
-      "h": "Renhuai123/ziwei-doushu\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Renhuai123/ziwei-doushu\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Renhuai123/ziwei-doushu\" data-view-component=\"true"
-    },
-    {
       "h": "JetBrains/thinkrail\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/JetBrains/thinkrail\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/JetBrains/thinkrail\" data-view-component=\"true"
     },
     {
-      "h": "coollabsio/coolify\" data-view-component=\"true",
+      "h": "makecindy/cindy\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/coollabsio/coolify\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/coollabsio/coolify\" data-view-component=\"true"
+      "link": "https://github.com/makecindy/cindy\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/makecindy/cindy\" data-view-component=\"true"
     },
     {
-      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
+      "h": "affaan-m/ECC\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
+      "link": "https://github.com/affaan-m/ECC\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/affaan-m/ECC\" data-view-component=\"true"
+    },
+    {
+      "h": "pbakaus/impeccable\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/pbakaus/impeccable\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/pbakaus/impeccable\" data-view-component=\"true"
+    },
+    {
+      "h": "NVIDIA/SkillSpector\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/NVIDIA/SkillSpector\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/NVIDIA/SkillSpector\" data-view-component=\"true"
+    },
+    {
+      "h": "pollen-robotics/microduck\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/pollen-robotics/microduck\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/pollen-robotics/microduck\" data-view-component=\"true"
+    },
+    {
+      "h": "nightly-labs/openbot\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/nightly-labs/openbot\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/nightly-labs/openbot\" data-view-component=\"true"
+    },
+    {
+      "h": "Panniantong/Agent-Reach\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/Panniantong/Agent-Reach\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Panniantong/Agent-Reach\" data-view-component=\"true"
     }
   ],
   "twitch": [],
