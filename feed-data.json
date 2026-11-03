@@ -2,64 +2,64 @@
   "youtube": [],
   "github": [
     {
-      "h": "vercel-labs/agent-desktop\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/vercel-labs/agent-desktop\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-desktop\" data-view-component=\"true"
-    },
-    {
       "h": "thedotmack/claude-mem\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/thedotmack/claude-mem\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/thedotmack/claude-mem\" data-view-component=\"true"
     },
     {
-      "h": "D4Vinci/Scrapling\" data-view-component=\"true",
+      "h": "vercel-labs/agent-desktop\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/D4Vinci/Scrapling\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/D4Vinci/Scrapling\" data-view-component=\"true"
+      "link": "https://github.com/vercel-labs/agent-desktop\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-desktop\" data-view-component=\"true"
     },
     {
-      "h": "hyprwm/Hyprland\" data-view-component=\"true",
+      "h": "max-sixty/worktrunk\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/hyprwm/Hyprland\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/hyprwm/Hyprland\" data-view-component=\"true"
-    },
-    {
-      "h": "Donchitos/Claude-Code-Game-Studios\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Donchitos/Claude-Code-Game-Studios\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Donchitos/Claude-Code-Game-Studios\" data-view-component=\"true"
-    },
-    {
-      "h": "FlashML-org/FreeToken\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/FlashML-org/FreeToken\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/FlashML-org/FreeToken\" data-view-component=\"true"
-    },
-    {
-      "h": "pingdotgg/t3code\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/pingdotgg/t3code\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/pingdotgg/t3code\" data-view-component=\"true"
-    },
-    {
-      "h": "shiyu-coder/Kronos\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/shiyu-coder/Kronos\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/shiyu-coder/Kronos\" data-view-component=\"true"
-    },
-    {
-      "h": "kornia/kornia\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/kornia/kornia\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/kornia/kornia\" data-view-component=\"true"
+      "link": "https://github.com/max-sixty/worktrunk\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/max-sixty/worktrunk\" data-view-component=\"true"
     },
     {
       "h": "JustVugg/colibri\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/JustVugg/colibri\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/JustVugg/colibri\" data-view-component=\"true"
+    },
+    {
+      "h": "mattpocock/skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/mattpocock/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
+    },
+    {
+      "h": "p-e-w/heretic\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/p-e-w/heretic\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/p-e-w/heretic\" data-view-component=\"true"
+    },
+    {
+      "h": "spotify/portal-ai-plugins\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/spotify/portal-ai-plugins\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/spotify/portal-ai-plugins\" data-view-component=\"true"
+    },
+    {
+      "h": "floci-io/floci\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/floci-io/floci\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/floci-io/floci\" data-view-component=\"true"
+    },
+    {
+      "h": "Usagi-org/ai-goofish-monitor\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/Usagi-org/ai-goofish-monitor\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/Usagi-org/ai-goofish-monitor\" data-view-component=\"true"
+    },
+    {
+      "h": "anomalyco/hex\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/anomalyco/hex\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anomalyco/hex\" data-view-component=\"true"
     }
   ],
   "twitch": [],
