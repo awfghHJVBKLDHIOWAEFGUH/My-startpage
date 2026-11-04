@@ -2,6 +2,30 @@
   "youtube": [],
   "github": [
     {
+      "h": "NVIDIA/auto-ontology\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/NVIDIA/auto-ontology\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/NVIDIA/auto-ontology\" data-view-component=\"true"
+    },
+    {
+      "h": "max-sixty/worktrunk\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/max-sixty/worktrunk\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/max-sixty/worktrunk\" data-view-component=\"true"
+    },
+    {
+      "h": "mattpocock/skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/mattpocock/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
+    },
+    {
+      "h": "floci-io/floci\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/floci-io/floci\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/floci-io/floci\" data-view-component=\"true"
+    },
+    {
       "h": "thedotmack/claude-mem\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/thedotmack/claude-mem\" data-view-component=\"true",
@@ -14,52 +38,28 @@
       "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-desktop\" data-view-component=\"true"
     },
     {
-      "h": "max-sixty/worktrunk\" data-view-component=\"true",
+      "h": "github/spec-kit\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/max-sixty/worktrunk\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/max-sixty/worktrunk\" data-view-component=\"true"
+      "link": "https://github.com/github/spec-kit\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/github/spec-kit\" data-view-component=\"true"
     },
     {
-      "h": "JustVugg/colibri\" data-view-component=\"true",
+      "h": "The-PR-Agent/pr-agent\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/JustVugg/colibri\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/JustVugg/colibri\" data-view-component=\"true"
+      "link": "https://github.com/The-PR-Agent/pr-agent\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/The-PR-Agent/pr-agent\" data-view-component=\"true"
     },
     {
-      "h": "mattpocock/skills\" data-view-component=\"true",
+      "h": "harry0703/MoneyPrinterTurbo\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/mattpocock/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
+      "link": "https://github.com/harry0703/MoneyPrinterTurbo\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/harry0703/MoneyPrinterTurbo\" data-view-component=\"true"
     },
     {
-      "h": "p-e-w/heretic\" data-view-component=\"true",
+      "h": "garrytan/gstack\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/p-e-w/heretic\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/p-e-w/heretic\" data-view-component=\"true"
-    },
-    {
-      "h": "spotify/portal-ai-plugins\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/spotify/portal-ai-plugins\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/spotify/portal-ai-plugins\" data-view-component=\"true"
-    },
-    {
-      "h": "floci-io/floci\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/floci-io/floci\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/floci-io/floci\" data-view-component=\"true"
-    },
-    {
-      "h": "Usagi-org/ai-goofish-monitor\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/Usagi-org/ai-goofish-monitor\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/Usagi-org/ai-goofish-monitor\" data-view-component=\"true"
-    },
-    {
-      "h": "anomalyco/hex\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/anomalyco/hex\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anomalyco/hex\" data-view-component=\"true"
+      "link": "https://github.com/garrytan/gstack\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/garrytan/gstack\" data-view-component=\"true"
     }
   ],
   "twitch": [],
