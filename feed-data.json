@@ -2,52 +2,16 @@
   "youtube": [],
   "github": [
     {
-      "h": "vercel-labs/agent-browser\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/vercel-labs/agent-browser\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-browser\" data-view-component=\"true"
-    },
-    {
-      "h": "cloudflare/security-audit-skill\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/cloudflare/security-audit-skill\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/cloudflare/security-audit-skill\" data-view-component=\"true"
-    },
-    {
-      "h": "google/skills\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/google/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/google/skills\" data-view-component=\"true"
-    },
-    {
-      "h": "mattpocock/skills\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/mattpocock/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/mattpocock/skills\" data-view-component=\"true"
-    },
-    {
-      "h": "anthropics/skills\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
-    },
-    {
-      "h": "meta/astryx\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/meta/astryx\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/meta/astryx\" data-view-component=\"true"
-    },
-    {
-      "h": "prometheus/prometheus\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/prometheus/prometheus\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/prometheus/prometheus\" data-view-component=\"true"
-    },
-    {
       "h": "sherlock-project/sherlock\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/sherlock-project/sherlock\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/sherlock-project/sherlock\" data-view-component=\"true"
+    },
+    {
+      "h": "dsx-ai-factory/nvke\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/dsx-ai-factory/nvke\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/dsx-ai-factory/nvke\" data-view-component=\"true"
     },
     {
       "h": "milind-soni/OpenMausBot\" data-view-component=\"true",
@@ -56,10 +20,40 @@
       "thumb": "https://opengraph.githubassets.com/1/milind-soni/OpenMausBot\" data-view-component=\"true"
     },
     {
-      "h": "astral-sh/ruff\" data-view-component=\"true",
+      "h": "anthropics/claude-quickstarts\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/astral-sh/ruff\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/astral-sh/ruff\" data-view-component=\"true"
+      "link": "https://github.com/anthropics/claude-quickstarts\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-quickstarts\" data-view-component=\"true"
+    },
+    {
+      "h": "vercel-labs/agent-browser\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/vercel-labs/agent-browser\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-browser\" data-view-component=\"true"
+    },
+    {
+      "h": "meta/astryx\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/meta/astryx\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/meta/astryx\" data-view-component=\"true"
+    },
+    {
+      "h": "anthropics/skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
+    },
+    {
+      "h": "google-deepmind/mujoco\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/google-deepmind/mujoco\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/google-deepmind/mujoco\" data-view-component=\"true"
+    },
+    {
+      "h": "ranxianglei/billion-context\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/ranxianglei/billion-context\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ranxianglei/billion-context\" data-view-component=\"true"
     }
   ],
   "twitch": [],
