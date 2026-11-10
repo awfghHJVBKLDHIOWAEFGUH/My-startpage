@@ -2,28 +2,22 @@
   "youtube": [],
   "github": [
     {
-      "h": "anthropics/skills\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
-    },
-    {
       "h": "meta/astryx\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/meta/astryx\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/meta/astryx\" data-view-component=\"true"
     },
     {
-      "h": "sherlock-project/sherlock\" data-view-component=\"true",
+      "h": "anthropics/skills\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/sherlock-project/sherlock\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/sherlock-project/sherlock\" data-view-component=\"true"
+      "link": "https://github.com/anthropics/skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/anthropics/skills\" data-view-component=\"true"
     },
     {
-      "h": "google-deepmind/mujoco\" data-view-component=\"true",
+      "h": "addyosmani/agent-skills\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/google-deepmind/mujoco\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/google-deepmind/mujoco\" data-view-component=\"true"
+      "link": "https://github.com/addyosmani/agent-skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/addyosmani/agent-skills\" data-view-component=\"true"
     },
     {
       "h": "anthropics/claude-quickstarts\" data-view-component=\"true",
@@ -32,10 +26,22 @@
       "thumb": "https://opengraph.githubassets.com/1/anthropics/claude-quickstarts\" data-view-component=\"true"
     },
     {
-      "h": "garrytan/gbrain\" data-view-component=\"true",
+      "h": "google-deepmind/mujoco\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/garrytan/gbrain\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/garrytan/gbrain\" data-view-component=\"true"
+      "link": "https://github.com/google-deepmind/mujoco\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/google-deepmind/mujoco\" data-view-component=\"true"
+    },
+    {
+      "h": "we-promise/sure\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/we-promise/sure\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/we-promise/sure\" data-view-component=\"true"
+    },
+    {
+      "h": "homeassistant-ai/ha-mcp\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/homeassistant-ai/ha-mcp\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/homeassistant-ai/ha-mcp\" data-view-component=\"true"
     },
     {
       "h": "vercel-labs/agent-browser\" data-view-component=\"true",
@@ -44,22 +50,16 @@
       "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-browser\" data-view-component=\"true"
     },
     {
-      "h": "ruvnet/RuView\" data-view-component=\"true",
+      "h": "sherlock-project/sherlock\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/ruvnet/RuView\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ruvnet/RuView\" data-view-component=\"true"
+      "link": "https://github.com/sherlock-project/sherlock\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/sherlock-project/sherlock\" data-view-component=\"true"
     },
     {
-      "h": "ZhuLinsen/daily_stock_analysis\" data-view-component=\"true",
+      "h": "tokio-rs/topcoat\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/ZhuLinsen/daily_stock_analysis\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ZhuLinsen/daily_stock_analysis\" data-view-component=\"true"
-    },
-    {
-      "h": "homeassistant-ai/ha-mcp\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/homeassistant-ai/ha-mcp\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/homeassistant-ai/ha-mcp\" data-view-component=\"true"
+      "link": "https://github.com/tokio-rs/topcoat\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/tokio-rs/topcoat\" data-view-component=\"true"
     }
   ],
   "twitch": [],
