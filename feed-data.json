@@ -2,52 +2,10 @@
   "youtube": [],
   "github": [
     {
-      "h": "meta/astryx\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/meta/astryx\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/meta/astryx\" data-view-component=\"true"
-    },
-    {
-      "h": "ZhuLinsen/daily_stock_analysis\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/ZhuLinsen/daily_stock_analysis\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/ZhuLinsen/daily_stock_analysis\" data-view-component=\"true"
-    },
-    {
       "h": "GoogleChrome/modern-web-guidance-src\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
       "link": "https://github.com/GoogleChrome/modern-web-guidance-src\" data-view-component=\"true",
       "thumb": "https://opengraph.githubassets.com/1/GoogleChrome/modern-web-guidance-src\" data-view-component=\"true"
-    },
-    {
-      "h": "shadcn/improve\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/shadcn/improve\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/shadcn/improve\" data-view-component=\"true"
-    },
-    {
-      "h": "addyosmani/agent-skills\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/addyosmani/agent-skills\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/addyosmani/agent-skills\" data-view-component=\"true"
-    },
-    {
-      "h": "vercel-labs/agent-browser\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/vercel-labs/agent-browser\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/vercel-labs/agent-browser\" data-view-component=\"true"
-    },
-    {
-      "h": "we-promise/sure\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/we-promise/sure\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/we-promise/sure\" data-view-component=\"true"
-    },
-    {
-      "h": "homeassistant-ai/ha-mcp\" data-view-component=\"true",
-      "p": "Trending Open Source Repository",
-      "link": "https://github.com/homeassistant-ai/ha-mcp\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/homeassistant-ai/ha-mcp\" data-view-component=\"true"
     },
     {
       "h": "openai/codex-security\" data-view-component=\"true",
@@ -56,10 +14,52 @@
       "thumb": "https://opengraph.githubassets.com/1/openai/codex-security\" data-view-component=\"true"
     },
     {
-      "h": "TheAlgorithms/Java\" data-view-component=\"true",
+      "h": "nvm-sh/nvm\" data-view-component=\"true",
       "p": "Trending Open Source Repository",
-      "link": "https://github.com/TheAlgorithms/Java\" data-view-component=\"true",
-      "thumb": "https://opengraph.githubassets.com/1/TheAlgorithms/Java\" data-view-component=\"true"
+      "link": "https://github.com/nvm-sh/nvm\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/nvm-sh/nvm\" data-view-component=\"true"
+    },
+    {
+      "h": "pookjw/HermesEnabler\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/pookjw/HermesEnabler\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/pookjw/HermesEnabler\" data-view-component=\"true"
+    },
+    {
+      "h": "we-promise/sure\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/we-promise/sure\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/we-promise/sure\" data-view-component=\"true"
+    },
+    {
+      "h": "QwenLM/qwen-code\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/QwenLM/qwen-code\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/QwenLM/qwen-code\" data-view-component=\"true"
+    },
+    {
+      "h": "ashhart/TensorFold\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/ashhart/TensorFold\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/ashhart/TensorFold\" data-view-component=\"true"
+    },
+    {
+      "h": "nodejs/node\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/nodejs/node\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/nodejs/node\" data-view-component=\"true"
+    },
+    {
+      "h": "addyosmani/agent-skills\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/addyosmani/agent-skills\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/addyosmani/agent-skills\" data-view-component=\"true"
+    },
+    {
+      "h": "meta/astryx\" data-view-component=\"true",
+      "p": "Trending Open Source Repository",
+      "link": "https://github.com/meta/astryx\" data-view-component=\"true",
+      "thumb": "https://opengraph.githubassets.com/1/meta/astryx\" data-view-component=\"true"
     }
   ],
   "twitch": [],
